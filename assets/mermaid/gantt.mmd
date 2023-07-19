@@ -1,0 +1,17 @@
+gantt
+	dateFormat YYYY/MM/DD
+	axisFormat %m/%d
+	tickInterval 2week
+    todayMarker off
+	Dulany Robot Rumble: milestone, m1, 2023/11/01, 1d
+	section Programming
+		Plan auton route       :a1, 2023/07/14, 1w
+		Contribute to LemLib   :after a1, 10w
+		Test auton             :after b3, 2w
+  	section Building
+		Build the drivetrain   :b1, 2023/07/14, 2w
+		Build upper subsystems :b2, after b1, 9w
+		Test whole robot       :b3, after b2, 2w
+    section Notebook
+		Document drivetrain       :c1, 2023/07/14, 2w
+		Document upper subsystems :after c1, 2w

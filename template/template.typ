@@ -10,10 +10,9 @@
 ) = {
 
   set text(
-    font: "JetBrainsMono NF",
-    size: 12pt,
+    font: "Calibri",
+    size: 11pt,
   )
-
 
   align(center, [
     #set heading()

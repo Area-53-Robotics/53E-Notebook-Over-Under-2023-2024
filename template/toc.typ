@@ -21,7 +21,7 @@
 
   locate(loc => {
     for entry in entries.final(loc) {
-      [ #label(label: entry.type) #entry.title #h(1fr) #entry.date.display() \ ]
+      [ #nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.date.display() \ ]
     }
   })
   
