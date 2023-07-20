@@ -38,7 +38,7 @@
 #let nb_heading(level: 0, body) = [
   #if level == 0 [
     = #text(size: 20pt, [#body] )
-    #line(length: 100%)
+    #line(length: 100%, stroke: (thickness: 2pt, cap: "round", dash: "solid"))
   ] else if level == 1 [
     == #body
     #line()

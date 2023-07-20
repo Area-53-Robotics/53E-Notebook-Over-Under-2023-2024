@@ -9,42 +9,57 @@ VRC Team 53E is part of the Area 53 Alien Raiders robotics club at Eleanor Roose
 
 #nb_heading([Our Team])
 
-#let member(name: "", picture: "", body) = [
-  == #name
-  
-  #image("assets/logo.png", width: 50%)
+// TODO: move to template
 
-  #body
+#let nb_member(name: "", picture: "", body) = [
+  #rect(
+    fill: rgb("e4e5ea"),
+    inset: 20pt,
+    width: 200pt,
+    height: 200pt,
+    radius: 12pt
+  )[
+    = #name
+    #line(length: 100%, stroke: (cap: "round", dash: "solid"))
+    #v(8pt)
+    #grid(
+      columns: 2,
+      gutter: 20pt,
+      align(center,
+        image(width: 80pt, height: 80pt, picture)
+      ),
+      align(left, body)
+    )
+  ]
+]
 
-] 
 
-
-#let cell = rect.with(
-  inset: 8pt,
-  fill: rgb("e4e5ea"),
-  width: 100%,
-  radius: 12pt
-)
-
-#set align(center)
-
-#grid(
-  columns: (220pt, 220pt ),
-  rows: (220pt, 220pt),
-  gutter: 10pt,
-  cell(height: 100%)[#member(name: "Felix Hass", picture: "", [
-    - 12th Grade
-    - Team Leader
-    - Lead Programmer
-    - Rust Enthusiast
-  ])],
-  cell(height: 100%)[#member(name: "John Doe", picture: "", [generic dude])],
-  cell(height: 100%)[#member(name: "John Doe", picture: "", [generic dude])],
-  cell(height: 100%)[#member(name: "John Doe", picture: "", [generic dude])],
-)
-
-#set align(left)
-
+#align(center)[
+  #v(60pt)
+  #grid(
+    columns: 2,
+    rows: 2,
+    gutter: 20pt,
+    [#nb_member(name: "Felix Hass", picture: "./assets/mugshots/felix.png")[
+       - 12th Grade
+       - Team Leader
+       - Programmer
+       - Notebooker
+      ]],
+    [#nb_member(name: "Alan Morales", picture: "./assets/mugshots/alan.jpg")[
+      - 11th Grade
+      - Builder
+    ]],
+    [#nb_member(name: "John Kelly", picture: "./assets/mugshots/john.png")[
+      - 10th Grade
+      - Builder
+    ]],
+    [#nb_member(name: "Meghana Noojipady", picture: "./assets/mugshots/meghana.jpg")[
+      - 9th Grade
+      - Programmer
+    ]],
+  )
+]
 
 #pagebreak()
 

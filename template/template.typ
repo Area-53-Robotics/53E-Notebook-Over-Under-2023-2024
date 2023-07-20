@@ -17,16 +17,28 @@
   align(center, [
     #set heading()
     // Title Page
+    //
+    #text(
+      size: 50pt,
+      font: "Tele-Marines"
+    )[#organization]
+      
+    #line(length: 100%, stroke: (thickness: 3pt, cap: "round"))
 
-    #organization
-  
-    #line(length: 100%)
+    #v(1fr)
 
-    #image(cover, width: 80%)
+    #image(cover, width: 50%)
 
-    #season
+    #v(1fr)
 
-    #team
+    #text(
+      size: 40pt, 
+      font: "Tele-Marines"
+    )[
+      #season
+
+      #team
+    ]
   ])
 
   pagebreak()

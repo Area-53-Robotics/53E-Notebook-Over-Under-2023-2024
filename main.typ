@@ -5,7 +5,7 @@
 #show: notebook.with(
   team: "53E",
   organization: "Area 53",
-  cover: "/assets/logo-square.png",
+  cover: "/assets/logo-cut.png",
   season: "Over Under 2023 - 2024",
 )
 
