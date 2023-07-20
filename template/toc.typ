@@ -1,21 +1,20 @@
 #import "entries.typ": *
 
 #let toc() = {
-  [ = Table of Contents]
-  line(length: 100%)
+  nb_heading([Table of Contents])
 
   // TODO: do this automatically somehow
   
   [
 
-  == Introduction
+  #nb_heading([Introduction], level: 1)
 
   Who We Are \
   Our Team \
   About This Notebook \
 
   \
-  == Entries
+  #nb_heading([Entries], level: 1)
 
   ]
 
@@ -27,7 +26,8 @@
   
   [
 
-  == Appendix
+  #nb_heading([Appendix], level: 1)
+
 
   Glossary \
 

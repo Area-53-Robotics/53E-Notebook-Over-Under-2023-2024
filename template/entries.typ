@@ -101,8 +101,10 @@
         #set page(
           footer: [
           #line(length: 100%)
-          *Designed by:* \
-          *Witnessed by:* #h(1fr) #counter(page).display()
+          #align(left, [
+            *Designed by:* \
+            *Witnessed by:* #h(1fr) #counter(page).display()
+            ])
           ]
         )
         #nb_heading([ #nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.date.display() ]) 

@@ -111,6 +111,8 @@
 
   )
 
+  // TODO: Change these to nb headings
+  
   == Scoring
   #line()
   - each triball in a goal is worth 5 points
@@ -218,7 +220,8 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
   type: "management",
   date: datetime(year: 2023, month: 4, day: 19),
   [
-    We created a schedule to give us a rough timeline of when we need to get things done by, using a gantt chart.
+    We created a schedule to give us a rough timeline of when we need to get things done by, up until the first competition of the season. We decided to use a gantt chart for this because it represents the diffent overlapping tasks and how long they take in a nice visual manner. Our team typically meets twice a week, for 3 hours at a time, so we've organized the chart on a weekly basis.
+
     // TODO: add time for planning, expand document upper subsystems, no one knows what LemLib is yet.
     #image("./assets/mermaid/gantt.svg")
 
@@ -234,7 +237,7 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
 )
 
 #create_entry(
-  title: "Possible Drivetrain components",
+  title: "Brainstorming Drivetrain Type",
   type: "brainstorm",
   date: datetime(year: 2023, month: 4, day: 19),
   [
@@ -243,7 +246,7 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     #nb_heading([Tank Drive with Omni Wheels], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
           - turns easily
@@ -265,7 +268,7 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     #nb_heading([Tank Drive with Traction Wheels], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
           - strong traction forwards and backwards
@@ -286,7 +289,7 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     #nb_heading([Tank Drive with Traction and Omni Wheels], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
           - strong traction forwards and backwards
@@ -306,7 +309,7 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     #nb_heading([Mecanum Drive], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
           - can strafe
@@ -327,7 +330,7 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     #nb_heading([X-Drive], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
           - can strafe
@@ -346,34 +349,14 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
 
     #nb_heading([Wheel Size], level: 1)
 
-    #nb_heading([4.125" Wheels], level: 2)
+    #nb_heading([4" Wheel], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
           - fastest wheel
-          - traverses tall game objects easily
-        ],
-        cons: [
-          - no equivalent traction wheel
-          - low torque
-          - bad center of gravity
-        ],
-      ),
-      align(center,
-        image("./assets/logo.png", width: 50%),
-      )
-    )
-
-    #nb_heading([4" Wheels], level: 2)
-
-    #grid(
-      columns: (1fr, 1fr),
-      nb_pro_con(
-        pros: [
-          - fast wheel
-          - traverses tall game objects easily
+          - traverses game objects easily
         ],
         cons: [
           - low torque
@@ -385,17 +368,17 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     )
 
 
-    #nb_heading([3.25" Wheels], level: 2)
+    #nb_heading([3.25" Wheel], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
-          - balance of speed and torque
+          - balance of torque and speed
         ],
         cons: [
-          - balance of speed and torque
-          - gets stuck on low game objects easily
+          - balance of torque and speed
+          - gets stuck on game objects easily
         ],
       ),
       align(center,
@@ -404,17 +387,17 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     )
 
 
-    #nb_heading([2.75" Wheels], level: 2)
+    #nb_heading([2.75" Wheel], level: 2)
 
     #grid(
-      columns: (1fr, 1fr),
+      columns: 2,
       nb_pro_con(
         pros: [
-          - highest torque
+          - high torque
         ],
         cons: [
-          - slowest wheels
-          - gets stuck on low game objects easily
+          - low speed
+          - gets stuck on game objects easily
         ],
       ),
       align(center,
@@ -422,39 +405,129 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
       )
     )
 
+    #pagebreak()
 
-    #nb_heading([Gear Ratios], level: 1)
+    #nb_heading([Motor Cartridge], level: 1)
 
+    #nb_heading([Blue Cartridge (600 RPM) ], level: 2)
+
+    #grid(
+      columns: 2,
+      nb_pro_con(
+        pros: [
+          - very fast 
+          ],
+        cons: [
+          - very low torque
+        ],
+      ),
+      align(center,
+        image("./assets/logo.png", width: 50%),
+      )
+    )
+
+    #nb_heading([Green Cartridge (200 RPM) ], level: 2)
+
+    #grid(
+      columns: 2,
+      nb_pro_con(
+        pros: [
+          - fast
+          ],
+        cons: [
+          - low torque
+        ],
+      ),
+      align(center,
+        image("./assets/logo.png", width: 50%),
+      )
+    )
+
+    #nb_heading([Red Cartridge (100 RPM) ], level: 2)
+
+    #grid(
+      columns: 2,
+      nb_pro_con(
+        pros: [
+          - very high torque
+          ],
+        cons: [
+          - very slow
+        ],
+      ),
+      align(center,
+        image("./assets/logo.png", width: 50%),
+      )
+    )
   ]
 )
 
 #create_entry(
-  title: "Choosing Drivetrain Components",
+  title: "Choosing Drivetrain Type",
   type: "decide",
   date: datetime(year: 2023, month: 4, day: 19),
   [
     #nb_heading([Drivetrain Type], level: 1)
 
+    We placed all our options into a decision matrix in order to find the best option. We rated each option's speed, strength, and handling on a scale of 0 to 3. Speed is simly how fast the drivetrain can go. Strength is the ability of the drive to push and resist pusing. It takes into account the torque of the drive, as well as it's traction.
+
     #nb_decision_matrix(
-      properties: ("Speed", "Torque", "Maneuverability"),
+      properties: ("Speed", "Strength", "Handling"),
       choices: (
-        ("Mecanum", 2, 2, 4),
+        ("Omni Wheels", 2, 2, 2),
+        ("Traction Wheels", 2, 3, 1),
+        ("Traction and Omni Wheels", 3, 3, 2),
+        ("Mecanum", 2, 1, 3),
+        ("X Drive", 3, 1, 3),
       )
     )
 
-    #nb_heading([Wheel Size], level: 1)
+    We chose the traction and omni wheel drive, due to its high strenth and handling.
 
-    #nb_heading([Gearing], level: 1)
+    // TODO: add images of modeled drivetrains.
+    
+    #nb_heading([Gear Ratio, Wheel Size, and Cartridge Type], level: 1)
+
+    Now that we had decided on our type of drivetrain we can decide the other components. We decided on 4 combinations of gear ratio, wheel sizes and motor cartridge, and rated each for their speed, torque, and manueverability on a scale of 0 to 5.
+
+    #nb_decision_matrix(
+      properties: ("Speed", "Strength", "Manueverability"),
+      choices: (
+        ("6:3, 4\" wheels, green cartridges", 5, 2, 3),
+        ("3:5, 3.25\" wheels, blue cartridges", 3, 4, 2),
+        ("3:5, 4\" wheels, blue cartridges", 0, 0, 0),
+        ("4:7, 4\" wheels, blue cartridges", 3.5, 4, 3),
+      )
+    )
+
+    While mocking up the designs in CAD we discovered that the drivetrain with the 3:5 gear ratio and the 4" wheels could not be built due to some of its gears not meshing. Due to this, it did not get rated.
+
+
+    We settled on a drivetrain with a 4:7 gear ratio, 4" wheels, and blue cartridges, leaving us with a final RPM of 360, and a final speed of 6.7 feet/second.
+
+    #pagebreak()
+
+    #nb_heading([Final Drivetrain Design], level: 1)
+
+    #align(center, [
+      #image("./assets/drivetrain-cad-side.png", width: 80%)
+      #image("./assets/drivetrain-cad-top.png", width: 75%)
+    ])
+
+    #pagebreak()
+
+    #align(center, [
+      #image("./assets/drivetrain-drawing.png") \
+    ])
+
   ]
 )
 
 #create_entry(
-  title: "Build the Drivetrain",
+  title: "Building the Drivetrain",
   type: "build",
   date: datetime(year: 2023, month: 6, day: 14),
   [
   We did some pretty cool stuff
   ]
 )
-
-
