@@ -16,6 +16,7 @@
         packages = with pkgs; [
           typst
           nodePackages_latest.mermaid-cli
+          zathura
         ];
       };
 

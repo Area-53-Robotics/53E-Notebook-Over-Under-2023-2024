@@ -53,6 +53,7 @@ VRC Team 53E is part of the Area 53 Alien Raiders robotics club at Eleanor Roose
     [#nb_member(name: "John Kelly", picture: "./assets/mugshots/john.png")[
       - 10th Grade
       - Builder
+      - Driver
     ]],
     [#nb_member(name: "Meghana Noojipady", picture: "./assets/mugshots/meghana.jpg")[
       - 9th Grade
@@ -69,7 +70,10 @@ This notebook was written with a typesetting language called Typst. The source c
 
 == Why Digital
 
-This is our third year using a digital notebook. We find that this makes the already difficult job of notebooker easier, and also creates neater results, and lets us use more modern tools to better represent information.
+This is our third year using a digital notebook, and we find that it improves the experience for both the writer and the viewer in several ways.
+
+- Increased neatness
+- Better, more modern tooling
 
 == Why Typst
 

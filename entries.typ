@@ -34,6 +34,57 @@
 )
 
 #create_entry(
+  title: "Post Reveal Thoughts",
+  type: "brainstorm",
+  date: datetime(year: 2023, month: 4, day: 13),
+  [
+
+  // TODO: 
+  // post-reveal thoughts from meghaha
+  // cut everything down
+  //
+  After the reveal each member of the team wrote down their thoughts on what the coming season will look like, and ideas for our robot. \ 
+  \
+  // TODO: replace with admonition
+  *Note:* These were recorded before the rules were released, so they are made without key information, like expansion limits, or how the AWP will be scored.
+
+#nb_heading([Felix], level: 1)
+
+
+#nb_heading([Scoring Mechanisms], level: 2)
+My first thought for a mechanism to move the triballs is something similar to the bots we see for FRC's Charged Up. A long arm with flex wheels that spin to grab the triballs. The climbing mechanism is much more difficult. The real question is whether we use the same mechanism as the triball collector for this, and whether that's feasible to build. The hardest part to me seems like getting a consistent hold on the PVC pipe. It is very inconvenient that  the pole is vertical, which will make it very hard to maintain a grip. 
+
+#nb_heading([Drivetrain], level: 2)
+Our drivetrain is the core of our robot, and is easily the most important part to get right. Due to the lack of heavy objects, torque is much less important than speed. We can use a similar gear ratio to our robot during the Spin Up Season, or maybe even higher. The real question is whether we can get a six motor drive. If we can get the triball grabbing and bot lifting on two motors that would be amazing, but I'm not sure if it's possible.
+
+The weight of the drive (and the bot overall) is also very important. If we were considering a steel drivetrain before, we certainly should not be now. We need to be as light as possible to make lifting our robot as easy as possible.
+
+The ability of our bot to cross the middle line is also very important due to the ramification of having a bot of our alliance on our side of the field. If we can quickly switch sides, it will mean that we can quickly shut down our opponents defense without even interacting with their robot.
+
+
+== Programming
+As always, consistency chassis movement is the key to a perfect auton. Using an absolute positioning system like GPS or Odometry can make this much easier, because it allows the robot to correct for past error, or even external interference. There are also many different motion control algorithms we can use, like PID or motion profiling. Overall, tracking wheels and an IMU will be a must, but these sensors might have some difficulty when we cross the center line, due to the bot leaving the ground. In addition, if our robot is high off the ground, we may have some trouble getting the tracking wheels to touch the ground. 
+
+#nb_heading([John], level: 1)
+I think that the best intake for this season would easily be one with horizontal flex wheels. This would allow the bot to reach under the goal easier and also could be easier to build. We will most definitely need a shooting mechanism (a catapult would work best, and we have more experience with such building). We will also need some sort of scissor lift to lift the bot. All of these systems will require a motor, so we will need a four motor drive. This means that we can spare a motor on the claw for lifting the bot. We will want a fast drive with the center locked omni.
+
+
+#nb_heading([Alan], level: 1)
+At first I was very surprised by this game as it seemed that the results of a match would be decided in the first few seconds. However, upon further review I noticed the heavily weighted importance on match loads (22 match loads with only 12 game pieces on the field). This makes an intake that is able to get match loads necessary. I also began thinking of ways to climb the pole, as that makes up a big amount of points. My initial idea is a claw with two flex wheels on the inside, so the claw could clamp on to the pole and the wheels could rotate and drag the robot upwards. A lot of torque will be necessary but it may be doable. 
+
+\
+\
+// TODO: replace with admonition
+*Note:*
+
+Meghana was not a part of the team when the game was revealed, so we did not record a take from her.
+
+  ]
+
+
+)
+
+#create_entry(
   title: "Identify Game Rules",
   type: "identify",
   date: datetime(year: 2023, month: 4, day: 13),
@@ -45,8 +96,7 @@
     #image("/assets/field-elements/full-field.png", width: 75%)
     ])
 
-  == Field Elements
-  #line()
+  #nb_heading([Field Elements], level: 1)
 
   #grid(
     columns: (1fr, 2fr),
@@ -113,8 +163,8 @@
 
   // TODO: Change these to nb headings
   
-  == Scoring
-  #line()
+  #nb_heading([Scoring], level: 1)
+
   - each triball in a goal is worth 5 points
   - triballs in an offensive zone are worth 2 points
   - highest climbing robot is worth 20 points
@@ -123,38 +173,50 @@
   - lowest climbing robot is worth 5 points
   - the autonomous bonus is worth 8 points
 
-  == Important Terms
-  #line()
+  #nb_heading([Important Rules], level: 1)
 
-  === Double-Zoned
+  #nb_heading([Double-Zoned], level: 2)
   - An alliance is double zoned when both of their robots are in the same offensive zone
 
-  === Elevated
+  #nb_heading([Elevated], level: 2)
   - A robot is considered elevated when the only field element they're touching is the elevation bar (excluding the elevation cap)
 
 
-  == Important Rules
-  #line()
-  === SG1 
+  #nb_heading([Important Rules], level: 1)
+
+  #nb_heading([SG1], level: 2)
+
   - Once robot of each alliance must start in the other team's offensive zone
 
-  === SG2
+  #nb_heading([SG2], level: 2)
   - Horizontal expansion is limited to 36"
   - There is no vertical limit
 
-  === SG6
+  #nb_heading([SG6], level: 2)
   - triballs can be loaded into the field in the match load zone
   - triballs can be loaded directly onto the robot if the robot is touching the match load zone
 
-  === SG7
+  #nb_heading([SG7], level: 2)
   - possession is limited to 1 triball
 
-  === SG8
+  #nb_heading([SG8], level: 2)
   - A robot cannot enter an alliance's goal unless they are double zoned
 
-  === R12
+  #nb_heading([R12], level: 2)
   - The motors on a robot are limited to a total of 88W. The robot can have any combination of 11W and 5.5W motors. This means that robots can now have up to 16 motors.
+
+  #nb_heading([Conclusion], level: 1)
+  Overall, Over Under is a very interesting season. We find it especially interesting that robots can only hold one triball at a time, and that triballs can be loaded directly into the robot in the load-zone.
+
+  After reading through the rules we identified these capabilities that our bot will need to have:
+  - Needs to be able to pick up/put down match loads.
+  - Needs to be able to climb.
+  - Needs to have an auton.
+  - Needs to be able to drive.
+  - Needs to be able to score triballs in offensive goal.
   ]
+
+
 
   // TODO:
   // add conclusion
@@ -162,58 +224,7 @@
   // awp requirements
 )
 
-#create_entry(
-  title: "Post Reveal Thoughts",
-  type: "brainstorm",
-  date: datetime(year: 2023, month: 4, day: 13),
-  [
 
-  // TODO: 
-  // post-reveal thoughts from meghaha
-  // cut everything down
-
-Felix - 
-== Challenges
-We will need to achieve the following things with our robot:
-
-- moving the acorns
-- elevating the robot
-- crossing the middle line
-- going under the elevation poles
-- being able to grab acorns from the corners?
-- consistent movement in autonomous
-- no intake (yipeee!)
-
-
-== Brainstorming
-Scoring Mechs
-My first thought for the acorn moving mech is something similar to the bots we see for FRC's Charged Up. A long arm with flex wheels that spin to grab the acorns. The climbing mechanism is much more difficult. The real question is whether we use the same mech as the acorn collector for this, and whether that's feasible to build. The hardest part to me seems like getting a consistent hold on the PVC pipe. It is very inconvenient that  the pole is vertical, which will make it very hard to maintain a grip. 
-Drivetrain
-Our drivetrain is the core of our robot, and is easily the most important part to get right. Due to the lack of heavy objects, torque is much less important than speed. We can use a similar gear ratio to our robot during the Spin Up Season, or maybe even higher. The real question is whether we can get a six motor drive. If we can get the acorn grabbing and bot lifting on two motors that would be amazing, but I'm not sure if it's possible.
-
-The weight of the drive (and the bot overall) is also very important. If we were considering a steel drivetrain before, we certainly should not be now. We need to be as light as possible to make lifting our robot as easy as possible.
-
-The ability of our bot to cross the middle line is also very important due to the ramification of having a bot of our alliance on our side of the field. If we can quickly switch sides, it will mean that we can quickly shut down our opponents defense without even interacting with their robot.
-
-
-== Programming
-As always, consistency chassis movement is the key to a perfect auton. Using an absolute positioning system like GPS or Odometry can make this much easier, because it allows the robot to correct for past error, or even external interference. There are also many different motion control algorithms we can use, like PID or motion profiling. Overall, tracking wheels and an IMU will be a must, but these sensors might have some difficulty when we cross the center line, due to the bot leaving the ground. In addition, if our robot is high off the ground, we may have some trouble getting the tracking wheels to touch the ground. 
-== Limitations
-Due to the fact that the rulebook is not out yet, there are some limitations to these predictions. There are many things we do not know, including how the zone guarding will be enforced, and the exact conditions for the autonomous win point. The largest one however is the expansion limit. We know that the robot must fit in an 18" by 18" by 18" cube, but we do not know how much we can expand from that size. 
-
-
-John - I think that the best intake for this season would easily be one with horizontal flex wheels. This would allow the bot to reach under the goal easier and also could be easier to build. We will most definitely need a shooting mechanism (a catapult would work best, and we have more experience with such building). We will also need some sort of scissor lift to lift the bot. All of these systems will require a motor, so we will need a four motor drive. This means that we can spare a motor on the claw for lifting the bot. We will want a fast drive with the center locked omni.
-
-
-Alan - At first I was very surprised by this game as it seemed that the results of a match would be decided in the first few seconds. However, upon further review I noticed the heavily weighted importance on match loads (22 match loads with only 12 game pieces on the field). This makes an intake that is able to get match loads necessary. I also began thinking of ways to climb the pole, as that makes up a big amount of points. My initial idea is a claw with two flex wheels on the inside, so the claw could clamp on to the pole and the wheels could rotate and drag the robot upwards. A lot of torque will be necessary but it may be doable. 
-
-
-Will - Although Over Under doesn't look to be as good as Spin Up, it still has promise. I find it pretty disappointing that there are only two ways to score points. Getting up the poles looks like it will be challenging. There must be a way to build a bot that crawls up them. Perhaps one that could go around the pole and stop others from getting up it? I hope that we’ll be allowed to go over the second line.
-
-
-
-  ]
-)
 
 #create_entry(
   title: "Create Schedule",
@@ -487,7 +498,6 @@ Will - Although Over Under doesn't look to be as good as Spin Up, it still has p
     // TODO: add images of modeled drivetrains.
     
     #nb_heading([Gear Ratio, Wheel Size, and Cartridge Type], level: 1)
-
     Now that we had decided on our type of drivetrain we can decide the other components. We decided on 4 combinations of gear ratio, wheel sizes and motor cartridge, and rated each for their speed, torque, and manueverability on a scale of 0 to 5.
 
     #nb_decision_matrix(

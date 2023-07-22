@@ -1,4 +1,6 @@
 // formatting utilities
+// TODO: 
+// Admonitions (note, alert, example, etc)
 
 #let highlight(
   color: red,
