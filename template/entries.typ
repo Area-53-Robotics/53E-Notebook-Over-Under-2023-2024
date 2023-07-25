@@ -1,7 +1,6 @@
-// formatting utilities
-// TODO: 
-// Admonitions (note, alert, example, etc)
+#import "./colors.typ" : *
 
+// formatting utilities
 #let highlight(
   color: red,
   body
@@ -42,10 +41,10 @@
     = #text(size: 20pt, [#body] )
     #line(length: 100%, stroke: (thickness: 2pt, cap: "round", dash: "solid"))
   ] else if level == 1 [
-    == #body
+    == #text(size: 18pt, [#body])
     #line()
   ] else if level == 2 [
-    === #body
+    === #text(size: 14pt, [#body])
   ]
 ]
 
@@ -63,7 +62,7 @@
   )
 ]
 
-#let nb_decision_matrix(properties: ("earth", "wind", "fire", "water"), choices: (("bob", 1, 2, 3, 4),("fred", 4, 3, 2, 1))) = {
+#let nb_decision_matrix(properties: (), choices: ()) = {
   for choice in choices {
     if not (choice.len() - 1) == properties.len() {
       panic("a choice did not have the right amount of properties")
@@ -87,11 +86,58 @@
   )
 }
 
+#let nb_admonition(type: "", body) = {
+  let title
+  let icon
+  let color
+
+  // I hate everthing about this
+  if type == "note" {
+    title = "Note"
+    icon = "./icons/pencil.svg"
+    color = indigo
+  } else if type == "warning" {
+    title = "Warning"
+    icon = "./icons/warning.svg"
+    color = pink
+  } else if type == "example" {
+    title = "Example"
+    icon = "./icons/web.svg"
+    color = purple
+  } else if type == "quote" {
+    title = "Quote"
+    icon = "./icons/quotes.svg"
+    color = gray
+  } else if type == "decision" {
+    title = "Final Decision"
+    icon = "./icons/target.svg"
+    color = blue
+  }
+  
+  rect(
+    width: 100%,
+    fill: color.lighten(50%),
+    stroke: (left: 4pt + color ),
+    [
+      #text(size: 15pt, [#box(baseline: 30%, image(icon, width: 1.5em)) *#title*])
+      \
+      #body
+    ]
+  )
+
+}
+
 #let entries = state("entries", ())
 
-#let create_entry(title: "", type: "", date: datetime(year: 1970, month: 1, day: 1), body) = {
-  entries.update(x => {
-    x.push((title: title, type: type, date: date, body: body))
+#let create_entry(title: "", type: "", start_date: none, end_date: none, body) = {
+  if start_date == none {
+    panic("No valid start date specified")
+  }
+  if end_date == none {
+    end_date = start_date
+  }
+    entries.update(x => {
+    x.push((title: title, type: type, start_date: start_date, end_date: end_date, body: body))
     x
    }) 
 }
@@ -109,8 +155,8 @@
             ])
           ]
         )
-        #nb_heading([ #nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.date.display() ]) 
 
+        #nb_heading([#nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.start_date.display("[year]/[month]/[day]")]) 
 
         #entry.body
       ]

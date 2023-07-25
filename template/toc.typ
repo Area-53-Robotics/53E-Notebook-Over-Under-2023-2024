@@ -1,6 +1,6 @@
 #import "entries.typ": *
 
-#let toc() = {
+#let nb_toc() = {
   nb_heading([Table of Contents])
 
   // TODO: do this automatically somehow
@@ -11,16 +11,42 @@
 
   Who We Are \
   Our Team \
-  About This Notebook \
-
   \
+
   #nb_heading([Entries], level: 1)
 
   ]
 
   locate(loc => {
     for entry in entries.final(loc) {
-      [ #nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.date.display() \ ]
+      [
+        #nb_label(label: entry.type)
+        #h(5pt)
+        #entry.title
+        #box(
+          width: 1fr,
+          line(
+            length: 100%,
+            stroke:
+            (dash: "dotted")
+          )
+        )
+        #entry.start_date.display("[year]/[month]/[day]") \ ]
+      if not entry.end_date == entry.start_date {
+        align(right,
+          [
+            #box(
+              outset: 0pt,
+              [
+              // #line(length: 20pt, start: (-30pt, -10pt), stroke: (thickness: 0.5pt))
+              #line(length: 20pt, start: (-20pt, -8pt), angle: 90deg, stroke: (thickness: 1pt))
+              // #line(length: 20pt, start: (-30pt, 0pt), stroke: (thickness: 0.5pt))
+            ])
+            \
+            #entry.end_date.display("[year]/[month]/[day]")
+          ]
+        )
+      }
     }
   })
   

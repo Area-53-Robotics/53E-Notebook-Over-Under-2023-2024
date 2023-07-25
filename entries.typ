@@ -1,25 +1,35 @@
-#import "/template/template.typ": *
+#import "/template/entries.typ": *
 
 // TODO: split this into multiple files
+
+
 
 #create_entry(
   title: "Pre Reveal Thoughts",
   type: "identify",
-  date: datetime(year: 2023, month: 4, day: 12),
+  start_date: datetime(year: 2023, month: 4, day: 26),
+  end_date: datetime(year: 2023, month: 4, day: 26),
   [
 
-    #nb_heading([Reflection], level: 1)
+    #nb_heading([Reflection on Last Season], level: 1)
     
     
-    53E grew greatly as a team last season, on both the building side, and the programming side. We struggled a lot with getting a functional bot together, but in the end our bot was able to perform all of the tasks required for the Spin Up season. This difficulty was due to both our inexperience and lack of planning. We did not plan our designs before building, we simply starting putting parts together. We did use CAD to a certain extent, but not to the point where we had a 1 to 1 mirror of our bot digitally. We would often be trying to get our bot functional even during the tournament. This meant we were constantly behind, and meant that our bot was not as tuned as it could have been, and also meant that we did not have enough time for driver practice and autonomous testing.
-    
-    Our programming also had mixed success. We did have some major successes. We managed to use git and Github to manage our code, which let us have two programmers work together. As far as I know, this is the first time in the club's history this has worked successfully. However, we did not meet some of the goals we set at the beginning of the year. We wanted to implement odometry to be able to make absolute movements in the autonomous period, but we were never able to get it to a usable state. It required a level of time and testing that we could not dedicate with a nonfunctional robot.
+    53E grew greatly as a team last season on both the building side and the programming side. We struggled a lot with getting a functional bot together, but in the end our bot was able to perform all of the tasks required for the Spin Up season. This difficulty was due to our inexperience and lack of planning. We did not plan our designs before building, we simply starting putting parts together. We did use CAD to a certain extent, but not to the point where we had a 1 to 1 mirror of our bot digitally. We would often be trying to get our bot functional even during tournaments. This meant we were constantly behind, and meant that our bot was not as tuned /* refined? fine tuned? efficient? */ as it could have been, and also meant that we did not have enough time for driver practice and autonomous testing.
 
-    //TODO: add glossary references for git and github
+    53E grew greatly as a team during the last season on both the building side and the programming side. We struggled to build a robot that could complete all of the tasks in the Spin Up season. This was mainly due to overall inexperience and lack of planning. While we did make an attempt to use CAD, we never really ended up with a 1 to 1 mirror of the robot digitally. More often than not, we would simply put parts together and seeing what would work, rather than planning it out beforehand. This lead to us being very behind, often building on our robot at tournaments. Despite these challenges we eventually built a fully functional robot and even made it to the state championship.
+    
+    Our programming also had mixed successes. One of our big achievements was working collaboratively. We were able to have two programmers working together on the same team working on the code at the same time. As far as we are aware, this is the first time in the club's history that this has worked. We did this using git and GitHub, which let us easily sync code across both programmer's computers. However we did not meet our major goal of implementing odometry in order to track our robot's position on the field during the autonomous period. Complex algorithms like odometry require a lot of testing in order to be effective, and we chose to prioritize getting a functioning robot over implementing it.
+
+    // TODO: add footnotes for glossary (git, GitHub, CAD)
     
     #nb_heading([Goals], level: 1)
+
+    #nb_heading([Team Management], level: 2)
+    - Create and adhere to a schedule of when planning, building, programming, and testing should occur
+    - Create a more organized team structure
     
     #nb_heading([Building], level: 2)
+    - Create a more structured process for planning and testing work
     - Design everything system before building, using CAD software
     - Undergo more rigorous testing before tournaments
      
@@ -36,48 +46,47 @@
 #create_entry(
   title: "Post Reveal Thoughts",
   type: "brainstorm",
-  date: datetime(year: 2023, month: 4, day: 13),
+  start_date: datetime(year: 2023, month: 4, day: 27),
+  end_date: datetime(year: 2023, month: 4, day: 27),
   [
 
-  // TODO: 
-  // post-reveal thoughts from meghaha
-  // cut everything down
-  //
-  After the reveal each member of the team wrote down their thoughts on what the coming season will look like, and ideas for our robot. \ 
+  After the game reveal each member of the team wrote down their thoughts on what the coming season will look like, and ideas for our robot. \ 
   \
-  // TODO: replace with admonition
-  *Note:* These were recorded before the rules were released, so they are made without key information, like expansion limits, or how the AWP will be scored.
+  #nb_admonition(type: "note", [
+    These were recorded before the rules were released, so they are made without key information, like expansion limits, or how the autonomous win point will be scored.
+  ])
 
-#nb_heading([Felix], level: 1)
+  #nb_heading([Felix], level: 1)
+  
+  
+  #nb_heading([Scoring Mechanisms], level: 2)
+  My first thought for a mechanism to move the triballs is something similar to the bots we see for FRC's Charged Up. A long arm with flex wheels that spin to grab the triballs. The climbing mechanism is much more difficult. The real question is whether we use the same mechanism as the triball collector for this, and whether that's feasible to build. The hardest part to me seems like getting a consistent hold on the PVC pipe. It is very inconvenient that  the pole is vertical, which will make it very hard to maintain a grip. 
+  
+  #nb_heading([Drivetrain], level: 2)
+  Our drivetrain is the core of our robot, and is easily the most important part to get right. Due to the lack of heavy objects, torque is much less important than speed. We can use a similar gear ratio to our robot during the Spin Up Season, or maybe even higher. The real question is whether we can get a six motor drive. If we can get the triball grabbing and bot lifting on two motors that would be amazing, but I'm not sure if it's possible.
+  
+  The weight of the drive (and the bot overall) is also very important. If we were considering a steel drivetrain before, we certainly should not be now. We need to be as light as possible to make lifting our robot as easy as possible.
+  
+  The ability of our bot to cross the middle line is also very important due to the ramification of having a bot of our alliance on our side of the field. If we can quickly switch sides, it will mean that we can quickly shut down our opponents defense without even interacting with their robot.
+  
+  #nb_heading([Programming], level: 2)
+  As always, consistent chassis movement is the key to a perfect auton. Using an absolute positioning system like GPS or Odometry can make this much easier, because it allows the robot to correct for past error, or even external interference. There are also many different motion control algorithms we can use, like PID and/or motion profiling. Overall, tracking wheels and an IMU will be a must, but these sensors might have some difficulty when we cross the center line, due to the bot leaving the ground. In addition, if our robot is high off the ground, we may have some trouble getting the tracking wheels to touch the ground. 
+  
+  #nb_heading([John], level: 1)
+  I think that the best intake for this season would easily be one with horizontal flex wheels. This would allow the bot to reach under the goal easier and also could be easier to build. We will most definitely need a shooting mechanism (a catapult would work best, and we have more experience with such building). We will also need some sort of scissor lift to lift the bot. All of these systems will require a motor, so we will need a four motor drive. This means that we can spare a motor on the claw for lifting the bot. We will want a fast drive with the center locked omni.
+  
+  
+  #nb_heading([Alan], level: 1)
+  At first I was very surprised by this game as it seemed that the results of a match would be decided in the first few seconds. However, upon further review I noticed the heavily weighted importance on match loads (22 match loads with only 12 game pieces on the field). This makes an intake that is able to get match loads necessary. I also began thinking of ways to climb the pole, as that makes up a big amount of points. My initial idea is a claw with two flex wheels on the inside, so the claw could clamp on to the pole and the wheels could rotate and drag the robot upwards. A lot of torque will be necessary but it may be doable. 
+  
+  \
+  \
 
+  #nb_admonition(type: "note", [
+    Meghana was not a part of the team when the game was revealed, so we did not record a take from her.
+  ])
 
-#nb_heading([Scoring Mechanisms], level: 2)
-My first thought for a mechanism to move the triballs is something similar to the bots we see for FRC's Charged Up. A long arm with flex wheels that spin to grab the triballs. The climbing mechanism is much more difficult. The real question is whether we use the same mechanism as the triball collector for this, and whether that's feasible to build. The hardest part to me seems like getting a consistent hold on the PVC pipe. It is very inconvenient that  the pole is vertical, which will make it very hard to maintain a grip. 
-
-#nb_heading([Drivetrain], level: 2)
-Our drivetrain is the core of our robot, and is easily the most important part to get right. Due to the lack of heavy objects, torque is much less important than speed. We can use a similar gear ratio to our robot during the Spin Up Season, or maybe even higher. The real question is whether we can get a six motor drive. If we can get the triball grabbing and bot lifting on two motors that would be amazing, but I'm not sure if it's possible.
-
-The weight of the drive (and the bot overall) is also very important. If we were considering a steel drivetrain before, we certainly should not be now. We need to be as light as possible to make lifting our robot as easy as possible.
-
-The ability of our bot to cross the middle line is also very important due to the ramification of having a bot of our alliance on our side of the field. If we can quickly switch sides, it will mean that we can quickly shut down our opponents defense without even interacting with their robot.
-
-
-== Programming
-As always, consistency chassis movement is the key to a perfect auton. Using an absolute positioning system like GPS or Odometry can make this much easier, because it allows the robot to correct for past error, or even external interference. There are also many different motion control algorithms we can use, like PID or motion profiling. Overall, tracking wheels and an IMU will be a must, but these sensors might have some difficulty when we cross the center line, due to the bot leaving the ground. In addition, if our robot is high off the ground, we may have some trouble getting the tracking wheels to touch the ground. 
-
-#nb_heading([John], level: 1)
-I think that the best intake for this season would easily be one with horizontal flex wheels. This would allow the bot to reach under the goal easier and also could be easier to build. We will most definitely need a shooting mechanism (a catapult would work best, and we have more experience with such building). We will also need some sort of scissor lift to lift the bot. All of these systems will require a motor, so we will need a four motor drive. This means that we can spare a motor on the claw for lifting the bot. We will want a fast drive with the center locked omni.
-
-
-#nb_heading([Alan], level: 1)
-At first I was very surprised by this game as it seemed that the results of a match would be decided in the first few seconds. However, upon further review I noticed the heavily weighted importance on match loads (22 match loads with only 12 game pieces on the field). This makes an intake that is able to get match loads necessary. I also began thinking of ways to climb the pole, as that makes up a big amount of points. My initial idea is a claw with two flex wheels on the inside, so the claw could clamp on to the pole and the wheels could rotate and drag the robot upwards. A lot of torque will be necessary but it may be doable. 
-
-\
-\
-// TODO: replace with admonition
-*Note:*
-
-Meghana was not a part of the team when the game was revealed, so we did not record a take from her.
+  // TODO: get Meghana's post reveal thoughts
 
   ]
 
@@ -87,7 +96,7 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
 #create_entry(
   title: "Identify Game Rules",
   type: "identify",
-  date: datetime(year: 2023, month: 4, day: 13),
+  start_date: datetime(year: 2023, month: 5, day: 13),
   [
     
   We first need to read and analyze the game rules in order to identify the challenges we'll need to solve.
@@ -161,8 +170,6 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
 
   )
 
-  // TODO: Change these to nb headings
-  
   #nb_heading([Scoring], level: 1)
 
   - each triball in a goal is worth 5 points
@@ -202,55 +209,64 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
   #nb_heading([SG8], level: 2)
   - A robot cannot enter an alliance's goal unless they are double zoned
 
+  #nb_heading([SC7], level: 2)
+  - Alliances get an autonomous win point if they do the following tasks in the autonomous period:
+    - Remove triball from alliance match load zone
+    - Score triball in alliance goal
+    - End autonomous period with robot touching elevation bar
+
   #nb_heading([R12], level: 2)
   - The motors on a robot are limited to a total of 88W. The robot can have any combination of 11W and 5.5W motors. This means that robots can now have up to 16 motors.
 
   #nb_heading([Conclusion], level: 1)
-  Overall, Over Under is a very interesting season. We find it especially interesting that robots can only hold one triball at a time, and that triballs can be loaded directly into the robot in the load-zone.
+  Overall, Over Under is a unique and intruiging season, and we are excited to get started. We find it especially interesting that robots can only hold one triball at a time, and that triballs can be loaded directly into the robot in the load-zone. In addition, the newly legal 5.5W motors allow for a large amount of new designs that were not possible before.
 
   After reading through the rules we identified these capabilities that our bot will need to have:
   - Needs to be able to pick up/put down match loads.
   - Needs to be able to climb.
-  - Needs to have an auton.
-  - Needs to be able to drive.
+  - Needs to be able to complete tasks during the autonomous period.
+  - Needs to be able to traverse the field.
   - Needs to be able to score triballs in offensive goal.
   ]
 
-
-
-  // TODO:
-  // add conclusion
-  // subsystems we'll have to design
-  // awp requirements
 )
 
-
-
 #create_entry(
-  title: "Create Schedule",
+  title: "Team Organization",
   type: "management",
-  date: datetime(year: 2023, month: 4, day: 19),
+  start_date: datetime(year: 2023, month: 5, day: 13),
   [
-    We created a schedule to give us a rough timeline of when we need to get things done by, up until the first competition of the season. We decided to use a gantt chart for this because it represents the diffent overlapping tasks and how long they take in a nice visual manner. Our team typically meets twice a week, for 3 hours at a time, so we've organized the chart on a weekly basis.
 
-    // TODO: add time for planning, expand document upper subsystems, no one knows what LemLib is yet.
+    #nb_heading([Design Process], level: 1)
+    As stated in the pre reveal reflection we identified that our largest problem during the last season was our lack of structure and organization. In order to adress this issue we decided to have a set of steps for builders to follow while creating a system:
+    - Brainstorm possible designs
+    - Choose best design
+    - Create design in CAD
+    - Have design reviewed by fellow teamates and/or alumni
+    - If the design passed review, build it
+    - Test the system
+    - Iterate again
+
+    The crucial steps here are the design in CAD and review. CAD by itself cannot verify that the design will work in the real world, but the more eyes we can put on the design before building, the more mistakes we can catch. 
+
+    Overall these two steps will make our designs much more error free, and save us time in the long run.
+
+    #nb_heading([Schedule], level: 1)
+     
+    We created a schedule to get us a rough timeline of deadlines to help us meet our targets before the first competition of the season. We opted to use a Gantt chart for this because it represents the different overlapping tasks visually. This should help us meet our goal of staying more organized. Our team typically meets twice a week, for 3 hours at a time, so we've organized the chart on a weekly basis.
+
     #image("./assets/mermaid/gantt.svg")
 
     We decided to dedicate the most time to building the subsystems, as these are easily the hardest part of the robot to build. We've also planned a 4 week cutoff before the first competition to give us time to test the robot thoroughly.
 
     Once the first competition happens we will update this schedule further.
-
-
-
-
-
   ]
 )
 
 #create_entry(
-  title: "Brainstorming Drivetrain Type",
+  title: "Brainstorming Drivetrain Components",
   type: "brainstorm",
-  date: datetime(year: 2023, month: 4, day: 19),
+  start_date: datetime(year: 2023, month: 5, day: 19),
   [
     #nb_heading([Drivetrain Type], level: 1)
 
@@ -270,7 +286,7 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
         ],
       ),
       align(center,
-        image("./assets/mecanum-drive.svg", width: 50%),
+        image("./assets/drivetrain/mecanum-drive.svg", width: 50%),
       )
     )
 
@@ -292,7 +308,7 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
           ],
       ),
       align(center,
-        image("./assets/onmi-drive.svg", width: 50%),
+        image("./assets/drivetrain/onmi-drive.svg", width: 50%),
       )
     )
 
@@ -476,29 +492,63 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
 #create_entry(
   title: "Choosing Drivetrain Type",
   type: "decide",
-  date: datetime(year: 2023, month: 4, day: 19),
+  start_date: datetime(year: 2023, month: 5, day: 19),
   [
     #nb_heading([Drivetrain Type], level: 1)
 
-    We placed all our options into a decision matrix in order to find the best option. We rated each option's speed, strength, and handling on a scale of 0 to 3. Speed is simly how fast the drivetrain can go. Strength is the ability of the drive to push and resist pusing. It takes into account the torque of the drive, as well as it's traction.
+    We placed all our options into a decision matrix in order to find the best option. We rated each option's speed, strength, and handling on a scale of 0 to 3. Speed is simply how fast the drivetrain can go. Strength is the ability of the drive to push and resist other robots. It takes into account the torque of the drive, as well as it's traction.
 
     #nb_decision_matrix(
       properties: ("Speed", "Strength", "Handling"),
       choices: (
-        ("Omni Wheels", 2, 2, 2),
-        ("Traction Wheels", 2, 3, 1),
-        ("Traction and Omni Wheels", 3, 3, 2),
+        ("Omni Wheels", 2.5, 2, 2.5),
+        ("Traction Wheels", 2.5, 3, 1),
+        ("Traction and Omni Wheels", 2.5, 2.5, 1.5),
         ("Mecanum", 2, 1, 3),
-        ("X Drive", 3, 1, 3),
+        ("X-Drive", 2.5, 0.5, 3),
       )
     )
+    #nb_admonition(type: "decision", [
+      We ended up choosing the all omni drive due to its great turning and speed. While an X drive of the same gearing could be faster, the prevalence of 6 motor drivetrains means that any skid-steer chassis will be comparable have a comparable speed due to the X-Drive's inability to have more than 4 motors.
+    ])
+    // TODO: add glossary entry (skid-steer)
 
-    We chose the traction and omni wheel drive, due to its high strenth and handling.
-
-    // TODO: add images of modeled drivetrains.
-    
     #nb_heading([Gear Ratio, Wheel Size, and Cartridge Type], level: 1)
-    Now that we had decided on our type of drivetrain we can decide the other components. We decided on 4 combinations of gear ratio, wheel sizes and motor cartridge, and rated each for their speed, torque, and manueverability on a scale of 0 to 5.
+
+    Now that we had decided on our type of drivetrain we can decide the other components. We decided on 4 combinations of gear ratio, wheel sizes and motor cartridge, which are detailed below:
+    #v(40pt)
+    #grid(columns: (1fr, 1fr),
+    [
+      #nb_heading([6:3, 4" wheels, green cartridges], level: 2)
+      - 400 RPM
+      - 7 f/s
+    ],
+    image("./assets/drivetrain/6:3-4.png"),
+
+    [
+      #nb_heading([3:5, 3.25" wheels, green cartridges], level: 2)
+      - 360 RPM
+      - 5.1 f/s
+    ],
+    image("./assets/drivetrain/3:5-3_25.png"),
+
+    [
+      #nb_heading([3:5, 4" wheels, green cartridges], level: 2)
+      - 360 RPM
+      - 6.47 f/s
+    ],
+    image("./assets/drivetrain/3:5-4.png"),
+
+    [
+      #nb_heading([4:7, 4" wheels, green cartridges], level: 2)
+      - 342 RPM
+      - 6.17 f/s
+    ],
+    image("./assets/drivetrain/4:7-4.png"),
+
+    )
+
+    We then rated each one for their speed, torque, and manueverability on a scale of 0 to 5.
 
     #nb_decision_matrix(
       properties: ("Speed", "Strength", "Manueverability"),
@@ -510,24 +560,26 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
       )
     )
 
-    While mocking up the designs in CAD we discovered that the drivetrain with the 3:5 gear ratio and the 4" wheels could not be built due to some of its gears not meshing. Due to this, it did not get rated.
+    #nb_admonition(type: "note", [
+      While mocking up the designs in CAD we discovered that the drivetrain with the 3:5 gear ratio and the 4" wheels could not be built due to some of its gears not meshing. This is an excellent example of how our work with CAD is already paying off. If we had discovered this issue while building it would have taken much longer to fix.
+    ])
 
 
-    We settled on a drivetrain with a 4:7 gear ratio, 4" wheels, and blue cartridges, leaving us with a final RPM of 360, and a final speed of 6.7 feet/second.
-
-    #pagebreak()
+    #nb_admonition(type: "decision", [
+      We settled on a drivetrain with a 4:7 gear ratio, 4" wheels, and blue cartridges, leaving us with a final RPM of 360, and a final speed of 6.7 feet/second.
+    ])
 
     #nb_heading([Final Drivetrain Design], level: 1)
 
     #align(center, [
-      #image("./assets/drivetrain-cad-side.png", width: 80%)
-      #image("./assets/drivetrain-cad-top.png", width: 75%)
+      #image("./assets/drivetrain/drivetrain-cad-side.png", width: 80%)
+      #image("./assets/drivetrain/drivetrain-cad-top.png", width: 75%)
     ])
 
     #pagebreak()
 
     #align(center, [
-      #image("./assets/drivetrain-drawing.png") \
+      #image("./assets/drivetrain/drivetrain-drawing.png") \
     ])
 
   ]
@@ -536,7 +588,8 @@ Meghana was not a part of the team when the game was revealed, so we did not rec
 #create_entry(
   title: "Building the Drivetrain",
   type: "build",
-  date: datetime(year: 2023, month: 6, day: 14),
+  start_date: datetime(year: 2023, month: 6, day: 14),
+  end_date: datetime(year: 2023, month: 6, day: 22),
   [
   We did some pretty cool stuff
   ]

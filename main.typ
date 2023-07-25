@@ -9,6 +9,10 @@
   season: "Over Under 2023 - 2024",
 )
 
+#include "about.typ"
+
+#nb_toc()
+
 #include "introduction.typ"
 
 #print_entries()
