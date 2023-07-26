@@ -1,5 +1,7 @@
 # 53E Notebook 2023-2024
 
+[![Build Typst document](https://github.com/Area-53-Robotics/53E-Notebook/actions/workflows/build.yml/badge.svg)](https://github.com/Area-53-Robotics/53E-Notebook/actions/workflows/build.yml)
+
 Welcome to 53E's notebook for the over under season.
 
 ## How to Compile
