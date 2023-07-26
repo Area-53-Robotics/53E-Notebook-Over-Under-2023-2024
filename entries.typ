@@ -2,8 +2,6 @@
 
 // TODO: split this into multiple files
 
-
-
 #create_entry(
   title: "Pre Reveal Thoughts",
   type: "identify",
@@ -36,7 +34,7 @@
     #nb_heading([Programming], level: 2)
     
     - Implement odometry
-    - Program an auton routine that can cross the field with minimal error buildup.
+    - Program an autonomous routine that can cross the field with minimal error buildup.
     
     Overall we are much better prepared for this season than we were the last. Our team is much more capable, not just in the realm of design and building, but also in our ability to write powerful and reliable software.
 
@@ -78,15 +76,15 @@
   
   #nb_heading([Alan], level: 1)
   At first I was very surprised by this game as it seemed that the results of a match would be decided in the first few seconds. However, upon further review I noticed the heavily weighted importance on match loads (22 match loads with only 12 game pieces on the field). This makes an intake that is able to get match loads necessary. I also began thinking of ways to climb the pole, as that makes up a big amount of points. My initial idea is a claw with two flex wheels on the inside, so the claw could clamp on to the pole and the wheels could rotate and drag the robot upwards. A lot of torque will be necessary but it may be doable. 
-  
-  \
-  \
+
+
+  #nb_heading([Meghana], level: 1)
 
   #nb_admonition(type: "note", [
-    Meghana was not a part of the team when the game was revealed, so we did not record a take from her.
+    Meghana joined the team after the season started, so her thoughts may be influenced by the ideas of other teammates.
   ])
 
-  // TODO: get Meghana's post reveal thoughts
+  After watching the video, I believe that we could create a strong claw mechanism which can grip the pole firmly, as it gets the most amount of points. It should be able to hold the weight as well. For the robots, they should be faster in speed but have flexible and firm wheels which can improve the accuracy of movements. Autonomous points and the winner of the autonomous period is a large headstart in the game and would also be helped by the wheels and speed.
 
   ]
 
@@ -511,47 +509,93 @@
     #nb_admonition(type: "decision", [
       We ended up choosing the all omni drive due to its great turning and speed. While an X drive of the same gearing could be faster, the prevalence of 6 motor drivetrains means that any skid-steer chassis will be comparable have a comparable speed due to the X-Drive's inability to have more than 4 motors.
     ])
-    // TODO: add glossary entry (skid-steer)
+  ])
+
+#create_entry(
+  title: "Brainstorm Drivetrain Configuration",
+  type: "brainstorm",
+  start_date: datetime(year: 2023, month: 5, day: 19),
+  [
+
 
     #nb_heading([Gear Ratio, Wheel Size, and Cartridge Type], level: 1)
 
     Now that we had decided on our type of drivetrain we can decide the other components. We decided on 4 combinations of gear ratio, wheel sizes and motor cartridge, which are detailed below:
     #v(40pt)
-    #grid(columns: (1fr, 1fr),
-    [
-      #nb_heading([6:3, 4" wheels, green cartridges], level: 2)
-      - 400 RPM
-      - 7 f/s
-    ],
-    image("./assets/drivetrain/6:3-4.png"),
+    #grid(
+      columns: (1fr, 1fr),
+      gutter: 5pt,
+      [
+        #nb_heading([6:3, 4" wheels, green cartridges], level: 2)
+        - 400 RPM
+        - 7 feet/second
+        - 14" long
+        #nb_pro_con(pros: [
+          - very fast
+          - large wheels make traversal easier
+          ], cons: [
+          - low torque
+          ])
+      ],
+      image("./assets/drivetrain/6:3-4.png"),
 
-    [
-      #nb_heading([3:5, 3.25" wheels, green cartridges], level: 2)
-      - 360 RPM
-      - 5.1 f/s
-    ],
-    image("./assets/drivetrain/3:5-3_25.png"),
+      [
+        #nb_heading([3:5, 3.25" wheels, green cartridges], level: 2)
+        - 360 RPM
+        - 5.1 feet/second
+        - 14" long
+        #nb_pro_con(pros: [
+          - higher torque
+          ], cons: [
+          - small wheels make traversal difficult
+          - slow
+          ])
 
-    [
-      #nb_heading([3:5, 4" wheels, green cartridges], level: 2)
-      - 360 RPM
-      - 6.47 f/s
-    ],
-    image("./assets/drivetrain/3:5-4.png"),
+      ],
+      image("./assets/drivetrain/3:5-3_25.png"),
 
-    [
-      #nb_heading([4:7, 4" wheels, green cartridges], level: 2)
-      - 342 RPM
-      - 6.17 f/s
-    ],
-    image("./assets/drivetrain/4:7-4.png"),
+      [
+        #nb_heading([3:5, 4" wheels, green cartridges], level: 2)
+        - 360 RPM
+        - 6.47 feet/second
+        - 14" long
+        #nb_pro_con(pros: [
+          - speed
+          - compact gears
+          ], cons: [
+            - low torque
+          ])
+      ],
+      image("./assets/drivetrain/3:5-4.png"),
+
+      [
+        #nb_heading([4:7, 4" wheels, green cartridges], level: 2)
+        - 342 RPM
+        - 6.17 feet/second
+        - 14" long
+        #nb_pro_con(pros: [
+          - speed
+          - large wheels make traversal easier
+          ], cons: [
+            - low torque
+          ])
+
+      ],
+      image("./assets/drivetrain/4:7-4.png"),
 
     )
 
-    We then rated each one for their speed, torque, and manueverability on a scale of 0 to 5.
+])
+
+#create_entry(
+  title: "Choose Drivetrain Configuration",
+  type: "decide",
+  start_date: datetime(year: 2023, month: 5, day: 19),
+  [
+    We then rated each configuration for it's speed, strength, and maneuverability on a scale of 0 to 5.
 
     #nb_decision_matrix(
-      properties: ("Speed", "Strength", "Manueverability"),
+      properties: ("Speed", "Strength", "Maneuverability"),
       choices: (
         ("6:3, 4\" wheels, green cartridges", 5, 2, 3),
         ("3:5, 3.25\" wheels, blue cartridges", 3, 4, 2),
