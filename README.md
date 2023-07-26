@@ -4,6 +4,12 @@
 
 Welcome to 53E's notebook for the over under season.
 
+## Rendered PDF
+
+You can downloaded the rendered version of this notebook under [releases](https://github.com/Area-53-Robotics/53E-Notebook/releases) as a pdf. We will make a release after each tournament we go to.
+
+Alternatively you can download the latest version, which gets built automatically after every commit. You can find it by going to the ["Actions"](https://github.com/Area-53-Robotics/53E-Notebook/actions) tab on this repository, clicking the latest action run. You will then be able to find a zip file containing the pdf under "Artifacts".
+
 ## How to Compile
 
 1. Install the required fonts
