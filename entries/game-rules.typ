@@ -1,4 +1,6 @@
-#import "/template/entries.typ": *
+#import "/template/entries.typ": create_entry
+#import "/template/widgets.typ": *
+
 
 #create_entry(
   title: "Identify Game Rules",

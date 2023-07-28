@@ -1,5 +1,7 @@
-#import "/template/entries.typ": *
-#import "/template/colors.typ": *
+#import "/template/entries.typ": create_entry
+#import "/template/widgets.typ": *
+
+
 
 #create_entry(
   title: "Team Organization",
