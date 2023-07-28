@@ -17,4 +17,4 @@
 - *PROS:* An api developed by students at Purdue, used to control vex robots.
 - *Odometry:* A method of tracking the position of the robot in cartesian coordinates developed by team 5225, the Pilons.
 - *Absolute Movement:* Movement that is in relation to a fixed point, rather than relative to itself.
-- *Tank Drive:*  A driver control method where the left joystick controls the left wheels of the bot, and the right joystick controls the right side of the bot.
+- *Tank Drive:* A driver control method where the left joystick controls the left wheels of the bot, and the right joystick controls the right side of the bot.

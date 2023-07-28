@@ -15,6 +15,8 @@
       devShell = pkgs.mkShell {
         packages = with pkgs; [
           typst
+          typst-lsp
+          typst-fmt
           nodePackages_latest.mermaid-cli
         ];
       };

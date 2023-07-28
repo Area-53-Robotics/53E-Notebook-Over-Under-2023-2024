@@ -6,43 +6,64 @@
   organization: "",
   cover: "",
   season: "",
-  body
+  about: [],
+  intro: [],
+  appendix: [],
+  body,
 ) = {
-
+  // Styling rules
   set text(
     font: "Calibri",
     size: 11pt,
   )
 
-  align(center, [
-    #set heading()
-    // Title Page
-    //
-    #text(
-      size: 50pt,
-      font: "Tele-Marines"
-    )[#organization]
-      
-    #line(length: 100%, stroke: (thickness: 3pt, cap: "round"))
+  set heading()
 
-    #v(1fr)
+  show link: underline
 
-    #image(cover, width: 50%)
+  // Content
 
-    #v(1fr)
+  align(
+    center,
+    [
+      // Title Page
 
-    #text(
-      size: 40pt, 
-      font: "Tele-Marines"
-    )[
-      #season
+      #text(
+        size: 50pt,
+        font: "Tele-Marines",
+      )[#organization]
 
-      #team
-    ]
-  ])
+      #line(
+        length: 100%,
+        stroke: (thickness: 3pt, cap: "round"),
+      )
+
+      #v(1fr)
+
+      #image(cover, width: 50%)
+
+      #v(1fr)
+
+      #text(
+        size: 40pt,
+        font: "Tele-Marines",
+      )[
+          #season
+
+          #team
+        ]
+    ],
+  )
 
   pagebreak()
 
-  
-  body
+  about
+
+  nb_toc()
+
+  intro
+
+  print_entries()
+
+  appendix
 }
