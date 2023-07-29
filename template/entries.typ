@@ -4,7 +4,6 @@
 
 // formatting utilities
 
-
 #let entries = state("entries", ())
 
 #let create_entry(
@@ -52,6 +51,7 @@
             ])
 
           #nb_heading([#nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.start_date.display("[year]/[month]/[day]")])
+          #counter(footnote).update(0)
 
           #entry.body
         ]

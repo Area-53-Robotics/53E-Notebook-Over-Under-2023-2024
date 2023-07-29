@@ -1,7 +1,6 @@
 #import "/template/entries.typ": create_entry
 #import "/template/widgets.typ": *
 
-
 #create_entry(
   title: "Deciding Drivetrain Configuration",
   type: "decide",

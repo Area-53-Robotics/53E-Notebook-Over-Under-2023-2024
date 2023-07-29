@@ -1,4 +1,5 @@
 #import "./globals.typ": appendix_page_counter
+#import "./colors.typ": *
 
 #let nb_frontmatter_footer() = {
   appendix_page_counter.step()
@@ -60,6 +61,11 @@
       color: gray,
       [ #image("icons/bar-chart.svg", height: 0.7em) ],
     ) #if long [ #h(5pt) *Project Management* ]
+  ] else if label == "notebook" [
+    #nb_highlight(
+      color: pink,
+      [ #image("icons/page.svg", height: 0.7em) ],
+    ) #if long [ #h(5pt) *Notebook Metadata* ]
   ] else {
     panic("invalid option passed to label funtion")
   }
@@ -166,6 +172,8 @@
     title = "Final Decision"
     icon = "./icons/target.svg"
     color = blue
+  } else {
+    panic("invalid admonition type")
   }
 
   rect(

@@ -1,16 +1,16 @@
 #import "/template/entries.typ": create_entry
 #import "/template/widgets.typ": *
 
-
 #create_entry(
   title: "Building the Drivetrain",
   type: "build",
   start_date: datetime(year: 2023, month: 7, day: 14),
   end_date: datetime(year: 2023, month: 7, day: 22),
   [
+    Once we completed our CAD design of our robot, we were able to begin building it. Due to most of our team being on vacation at this time, Alan was the only one building on the drivetrain.
     #grid(
       columns: (1fr, 1fr),
-      gutter: 5pt,
+      gutter: 20pt,
       [
         #nb_heading([2023/07/14], level: 1)
         1. Cut full length C-channel down to 30 holes in order to make the long bars on the side.
@@ -29,6 +29,9 @@
         #nb_heading([2023/07/21], level: 1)
         1. Cut 3 30 long C-channels to serve as the perpendicular braces
         2. Mounted the 30 long C-channels to the other 30 long C-channels from before
+        #nb_admonition(type: "note", [
+          We did not have the required 84 tooth gears and 4" omni wheels required to finish the drivetrain, so we'll have to wait till they arrive.
+        ])
       ],
       image("/assets/drivetrain/build-log/3.jpg"),
       image("/assets/drivetrain/build-log/4.jpg"),
@@ -48,7 +51,6 @@
 
       ],
     )
-
 
   ],
 )

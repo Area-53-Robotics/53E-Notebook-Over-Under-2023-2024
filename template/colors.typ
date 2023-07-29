@@ -24,7 +24,7 @@
 #let white = rgb("#ffffff")
 #let black = rgb("#000000")
 
-// #let primary = green
+#let primary = green
 #let secondary = light_green
 #let background = white
 #let surface_0 = rgb("#F5F5F5")

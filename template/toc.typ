@@ -7,13 +7,6 @@
     [
       #nb_heading([Table of Contents])
 
-      // TODO: do this automatically somehow
-      #nb_heading([Introduction], level: 1)
-
-      Who We Are \
-      Our Team \
-      \
-
       #nb_heading([Entries], level: 1)
       #locate(
         loc => {
@@ -59,6 +52,9 @@
       #nb_heading([Appendix], level: 1)
 
       Glossary \
+      #counter(page).update(_ => 0) //FIXME: this should not be here
+      // Functions that depend on state like counter are actually content,
+      // meaning that this creates a new page if used in the template
 
     ],
   )

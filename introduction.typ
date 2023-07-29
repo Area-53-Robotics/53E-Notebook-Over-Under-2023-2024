@@ -2,15 +2,6 @@
 #import "/template/colors.typ" : *
 #import "/template/widgets.typ" : *
 
-#page(
-  footer: [#nb_frontmatter_footer()],
-  [
-    #nb_heading([Who We Are])
-    VRC Team 53E is part of the Area 53 Alien Raiders robotics club at Eleanor Roosevelt High School, which resides in Greenbelt, Maryland. The team has a long history, starting back in 2015 with the season Nothing But Net.
-
-    At the time, the team was composed of several sophomores, who all graduated in 2018. In the following year, the team was restarted as an all freshman team who went onto compete in both the Turning point and Tower Takeover seasons with much improving success. Unfortunately the team was broken up during the 2020/2021 season Change Up due to the subsequent nature of the Pandemic. We returned during the Tipping Point Season, and have continued to compete through the Spin Up season.
-  ],
-)
 
 #page(
   footer: [
@@ -18,6 +9,11 @@
   ],
   [
     #nb_heading([Our Team])
+
+    VRC Team 53E is part of the Area 53 Alien Raiders robotics club at Eleanor Roosevelt High School, which resides in Greenbelt, Maryland. The team has a long history, starting back in 2015 with the season Nothing But Net. 
+
+    At the time, the team was composed of several sophomores, who all graduated in 2018. In the following year, the team was restarted as an all freshman team who went onto compete in both the Turning point and Tower Takeover seasons with much improving success. Unfortunately the team was broken up during the 2020/2021 season Change Up due to the subsequent nature of the Covid-19 pandemic. We returned after the pandemic with one of the original freshman returning as leader for his senior year. We have continued since then, competing in Spin Up, and now Over Under.
+
 
     // TODO: move to template
     #let nb_member(name: "", picture: "", body) = [
@@ -96,9 +92,6 @@
           ],
         )
       ]
-    #counter(page).update(_ => 0) //FIXME: this should not be here
-    // Functions that depend on state like counter are actually content,
-    // meaning that this creates a new page if used in the template
 
   ],
 )
