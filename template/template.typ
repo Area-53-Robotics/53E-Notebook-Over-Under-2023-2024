@@ -1,5 +1,6 @@
-#import "entries.typ": *
-#import "toc.typ": *
+#import "./entries.typ": *
+#import "./toc.typ": *
+#import "./colors.typ": *
 
 #let notebook(
   team: "",
@@ -18,8 +19,18 @@
   )
 
   set heading()
+  set footnote.entry(
+    separator: none
+  )
 
-  show link: underline
+  show link: it => [
+    #text(fill: blue,[ _ #it _ ])
+  ]
+
+  show figure: it => align(center)[
+   #it.body
+    _ #it.caption _ 
+  ] 
 
   // Content
 
@@ -28,29 +39,26 @@
     [
       // Title Page
 
-      #text(
-        size: 50pt,
-        font: "Tele-Marines",
-      )[#organization]
 
-      #line(
-        length: 100%,
-        stroke: (thickness: 3pt, cap: "round"),
-      )
 
-      #v(1fr)
-
-      #image(cover, width: 50%)
-
-      #v(1fr)
 
       #text(
-        size: 40pt,
+        size: 24pt,
         font: "Tele-Marines",
       )[
-          #season
+          #text(size: 28pt)[
+            Engineering Notebook
+          ]
 
-          #team
+          #image(cover, height: 70%)
+
+          2023 - 2024
+          #line(
+            length: 50%,
+            stroke: (thickness: 2.5pt, cap: "round"),
+          )
+          Over Under
+
         ]
     ],
   )
@@ -59,9 +67,9 @@
 
   about
 
-  nb_toc()
-
   intro
+
+  nb_toc()
 
   print_entries()
 

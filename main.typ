@@ -5,7 +5,7 @@
 #show: notebook.with(
   team: "53E",
   organization: "Area 53",
-  cover: "/assets/logo-cut.png",
+  cover: "/assets/53E-logo-jank.png",
   season: "Over Under 2023 - 2024",
   about: [
     #include "about.typ"
