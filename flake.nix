@@ -2,22 +2,27 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
+    typstfmt.url = "github:astrale-sharp/typstfmt";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    utils,
-  }:
-    utils.lib.eachDefaultSystem (system: let
-      pkgs = import nixpkgs {inherit system;};
-    in {
+  outputs =
+    { self
+    , nixpkgs
+    , utils
+    , typstfmt
+    ,
+    }:
+    utils.lib.eachDefaultSystem (system:
+    let
+      pkgs = import nixpkgs { inherit system; };
+    in
+    {
       devShell = pkgs.mkShell {
-        packages = with pkgs; [
-          typst
-          typst-lsp
-          typst-fmt
-          nodePackages_latest.mermaid-cli
+        packages = [
+          pkgs.typst
+          pkgs.typst-lsp
+          typstfmt.packages.${system}.default
+          pkgs.nodePackages_latest.mermaid-cli
         ];
       };
 

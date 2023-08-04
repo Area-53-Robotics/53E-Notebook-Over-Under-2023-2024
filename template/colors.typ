@@ -1,7 +1,7 @@
 // I chose to use the material design pallete 2014 colors, specifically the A100 variants.
 // I found these to be light enough to where the colors didn't stop text from being read,
 // but not too light as to where the color was unrecognizable.
-//
+
 #let red = rgb("#FF8A80")
 #let pink = rgb("#FF80AB")
 #let purple = rgb("#EA80FC")

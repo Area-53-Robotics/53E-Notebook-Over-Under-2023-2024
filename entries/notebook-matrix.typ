@@ -6,30 +6,31 @@
   type: "notebook",
   start_date: datetime(year: 2023, month: 7, day: 28),
   [
-    During the decide step of the engineering design process we often use a tool called a decision matrix. In order to make this process easier we wrote this Typst function:
-    ```typ
-    #let nb_nb_decision_matrix(properties: (), choices: ()) = {
+  During the decide step of the engineering design process we often use a tool called a decision matrix. In order to make this process easier we wrote this Typst function:
+  ```typ
+    #let nb_decision_matrix(properties: (), choices: ()) = {
       for choice in choices {
         if not (choice.len() - 1) == properties.len() {
           panic("a choice did not have the right amount of properties")
         }
       }
 
-      let totaled_choices = choices.map(
-        choice => {
-          let total = 0
-          for element in choice {
-            if type(element) == "integer" or type(element) == "float" { total += element }
-          }
-          choice + (total,)
-        })
+      let totaled_choices = choices.map(choice => {
+        let total = 0
+        for element in choice {
+          if type(element) == "integer" or type(element) == "float" { total += element }
+        }
+        choice + (total,)
+      })
 
       let highest = (index: 0, value: 0)
-      for choice in totaled_choices {
+
+      for (index, choice) in totaled_choices.enumerate() {
         if choice.at(choice.len() - 1) > highest.value {
-          highest.index += 1
+          highest.index = index + 1
           highest.value = choice.at(choice.len() - 1)
         }
+        [ #choice #choice.at(choice.len() - 1) #highest.value \ ]
       }
 
       table(
@@ -47,34 +48,33 @@
         },
       )
     }
-    ```
-    #pagebreak()
-    This code automatically calculates the total for each choice that we are comparing, and also finds the highest total. It then finds the row with the highest total, and then highlights that row green.
+  ```
+  #pagebreak()
+  This code automatically calculates the total for each choice that we are comparing, and also finds the highest total. It then finds the row with the highest total, and then highlights that row green.
 
-    Here's an example of this function in use:
+  Here's an example of this function in use:
 
-    This code:
+  This code:
 
-    ```typ
-     #nb_decision_matrix(
-     properties: ("Crunchiness", "Versatility", "Flavour"),
-     choices: (
-     ("Sweet Potato", 1, 2, 5),
-     ("Red Potato", 2, 3, 2),
-     ("White Potatoes", 4, 5, 2),
-     ),
-     )
-     ```
-
-    Renders this table:
+  ```typ
     #nb_decision_matrix(
       properties: ("Crunchiness", "Versatility", "Flavour"),
       choices: (
         ("Sweet Potato", 1, 2, 5),
         ("Red Potato", 2, 3, 2),
-        ("White Potatoes", 4, 5, 2),
+        ("White Potato", 4, 5, 2),
       ),
     )
+    ```
+  Renders this table:
+  #nb_decision_matrix(
+    properties: ("Crunchiness", "Versatility", "Flavour"),
+    choices: (
+      ("Sweet Potato", 1, 2, 5),
+      ("Red Potato", 2, 3, 2),
+      ("White Potato", 4, 5, 2),
+    ),
+  )
 
   ],
 )

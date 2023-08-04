@@ -1,6 +1,7 @@
 #import "./entries.typ": *
 #import "./toc.typ": *
 #import "./colors.typ": *
+#import "./glossary.typ": nb_print_glossary
 
 #let notebook(
   team: "",
@@ -13,53 +14,47 @@
   body,
 ) = {
   // Styling rules
-  set text(
-    font: "Calibri",
-    size: 11pt,
-  )
+  set text(font: "Calibri", size: 11pt)
 
   set heading()
-  set footnote.entry(
-    separator: none
-  )
+  set footnote.entry(separator: none)
 
   show link: it => [
-    #text(fill: blue,[ _ #it _ ])
+  #text(fill: blue, [ _ #it _ ])
   ]
 
-  show figure: it => align(center)[
-   #it.body
-    _ #it.caption _ 
-  ] 
+  show figure: it => align(
+    center,
+  )[
+    #it.body
+    _ #it.caption _
+    ]
 
   // Content
-
   align(
     center,
     [
-      // Title Page
-
-
-
-
+    // Title Page
+    #text(
+      size: 24pt,
+      font: "Tele-Marines",
+    )[
       #text(
-        size: 24pt,
-        font: "Tele-Marines",
+        size: 28pt,
       )[
-          #text(size: 28pt)[
-            Engineering Notebook
-          ]
-
-          #image(cover, height: 70%)
-
-          2023 - 2024
-          #line(
-            length: 50%,
-            stroke: (thickness: 2.5pt, cap: "round"),
-          )
-          Over Under
-
+        Engineering Notebook
         ]
+
+      #image(cover, height: 70%)
+
+      2023 - 2024
+      #line(
+        length: 50%,
+        stroke: (thickness: 2.5pt, cap: "round"),
+      )
+      Over Under
+
+      ]
     ],
   )
 
@@ -73,5 +68,5 @@
 
   print_entries()
 
-  appendix
+  nb_print_glossary()
 }
