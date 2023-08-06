@@ -11,7 +11,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Fonts
-        run: cp assets/fonts/* /usr/share/fonts/
+        run: |
+          ls ./assets/fonts/
+          whoami
+          pwd
+          cp ./assets/fonts/* /usr/share/fonts 
+          fc-cache -f -v
       - name: Typst
         uses: lvignoli/typst-action@v0
         with:
