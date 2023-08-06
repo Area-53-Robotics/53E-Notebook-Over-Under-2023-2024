@@ -1,11 +1,10 @@
 # 53E Notebook 2023-2024
 
-[![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
 [![Build Typst document](https://github.com/Area-53-Robotics/53E-Notebook/actions/workflows/build.yml/badge.svg)](https://github.com/Area-53-Robotics/53E-Notebook/actions/workflows/build.yml)
 ![GitHub](https://img.shields.io/github/license/Area-53-Robotics/53E-notebook)
 
 
-Welcome to 53E's notebook for the over under season.
+Welcome to 53E's notebook for the Over Under season.
 
 ## Rendered PDF
 
@@ -60,5 +59,4 @@ The template that this notebook uses is licensed under [GNU General Public Licen
 
 [cc-by-sa]: http://creativecommons.org/licenses/by-sa/4.0/
 [cc-by-sa-image]: https://licensebuttons.net/l/by-sa/4.0/88x31.png
-[cc-by-sa-shield]: https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg
 
