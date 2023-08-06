@@ -13,7 +13,9 @@ jobs:
       - name: Install cargo-hack from crates.io
         uses: baptiste0928/cargo-install@v2
         with:
+          crate: typst
           git: https://github.com/typst/typst
+          tag: 0.6.0
 
       - name: Install Fonts
         run: |
