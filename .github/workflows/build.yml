@@ -15,7 +15,7 @@ jobs:
         with:
           crate: typst
           git: https://github.com/typst/typst
-          tag: 0.6.0
+          tag: v0.6.0
 
       - name: Install Fonts
         run: |
