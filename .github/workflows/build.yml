@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Install Fonts
-        echo: "installing fonts"
+        run: echo "installing fonts"
         run: cp assets/fonts/* /usr/share/fonts/
       - name: Typst
         uses: lvignoli/typst-action@v0
