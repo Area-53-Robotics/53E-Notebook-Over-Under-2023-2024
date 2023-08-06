@@ -15,7 +15,6 @@ jobs:
           mkdir -p $HOME/.local/share/fonts
           cp ./assets/fonts/* $HOME/.local/share/fonts/ 
           fc-cache -f -v
-          typst fonts
       - name: Typst
         uses: lvignoli/typst-action@v0
         with:
