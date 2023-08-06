@@ -41,7 +41,8 @@ We decided on two tracking wheels and an IMU due to just the right balance of ac
 
 #pagebreak()
 
-//TODO: remove item number or make them mean something
+#set align(center)
 
-#image("/assets/tracking-wheels/tracking-wheel-drawing.png")
+#image("../assets/tracking-wheels/part-drawings/1.png")
+#image("../assets/tracking-wheels/part-drawings/2.png")
 ]
