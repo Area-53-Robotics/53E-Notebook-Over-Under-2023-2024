@@ -32,8 +32,10 @@
     2,
   )[
     #locate(
-      loc =>{
-        for entry in glossary_entries.final(loc) [
+      loc => {
+        let sorted_glossary = glossary_entries.final(loc).sorted(key: ((title, _)) => title)
+
+        for entry in sorted_glossary [
         #nb_heading([#entry.title], level: 2)
         #entry.definition
         ]
