@@ -12,6 +12,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Install Fonts
         run: |
+          mkdir -p $HOME/.local/share/fonts
           cp ./assets/fonts/* $HOME/.local/share/fonts/ 
           fc-cache -f -v
           typst fonts
