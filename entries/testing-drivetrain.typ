@@ -11,31 +11,35 @@
   #nb_heading([Temperature and Current Draw], level: 2)
   1. Load the following code onto the robot's brain:
   ```cpp
-    #include <iostream>
-    void opcontrol() {
-      pros::Motor_Group left_motors({1, 2, 3});
-      pros::Motor_Group right_motors({-11, -12, -13});
+  int start_time = pros::millis();
+  int end_time = start_time + 1000 * 60;
 
-      while (true) {
-        // Move the motors at maximum speed
-        left_motors.move(127);
-        right_motors.move(127);
-
-        int left_motor_draw = left_motors.get_current_draws();
-        int right_motor_draw = right_motors.get_current_draws();
-
-        int left_motor_temps = left_motors.get_temperatures();
-        int right_motor_temps = right_motors.get_temperatures();
-
-        // Print data to stdout in csv format
-        printf("%f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f, %f,",
-               left_motors_draw[0], left_motors_draw[1], left_motors_draw[2],
-               right_motors_draw[0], right_motors_draw[1], right_motors_draw[2],
-               left_motor_temps[0], left_motor_temps[1], left_motor_temps[2],
-               right_motor_temps[0], right_motor_temps[1], right_motor_temps[2]);
-      }
+  while (pros::millis() < end_time) {
+    // Move the motors at maximum speed
+    if (!controller.get_digital(
+            pros::E_CONTROLLER_DIGITAL_A)) {  // Emergency stop
+      left_motors.move(127);
+      right_motors.move(127);
     }
-    ```
+
+    std::vector<std::int32_t> left_motor_draw =
+        left_motors.get_current_draw_all();
+    std::vector<std::int32_t> right_motor_draw =
+        right_motors.get_current_draw_all();
+
+    std::vector<double> left_motor_temps = left_motors.get_temperature_all();
+    std::vector<double> right_motor_temps = right_motors.get_temperature_all();
+
+    // Print data to stdout in csv format
+    printf("%i, %i, %i, %i, %i, %i, %f, %f, %f, %f, %f, %f, %i \n",
+           left_motor_draw[0], left_motor_draw[1], left_motor_draw[2],
+           right_motor_draw[0], right_motor_draw[1], right_motor_draw[2],
+           left_motor_temps[0], left_motor_temps[1], left_motor_temps[2],
+           right_motor_temps[0], right_motor_temps[1], right_motor_temps[2],
+           pros::millis());
+  pros::delay(10);  // The brain terminal cannot handle faster than this
+  }
+  ```
   2. Make sure that the motors are not above room temperature
   3. Hold the robot in the air so the wheels don't touch the ground
   4. Run the code
