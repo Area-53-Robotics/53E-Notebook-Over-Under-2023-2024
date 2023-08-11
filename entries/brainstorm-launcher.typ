@@ -2,18 +2,17 @@
 #import "/template/widgets.typ": *
 
 #create_entry(
-    title: "Brainstorm: Moving Triballs",
-    type: "brainstorm",
-    start_date: datetime(year: 2023, month: 8, day: 5)
+  title: "Brainstorm: Moving Triballs",
+  type: "brainstorm",
+  start_date: datetime(year: 2023, month: 8, day: 5),
 )[
-After discussing for a bit we realized that the only mechanism that would be able to meet our goal of being able to get the triballs across the field in under 5s is some kind of shooting mechanism. 
+  After discussing for a bit we realized that the only mechanism that would be able to meet our goal of being able to get the triballs across the field in under 5s is some kind of shooting mechanism.
 
-#nb_heading([Options], level: 1)
+  #nb_heading([Options], level: 1)
 
-#grid(
+  #grid(
     columns: 2,
     gutter: 20pt,
-
     [
     #nb_heading([Puncher], level: 2)
     #nb_pro_con(
@@ -23,11 +22,11 @@ After discussing for a bit we realized that the only mechanism that would be abl
       ],
       cons: [
       - Take up a lot of horizontal space
-     ])
+      ],
+    )
 
     ],
     image("/assets/launchers/puncher.svg"),
-
     [
     #nb_heading([Catapult], level: 2)
 
@@ -38,13 +37,11 @@ After discussing for a bit we realized that the only mechanism that would be abl
       - Easy to tune
       ],
       cons: [
-      - Cata meta :3
-      ]
-      )
+      - Cata meta :3 // TODO: change this
+      ],
+    )
     ],
-
     image("/assets/launchers/catapult.svg"),
-
     [
     #nb_heading([Flywheel], level: 2)
     #nb_pro_con(
@@ -57,10 +54,8 @@ After discussing for a bit we realized that the only mechanism that would be abl
       ],
     )
     ],
-
     image("/assets/launchers/flywheel.svg"),
+  )
 
-)
-
-]
+  ]
 

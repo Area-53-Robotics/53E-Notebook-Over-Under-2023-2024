@@ -18,7 +18,7 @@
     [
     #nb_heading([6:3, 4" wheels, green cartridges], level: 2)
     - 400 RPM
-    - 7 feet/second
+    - 6.96 feet/second
     - 14" long
     #nb_pro_con(
       pros: [
@@ -32,7 +32,7 @@
     ],
     image("/assets/drivetrain/6:3-4.png"),
     [
-    #nb_heading([3:5, 3.25" wheels, green cartridges], level: 2)
+    #nb_heading([3:5, 3.25" wheels, blue cartridges], level: 2)
     - 360 RPM
     - 5.1 feet/second
     - 14" long
@@ -49,10 +49,15 @@
     ],
     image("/assets/drivetrain/3:5-3_25.png"),
     [
-    #nb_heading([3:5, 4" wheels, green cartridges], level: 2)
+    #nb_heading([3:5, 4" wheels, blue cartridges], level: 2)
     - 360 RPM
     - 6.47 feet/second
     - 14" long
+    #nb_admonition(
+      type: "warning",
+    )[
+      This drivetrain was never fully designed because we discovered that the gears did not fully mesh. This is an early sign of our working paying off, if we had just started building right away we would not have caught this error.
+      ]
     #nb_pro_con(
       pros: [
       - speed
@@ -65,13 +70,10 @@
     ],
     image("/assets/drivetrain/3:5-4.png"),
     [
-    #nb_heading([4:7, 4" wheels, green cartridges], level: 2)
+    #nb_heading([4:7, 4" wheels, blue cartridges], level: 2)
     - 342 RPM
-    - 6.17 feet/second
+    - 5.96 feet/second
     - 14" long
-    #nb_admonition(type: "warning")[
-    This drivetrain was never fully designed because we discovered that the gears did not fully mesh. This is an early sign of our working paying off, if we had just started building right away we would not have caught this error.
-    ]
     #nb_pro_con(
       pros: [
       - speed

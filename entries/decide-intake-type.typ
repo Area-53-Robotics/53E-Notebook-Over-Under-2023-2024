@@ -7,23 +7,21 @@
   start_date: datetime(year: 2023, month: 8, day: 4),
 )[
 
-We rated each option on a scale of 1 to 5 for compression, and a scale of 1 to 3 for speed. The reason we rated compression so high is due to the triballs irregular shape, we need an intake that can easily conform to their shape.
+  We rated each option on a scale of 1 to 5 for compression, and a scale of 1 to 3 for speed. The reason we rated compression so high is due to the triballs irregular shape, we need an intake that can easily conform to their shape.
 
-#nb_decision_matrix(
-  properties: ("compression", "speed"),
-  choices: (
-    ("Claw", 2,1),
-    ("Flex Wheels", 3,3),
-    ("Sprockets and Rubber Bands", 5,3),
-    )
-)
+  #nb_decision_matrix(properties: ("compression", "speed"), choices: (
+    ("Claw", 2, 1),
+    ("Flex Wheels", 3, 3),
+    ("Sprockets and Rubber Bands", 5, 3),
+  ))
 
-#nb_admonition(type: "decision")[
-We choose the intake design with sprockets and rubber bands due to its speed, and more importantly its very high compression.
-]
+  #nb_admonition(
+    type: "decision",
+  )[
+    We choose the intake design with sprockets and rubber bands due to its speed, and more importantly its very high compression.
+    ]
 
-//TODO: show the implementation
+  //TODO: show the implementation
 
-]
-
+  ]
 

@@ -22,7 +22,7 @@
   - The drivetrain must use no more than 66Ws of motors.
 
   #nb_heading([Design Goals], level: 1)
-  - A speed faster than our drivetrain
+  - A speed faster than our drivetrain from Spin Up (4.25 f/s)
   - Bracing that keeps all essential structure of the drivetrain square
   - The ability to cross the barrier
   ] 

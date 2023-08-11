@@ -6,7 +6,7 @@
   type: "brainstorm",
   start_date: datetime(year: 2023, month: 7, day: 28),
   [
-  In order to be able to track our robot with odometry #footnote(<nb_gl>) we need sensors. Odometry requires our sensors to be able to do three things:
+  In order to be able to implement absolute positioning on our robot we will need sensors. These sensors need to be able to do three things:
   - track our movement forwards and backwards
   - track our movement side to side
   - track our rotation
@@ -14,7 +14,7 @@
   #nb_admonition(
     type: "note",
     [
-    Tracking side to side movement is not required unless the robot can strafe, but it helps majorly reduce error over time, so we've decided we want it.
+    Tracking side to side movement is not required unless the robot can strafe, but it helps majorly reduce error over time, so we've decided it would be beneficial.
     ],
   )
 

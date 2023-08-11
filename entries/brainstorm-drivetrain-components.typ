@@ -15,9 +15,11 @@
     [
     #nb_heading([Skid Steer with Omni Wheels], level: 2)
     This design uses a simple skid steer design, much like what is found on many types of small front loader vehicles. In order to mitigate the issues with dragging wheels on the ground while turning this drivetrain uses omni wheels, which can be pushed side to side as well as forward and backwards.
-    #nb_admonition(type: "note")[
-    The ability to strafe refers to the drivetrain's ability to actively move side to side, and this design can only move sideways passively.
-    ]
+    #nb_admonition(
+      type: "note",
+    )[
+      The ability to strafe refers to the drivetrain's ability to actively move side to side, and this design can only move sideways passively.
+      ]
     #nb_pro_con(
       pros: [
       - turns easily
@@ -53,7 +55,7 @@
       [Skid Steer with Traction and Omni Wheels],
       level: 2,
     )
-    This design combines the strengths of both of the previous drivetrains. It can turn easily, but it very difficult for other robots to push from the side. 
+    This design combines the strengths of both of the previous drivetrains. It can turn easily, but it very difficult for other robots to push from the side.
     #nb_pro_con(
       pros: [
       - strong traction forwards and backwards
@@ -86,9 +88,11 @@
     [
     #nb_heading([X-Drive], level: 2)
     This drivetrain is the most unique on this list because of its frame. It is a holonomic chassis, which means that is has the same freedom of movement as the mecanum drive. However, it uses omni wheels at 45$degree$ angles instead of mecanum wheels.
-    #nb_admonition(type: "warning")[
-    This drivetrain is very difficult to build correctly, and usually requires custom plastic pieces #footnote[See #link("https://wiki.purduesigbots.com/hardware/misc.-vex-parts#plastic-gussets") for more information.] in order get the angles to line up.
-    ]
+    #nb_admonition(
+      type: "warning",
+    )[
+      This drivetrain is very difficult to build correctly, and usually requires custom plastic pieces #footnote[See #link("https://wiki.purduesigbots.com/hardware/misc.-vex-parts#plastic-gussets") for more information.] in order get the angles to line up.
+      ]
     #nb_pro_con(
       pros: [
       - can strafe
@@ -139,9 +143,11 @@
   #nb_heading([Motor Cartridge], level: 1)
 
   Motor cartridges go inside the motors, and dictate the motors RPM.
-  #nb_admonition(type: "note")[
-  This does not change the power of a motor, only its torque to speed ratio.
-  ]
+  #nb_admonition(
+    type: "note",
+  )[
+    This does not change the power of a motor, only its torque to speed ratio.
+    ]
 
   There are three different types of cartridges, each with differing speeds.
   - Blue (600 RPM)

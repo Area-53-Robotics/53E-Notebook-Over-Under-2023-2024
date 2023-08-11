@@ -17,7 +17,6 @@
   })
 }
 
-// TODO: make this into multiple columns
 
 #let nb_print_glossary() = [
 #page(

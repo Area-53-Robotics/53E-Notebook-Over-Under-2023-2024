@@ -7,10 +7,10 @@
   start_date: datetime(year: 2023, month: 8, day: 4),
 )[
   #nb_heading([Options], level: 1)
-  We decided on three different types of intake 
+  We decided on three different types of intake
 
   #grid(
-    columns: (1fr,2fr),
+    columns: (1fr, 2fr),
     gutter: 20pt,
     [
     #nb_heading([Claw], level: 2)

@@ -6,9 +6,7 @@
   type: "brainstorm",
   start_date: datetime(year: 2023, month: 4, day: 27),
   [
-  // TODO: clarify process
   After the game reveal each member of the team independently wrote down their thoughts on what the coming season will look like, and ideas for our robot. \
-
   \
   #nb_admonition(
     type: "note",

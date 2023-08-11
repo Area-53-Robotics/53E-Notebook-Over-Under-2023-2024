@@ -72,7 +72,11 @@
 #line()
 ] else if level == 2 [
 === #text(size: 14pt, [#body])
-]
+] else if level == 3 [
+==== #text(size: 12pt, [#body])
+] else {
+  panic("Invalid heading level")
+}
 ]
 
 #let nb_pro_con(pros: [], cons: []) = [
@@ -153,7 +157,7 @@
     title = "Quote"
     icon = "./icons/quotes.svg"
     color = gray
-  } else if type == "equation" {
+  } else if type == "equation" { // TODO: make equation its own function, choose a color other than yellow :v(
     title = "Equation"
     icon = "./icons/function.svg"
     color = lime

@@ -5,19 +5,26 @@
 
 #include "./identify-drivetrain.typ"
 #include "./brainstorm-drivetrain-components.typ"
-#include "./deciding-drivetrain-type.typ"
+#include "./decide-drivetrain-type.typ"
 #include "./brainstorm-drivetrain-config.typ"
-#include "./deciding-drivetrain-config.typ"
-#include "./building-drivetrain.typ"
+#include "./decide-drivetrain-config.typ"
+#include "./build-drivetrain.typ"
 
 #include "./notebook-matrix.typ"
 
+#include "./identify-tracking.typ"
 #include "./brainstorm-drivetrain-sensors.typ"
-#include "./deciding-drivetrain-sensors.typ"
+#include "./decide-drivetrain-sensors.typ"
+#include "./brainstorm-tracking-implementation.typ"
+#include "./decide-tracking-implementation.typ" // TODO: write this entry
 
 #include "./notebook-toc.typ"
 
 #include "./testing-drivetrain.typ"
+
+#include "./build-drivetrain-fixes.typ"
+
+//#include "./build-tracking-wheels.typ" // TODO: write this entry
 
 #include "./identify-intake.typ"
 #include "./brainstorm-intake.typ"
@@ -26,10 +33,10 @@
 #include "./identify-launcher.typ"
 #include "./brainstorm-launcher.typ"
 
+
 //#include "./identify-scoring.typ"
 
 // TODO:
 // entry backlog:
-// - identify: drivetrain tracking
 // - identify: traversing the barrier? (idk maybe also make a drivetrain one)
 // - identity: elevating

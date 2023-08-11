@@ -9,18 +9,18 @@
   This notebook was written with a programming language called Typst. We write instructions about formatting in Typst, and they they are rendered into a pdf. Here are some examples of what that looks like:
 
   ```typ
-  #nb_heading([Amazing Heading], level: 1) // Creates a heading
+    #nb_heading([Amazing Heading], level: 1) // Creates a heading
 
-  Just some ordinary text // Turns into text
+    Just some ordinary text // Turns into text
 
-  #nb_pro_con(pros: [ // Turns into a table of pros and cons
-    - good
-    - better
-  ], cons: [
-    - bad
-    - worse
-  ])
-  ```
+    #nb_pro_con(pros: [ // Turns into a table of pros and cons
+      - good
+      - better
+    ], cons: [
+      - bad
+      - worse
+    ])
+    ```
   The source code can be found here: #link("https://github.com/Area-53-Robotics/53E-Notebook").
 
   #nb_heading([Why Digital?], level: 1)
