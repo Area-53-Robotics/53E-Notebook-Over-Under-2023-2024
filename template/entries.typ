@@ -45,7 +45,7 @@
           ],
         )
 
-        #nb_heading([#nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.start_date.display("[year]/[month]/[day]")])
+        #nb_heading([#nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.start_date.display("[year]/[month]/[day]")])<nb_heading_entry>
         #counter(footnote).update(0)
 
         #entry.body

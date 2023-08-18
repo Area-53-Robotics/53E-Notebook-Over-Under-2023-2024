@@ -26,7 +26,7 @@
     #counter(page).display()
     ],
 )[
-  #nb_heading([Glossary])
+  #nb_heading([Glossary])<nb_heading_glossary>
   #columns(
     2,
   )[

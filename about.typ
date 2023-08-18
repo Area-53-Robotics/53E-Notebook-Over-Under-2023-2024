@@ -54,6 +54,5 @@
   - #nb_label(label: "test", long: true)
   - #nb_label(label: "management", long: true)
   - #nb_label(label: "notebook", long: true)
-
   ],
 )
