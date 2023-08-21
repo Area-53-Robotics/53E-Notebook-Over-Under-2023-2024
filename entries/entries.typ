@@ -16,7 +16,7 @@
 #include "./brainstorm-drivetrain-sensors.typ"
 #include "./decide-drivetrain-sensors.typ"
 #include "./brainstorm-tracking-implementation.typ"
-#include "./decide-tracking-implementation.typ" // TODO: write this entry
+#include "./decide-tracking-implementation.typ"
 
 #include "./notebook-toc.typ"
 
@@ -24,11 +24,12 @@
 
 #include "./build-drivetrain-fixes.typ"
 
-//#include "./build-tracking-wheels.typ" // TODO: write this entry
+//#include "./build-tracking-wheels.typ"  // TODO: write this entry
 
 #include "./identify-intake.typ"
 #include "./brainstorm-intake.typ"
 #include "./decide-intake-type.typ"
+#include "./build-intake.typ" // TODO: finish this entry
 
 #include "./identify-launcher.typ"
 #include "./brainstorm-launcher.typ"
@@ -38,5 +39,8 @@
 
 // TODO:
 // entry backlog:
+// - document driver control code (drive curve, tank drive, etc)
+// - document program structure
+// - build intake
 // - identify: traversing the barrier? (idk maybe also make a drivetrain one)
 // - identity: elevating
