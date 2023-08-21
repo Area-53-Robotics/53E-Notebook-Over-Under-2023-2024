@@ -40,9 +40,34 @@
     image("../assets/drivetrain/motor-spacing-fix.svg"),
   )
 
+  #grid(
+    columns: (1fr, 2fr),
+    gutter: 20pt,
+    [
+    We then addressed the issue of how difficult it was to control the drivetrain. We decided to substitute the omni wheels in the middle of the drivetrain with traction wheels in order to stop us from drifting.
+    ],
+    image("../assets/drivetrain/build-log/traction-wheel.jpg")
+  )
+
+  #grid(
+    columns: (1fr, 2fr),
+    gutter: 20pt,
+    [
+    The next issue had to do with the friction on the drivetrain. During testing we noticed that both sides of the drivetrain were drawing much more than the recommended 1W of power. We combed over the drivetrain looking for places where friction could be an issue and made the following changes:
+    - Reduced spacing on some axles
+    - Straightened motor mounts
+    - Corrected axle length
+
+    The most egregious issue we found was a piece of C-channel that a motor was mounted to. It's holes had been worn away, and were no longer square. This caused the motor that was mounted to it to not be straight.
+    ],
+    image("../assets/drivetrain/build-log/holes.png")
+    )
+
+
   // TODO:
   // - discuss power draw fixes
   // - discuss friction fixes
+  // - traction wheels
 
 
   ]

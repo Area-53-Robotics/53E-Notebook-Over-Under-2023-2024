@@ -185,6 +185,7 @@
   - Several motors use more than the recommended 1W in free spin.
   - While testing speed we noticed that the drivetrain doesn't move in a straight line, so one side is moving slower than the other
   - While doing informal tests on our practice field we noticed that the bot cannot get over the barrier.
+  - The drivetrain is very difficult to control overall due our use of 6 omni wheels. Making turns is exceptionally difficult, especially sharp ones. The drivetrain continues in its original direction for a good distance, with no way to control it.
 
   ],
 ) 
