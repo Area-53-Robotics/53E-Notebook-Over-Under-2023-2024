@@ -43,6 +43,42 @@ cd 53E-Notebook
 typst compile main.typ
 ```
 
+## Style Guide
+
+These following rules should be followed when writing entries:
+
+### Tense
+All entries should be written in past perfect tense. For example:
+
+> Today we build build the drivetrain.
+
+### Lists
+
+All lists should begin with capitalized letters. For example:
+
+> - One
+> - Two
+> - Three
+
+### Numbers 
+
+All numbers should be expressed with their respective Arabic notation rather than spelling them out. For example:
+
+> We drank 3 liters of water.
+
+### Pronouns and Names
+
+Use "we" rather than referring to individuals in the squad. For example:
+
+> Today we programmed the PID for the catapult.
+
+If you need to be more specific, refer to the job of the people performing the task. For example:
+
+> The programmers programmed a program.
+
+If gender neutral pronouns are needed, use "they/them". For example:
+
+> If the driver is needs information, they should notify the drive team.
 
 ## Thanks to
 
