@@ -50,7 +50,7 @@ These following rules should be followed when writing entries:
 ### Tense
 All entries should be written in past perfect tense. For example:
 
-> Today we build build the drivetrain.
+> Today we built the drivetrain.
 
 ### Lists
 
@@ -76,9 +76,9 @@ If you need to be more specific, refer to the job of the people performing the t
 
 > The programmers programmed a program.
 
-If gender neutral pronouns are needed, use "they/them". For example:
+If pronouns are needed, use the gender neutral "they/them". For example:
 
-> If the driver is needs information, they should notify the drive team.
+> If the driver needs information, they should notify the drive team.
 
 ## Thanks to
 
