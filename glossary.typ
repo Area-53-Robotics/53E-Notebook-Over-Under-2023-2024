@@ -1,5 +1,22 @@
 #import "/template/glossary.typ": *
 
+// TODO: singleton
+// TODO: mutual exclusion
+
+#nb_create_glossary_entry(
+  title: "Parallelism",
+  definition: [
+  The process of running code in parallel across multiple cores.
+  ],
+)
+
+#nb_create_glossary_entry(
+  title: "Asynchronous",
+  definition: [
+  When code is run out of order to achieve the illusion of running at the same time (parallelism).
+  ],
+)
+
 #nb_create_glossary_entry(
   title: "Auton",
   definition: [
