@@ -2,7 +2,7 @@
 #import "/template/widgets.typ": *
 
 #create_entry(
-title: "Brainstorm: Tracking Implementation",
+title: "Brainstorm: Position Tracking",
 type: "brainstorm",
 start_date: datetime(year: 2023, month: 7, day: 28),
 )[

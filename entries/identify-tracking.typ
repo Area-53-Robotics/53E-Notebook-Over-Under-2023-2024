@@ -2,7 +2,7 @@
 #import "/template/widgets.typ": *
 
 #create_entry(
-title: "Identify: Absolute Tracking",
+title: "Identify: Position Tracking",
 type: "identify",
 start_date: datetime(year: 2023, month: 7, day: 28),
 )[

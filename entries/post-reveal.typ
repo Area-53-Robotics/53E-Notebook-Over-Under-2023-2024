@@ -30,7 +30,6 @@
   #nb_heading([Programming], level: 2)
   As always, consistent chassis movement is the key to a perfect autonomous. Using an absolute positioning system like GPS or Odometry #footnote(<nb_gl>) can make this much easier, because it allows the robot to correct for past error, or even external interference. There are also many different motion control algorithms we can use, like PID #footnote(<nb_gl>) and/or motion profiling. Overall, tracking wheels and an IMU will be a must, but these sensors might have some difficulty when we cross the center line, due to the bot leaving the ground. In addition, if our robot is high off the ground, we may have some trouble getting the tracking wheels to touch the ground.
 
-  #v(40pt)
 
   #nb_heading([John], level: 1)
   I think that the best intake for this season would easily be one with horizontal flex wheels. This would allow the bot to reach under the goal easier and also could be easier to build. We will most definitely need a shooting mechanism (a catapult would work best, and we have more experience with such building). We will also need some sort of scissor lift to lift the bot. All of these systems will require a motor, so we will need a four motor drive. This means that we can spare a motor on the claw for lifting the bot. We will want a fast drive with the center locked omni.

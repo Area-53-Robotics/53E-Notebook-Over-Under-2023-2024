@@ -70,17 +70,10 @@ Assuming these variables:
 - $S_L$ is the distance from the left tracking wheel to the tracking center
 - $S_R$ is the distance from the right tracking wheel to the tracking center
 
-#align(
- center,
- text(size: 15pt)[
- \
+\
+$ Delta theta = (Delta L - Delta R) / (S_L + S_R) $
+\
 
-  $Delta theta = (Delta L - Delta R) / (S_L + S_R)$
-
-  \
- ]
-
-)
 ]
 
 If an IMU is being used, no equation is required, and its output can be used directly.
@@ -138,17 +131,9 @@ Assuming these variables:
 - $S_R$ is the distance from the right tracking wheel to the tracking center
 - $S_S$ is the distance from the center tracking wheel to the tracking center
 
-#align(
- center,
- text(size: 15pt)[
- \
-
-  $Delta limits("d"_"l")^--> = 2 sin((Delta theta)/2) * mat(delim: "[", (Delta S)/(Delta theta) + S_S; (Delta R)/(Delta theta) + S_R ) $
-
   \
- ]
-
-)
+  $ Delta limits("d"_"l")^--> = 2 sin((Delta theta)/2) * mat(delim: "[", (Delta S)/(Delta theta) + S_S; (Delta R)/(Delta theta) + S_R ) $
+  \
 ]
 
 ```cpp

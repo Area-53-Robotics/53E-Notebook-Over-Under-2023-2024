@@ -124,14 +124,10 @@
 
   #nb_admonition(
     type: "equation",
-    align(
-      center,
       [
-      $"Speed" = "Power" * "Torque"$
-
+      $ "Speed" = "Power" * "Torque" $
       \
       ],
-    ),
   )
 
   Power is constant due to the amount of motors we are given, so torque $prop$ to 1/speed. Gaining in one means losing in the other. If we gain speed, we lose torque, and vice versa.

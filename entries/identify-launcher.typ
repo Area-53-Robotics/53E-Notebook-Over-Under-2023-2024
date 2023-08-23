@@ -2,7 +2,7 @@
 #import "/template/widgets.typ": *
 
 #create_entry(
-  title: "Identify Problem: Moving Triballs",
+  title: "Identify: Moving Triballs",
   type: "identify",
   start_date: datetime(year: 2023, month: 8, day: 5),
 )[
