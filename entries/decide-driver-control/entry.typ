@@ -19,7 +19,9 @@ Due to this we've designed this testing procedure in order to find our driver's 
 2. Load a program onto the robot's brain that contains one of the control schemes detailed in the previous entry. The implementation section of this entry will cover what are code for this looked like.
 3. Have the driver follow the path marked in green.
 4. Repeat the last step 3 more times.
-5. Repeat the last 4 steps for the other 2 control schemes.
+5. Repeat steps 1 - 4 for the other 2 control schemes.
+6. Repeat steps 1 - 4, changing the drive curve constant each time.
+
 
 
 #nb_heading([Implementation], level: 1)
@@ -122,5 +124,11 @@ void curvature(int throttle, int turn, float curveGain) {
     rightMotors.move(rightPower);
 };
 ```
+#nb_heading([Results], level: 1)
+
+After running our test our driver decided on 
+
+- Tank drive
+- Drive curve t value of 5
 
 ]
