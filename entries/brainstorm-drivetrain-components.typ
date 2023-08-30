@@ -14,7 +14,7 @@
     gutter: 50pt,
     [
     #nb_heading([Skid Steer with Omni Wheels], level: 2)
-    This design uses a simple skid steer design, much like what is found on many types of small front loader vehicles. In order to mitigate the issues with dragging wheels on the ground while turning this drivetrain uses omni wheels, which can be pushed side to side as well as forward and backwards.
+    This design uses a simple skid steer #footnote("See glossary.") design, much like what is found on many types of small front loader vehicles. In order to mitigate the issues with dragging wheels on the ground while turning this drivetrain uses omni wheels, which can be pushed side to side as well as forward and backwards.
     #nb_admonition(
       type: "note",
     )[
@@ -32,7 +32,7 @@
       ],
     )
     ],
-    image("/assets/drivetrain/onmi-drive.svg"),
+    image("/assets/drivetrain/omni-drive.svg"),
     [
 
     #nb_heading([Skid Steer with Traction Wheels], level: 2)
@@ -142,7 +142,7 @@
   #nb_admonition(
     type: "note",
   )[
-    This does not change the power of a motor, only its torque to speed ratio.
+    Internally, motor cartridges are just sets of gears, meaning they follow the same rules as normal gear ratios do. This means that they cannot change the power of a motor, only its torque to speed ratio.
     ]
 
   There are three different types of cartridges, each with differing speeds.

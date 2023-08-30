@@ -18,7 +18,6 @@
     [
     #image(
       "/assets/field-elements/full-field.png",
-      width: 75%,
     )
     ],
   )

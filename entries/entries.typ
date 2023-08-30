@@ -31,7 +31,7 @@
 #include "./decide-program-structure/entry.typ" 
 #include "./program-program-structure/entry.typ"
 
-//#include "./build-tracking-wheels.typ"  // TODO: write this entry
+#include "./build-tracking-wheels/entry.typ"  // TODO: write this entry
 
 #include "./identify-intake.typ"
 #include "./brainstorm-intake.typ"
@@ -53,10 +53,11 @@
 
 //#include "./identify-scoring.typ"
 
+// TODO: put captions on part diagrams
+
 // TODO:
 // entry backlog:
-// - document driver control code (drive curve, tank drive, etc)
-// - document program structure
 // - build intake
+// - autonomous movement
 // - identify: traversing the barrier? (idk maybe also make a drivetrain one)
 // - identity: elevating
