@@ -10,7 +10,6 @@
     #nb_heading([Entries], level: 1)
     #locate(
       loc => {
-
         let headings = query(selector(<nb_heading_entry>),loc)
 
         for (index, entry) in entries.final(loc).enumerate() {

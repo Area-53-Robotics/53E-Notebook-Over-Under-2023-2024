@@ -19,6 +19,12 @@
   set heading()
   set footnote.entry(separator: none)
 
+  show image: it => [
+    #align(center)[
+      #it
+    ]
+  ]
+
   show link: it => [
   #text(fill: blue, [ _ #it _ ])
   ]

@@ -5,6 +5,7 @@
   appendix_page_counter.step()
   align(right, appendix_page_counter.display("i"))
 }
+
 #let nb_highlight(color: red, body) = {
   box(fill: color, outset: 3pt, radius: 5pt, body)
 }
