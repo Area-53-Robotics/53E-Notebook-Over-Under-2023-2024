@@ -2,6 +2,28 @@
 
 // TODO: singleton
 // TODO: mutual exclusion
+// TODO: skid steer
+
+#nb_create_glossary_entry(
+  title: "Singleton Pattern",
+  definition: [
+    A software design pattern where a class is only instantiated once.
+  ],
+)
+
+#nb_create_glossary_entry(
+  title: "Mutual Exclusion",
+  definition: [
+    A software design pattern where a shared resource can only be accessed by a single thread of execution at a time. It is often used to prevent race conditions.
+  ],
+)
+
+#nb_create_glossary_entry(
+  title: "Skid Steer",
+  definition: [
+    A style of vehicle where the wheels have a fixed alignment. This is typically seen on heavy equipment like front loaders.
+  ],
+)
 
 #nb_create_glossary_entry(
   title: "Parallelism",
