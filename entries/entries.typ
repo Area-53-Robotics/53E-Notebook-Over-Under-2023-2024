@@ -31,25 +31,32 @@
 #include "./decide-program-structure/entry.typ" 
 #include "./program-program-structure/entry.typ"
 
-#include "./build-tracking-wheels/entry.typ"  // TODO: write this entry
+#include "./build-tracking-wheels/entry.typ"
 
 #include "./identify-intake.typ"
 #include "./brainstorm-intake.typ"
 #include "./decide-intake-type/entry.typ"
-#include "./build-intake.typ" // TODO: finish this entry
+#include "./build-intake/entry.typ"
 
-// TODO: add an entry for odom implementation on the 20th of aug.
 #include "./program-tracking.typ"
 
 #include "./identify-driver-control/entry.typ"
 #include "./brainstorm-driver-control/entry.typ"
-#include "./decide-driver-control/entry.typ" // TODO: document actual decision
+#include "./decide-driver-control/entry.typ"
 #include "./program-driver-control/entry.typ" // TODO: document implementation
 
 #include "./test-tracking/entry.typ" // TODO: write this entry
 
-#include "./identify-launcher.typ"
+#include "./identify-launcher.typ" // TODO: place these in history correctly
 #include "./brainstorm-launcher.typ"
+// TODO: decide launcher
+
+// TODO: write all of these
+#include "./identify-auton-movement/entry.typ" 
+#include "./brainstorm-auton-movement/entry.typ"
+#include "./decide-auton-movement/entry.typ"
+#include "./program-auton-movement/entry.typ"
+#include "./test-auton-movement/entry.typ"
 
 //#include "./identify-scoring.typ"
 
