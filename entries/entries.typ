@@ -49,7 +49,8 @@
 
 #include "./identify-launcher.typ" // TODO: place these in history correctly
 #include "./brainstorm-launcher.typ"
-// TODO: decide launcher
+#include "./decide-launcher/entry.typ"
+#include "./build-launcher/entry.typ"
 
 // TODO: write all of these
 #include "./identify-auton-movement/entry.typ" 
@@ -58,13 +59,14 @@
 #include "./program-auton-movement/entry.typ"
 #include "./test-auton-movement/entry.typ"
 
+
 //#include "./identify-scoring.typ"
 
 // TODO: put captions on part diagrams
 
 // TODO:
 // entry backlog:
-// - build intake
+// - 
 // - autonomous movement
 // - identify: traversing the barrier? (idk maybe also make a drivetrain one)
 // - identity: elevating

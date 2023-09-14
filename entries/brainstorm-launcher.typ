@@ -37,7 +37,7 @@
       - Easy to tune
       ],
       cons: [
-      - Cata meta :3 // TODO: change this
+      - Takes up a lot of space
       ],
     )
     ],

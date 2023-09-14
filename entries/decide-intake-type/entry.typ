@@ -25,7 +25,6 @@
 
   #grid(
     columns: (1fr, 1fr),
-    //rows: (1fr, 1fr),
     gutter: 20pt,
     figure(
       caption: "Front View",

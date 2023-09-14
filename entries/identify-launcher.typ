@@ -17,10 +17,10 @@
     ]
 
   #nb_heading([Design Constraints], level: 1)
-  - needs to use 11Ws of motors or less
-  - needs to fit within an 18" by 18" by 18" cube
-  - if it expands, it cannot make the robot go beyond a vertical size of 36"
+  - Needs to use 11Ws of motors or less
+  - Needs to fit within an 18" by 18" by 18" cube
+  - If it expands, it cannot make the robot go beyond a vertical size of 36"
 
   #nb_heading([Design Goals], level: 1)
-  - be able to move a triball across the field in under 5s
+  - Be able to move a triball across the field in under 5s
   ]

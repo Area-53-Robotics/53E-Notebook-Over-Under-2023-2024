@@ -21,6 +21,7 @@
 
   show image: it => [
     #align(center)[
+      #set text(font: "Virgil 3 YOFF")
       #it
     ]
   ]
