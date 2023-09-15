@@ -52,13 +52,11 @@
 #include "./decide-launcher/entry.typ"
 #include "./build-launcher/entry.typ"
 
-// TODO: write all of these
 #include "./identify-auton-movement/entry.typ" 
 #include "./brainstorm-auton-movement/entry.typ"
-#include "./decide-auton-movement/entry.typ"
-#include "./program-auton-movement/entry.typ"
-#include "./test-auton-movement/entry.typ"
-
+#include "./decide-auton-movement/entry.typ" // TODO: document implementation
+#include "./program-auton-movement/entry.typ" // TODO: write this entry
+#include "./test-auton-movement/entry.typ" // TODO: write this entry
 
 //#include "./identify-scoring.typ"
 
@@ -66,7 +64,6 @@
 
 // TODO:
 // entry backlog:
-// - 
 // - autonomous movement
 // - identify: traversing the barrier? (idk maybe also make a drivetrain one)
 // - identity: elevating

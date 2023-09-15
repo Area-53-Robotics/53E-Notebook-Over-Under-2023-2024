@@ -30,7 +30,7 @@
       ],
     )
     ],
-    image("/assets/drivetrain/6:3-4.png"),
+    image("/assets/drivetrain/6_3-4.png"),
     [
     #nb_heading([3:5, 3.25" wheels, blue cartridges], level: 2)
     - 360 RPM
@@ -47,7 +47,7 @@
     )
 
     ],
-    image("/assets/drivetrain/3:5-3_25.png"),
+    image("/assets/drivetrain/3_5-3_25.png"),
     [
     #nb_heading([3:5, 4" wheels, blue cartridges], level: 2)
     - 360 RPM
@@ -68,7 +68,7 @@
       ],
     )
     ],
-    image("/assets/drivetrain/3:5-4.png"),
+    image("/assets/drivetrain/3_5-4.png"),
     [
     #nb_heading([4:7, 4" wheels, blue cartridges], level: 2)
     - 342 RPM
