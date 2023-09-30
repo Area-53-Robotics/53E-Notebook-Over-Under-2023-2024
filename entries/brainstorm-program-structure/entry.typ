@@ -12,7 +12,6 @@ start_date: datetime(year: 2023, month: 8, day: 12)
 #grid(
 columns: (1fr, 1fr),
 gutter: 20pt,
-
 [
 #nb_heading([Option 1], level: 2)
 
