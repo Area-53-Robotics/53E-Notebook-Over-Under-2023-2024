@@ -7,10 +7,10 @@
     start_date: datetime(year: 2023, month: 9 , day: 8)
 )[
 
-We rated the choices on a scale from 1 to 5: 
-- Ease Of Build
-- Widespread Use
-- Use Of Actuators
+We rated the choices by the following criteria:
+- Ease Of Build on a scale of 1 to 5. 
+- Widespread Use on a scale of 1 to 5. 
+- Use Of Actuators on a scale of 1 to 5. 
 
 #nb_decision_matrix(properties: ("Ease Of Build", "Widespread Use", "Use Of Actuators"), choices: (
     ("Wedges", 3, 4, 5),
