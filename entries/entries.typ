@@ -59,6 +59,7 @@
 #include "./test-auton-movement/entry.typ" // TODO: write this entry
 #include "./identify-wedges/entry.typ"
 #include "./brainstorm-wedges/entry.typ"
+#include "./decide-wedges/entry.typ"
 
 //#include "./identify-scoring.typ"
 
