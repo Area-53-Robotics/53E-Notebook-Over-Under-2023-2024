@@ -28,8 +28,6 @@ We followed the following steps to construct the tracking wheels:
 ]
 )
 
-
-
 #nb_admonition(type: "build")[
 Our tracking wheels are finally complete.
 ]
