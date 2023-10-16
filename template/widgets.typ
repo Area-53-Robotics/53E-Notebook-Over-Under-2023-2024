@@ -1,6 +1,5 @@
 #import "./globals.typ": appendix_page_counter
 #import "./colors.typ": *
-
 #let nb_frontmatter_footer() = {
   appendix_page_counter.step()
   align(right, appendix_page_counter.display("i"))
@@ -161,7 +160,7 @@
   } else if type == "equation" { // TODO: make equation its own function, choose a color other than yellow :v(
     title = "Equation"
     icon = "./icons/function.svg"
-    color = lime
+    color = amber
   } else if type == "decision" {
     title = "Final Decision"
     icon = "./icons/target.svg"
