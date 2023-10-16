@@ -18,7 +18,7 @@
         pros: [ 
          - It can double as a skirt. 
          - It is the stereotypical wedge. 
-         - It is slanted so it will take advantage of normal force. 
+         - The slant gives our robot mechanical advantage while pushing other robots.
          - The shape is simple to design. 
         ],
         cons: [
@@ -29,25 +29,24 @@
         )
 
     ],
-    image("./wedgeone.png"),
+    image("./wedges.svg"),
     [
         #nb_heading([Snow Plow], level: 1)
         #nb_pro_con(
         pros: [
-        - It is slanted at the bottom to take advantage of normal force. 
+        - It is slanted at the bottom to give mechanical advantage.
         - The back is flat and will be easier to mount. 
         - It could possibly double as a skirt. 
         ], 
         cons: [
         -  The shape is odd and would be hard to create. 
         - The protrusion at the top may limit the effectiveness. 
-        - The slant is less so it would not be able to take advantage of normal force as well. 
+        - Not as slanted as the wedges.
         - It would not allow the robot to go over the barrier. 
         ]
     )
     ],
-    image("./snowplow.png"),
-
+    image("./plow.svg"),
     [
         #nb_heading([Arms], level: 1)
         #nb_pro_con(
@@ -57,12 +56,12 @@
         - It can help to push other robots. 
         ], 
         cons: [
-        - The bottom is not slanted and would not take advantage of normal force. 
+        - Not slanted, forfeiting mechanical advantage
         - Would not allow the robot to go over the barrier. 
     ]
     )
     ],
-    image("./arms.png")
+    image("./forklift.svg")
 
 )    
 ]
