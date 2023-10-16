@@ -50,23 +50,32 @@
 #include "./identify-launcher.typ" // TODO: place these in history correctly
 #include "./brainstorm-launcher.typ"
 #include "./decide-launcher/entry.typ"
-#include "./build-launcher/entry.typ"
+#include "./build-test-launcher/entry.typ" // TODO: finish build log
 
 #include "./identify-auton-movement/entry.typ" 
 #include "./brainstorm-auton-movement/entry.typ"
-#include "./decide-auton-movement/entry.typ" // TODO: document implementation
-#include "./program-auton-movement/entry.typ" // TODO: write this entry
+#include "./decide-auton-movement/entry.typ"
+#include "./program-auton-movement/entry.typ" 
 #include "./test-auton-movement/entry.typ" // TODO: write this entry
+
 #include "./identify-wedges/entry.typ"
 #include "./brainstorm-wedges/entry.typ"
 #include "./decide-wedges/entry.typ"
+#include "./brainstorm-wedges/entry.typ" //TODO: redraw images
+
+#include "./kanban-board/entry.typ"
 
 //#include "./identify-scoring.typ"
 
 // TODO: put captions on part diagrams
 
+// TODO: make the entries automatically sorted by date
+
 // TODO:
 // entry backlog:
 // - autonomous movement
+// - wedges
+// - visualizing information (live graphing)
+// - kanban board
 // - identify: traversing the barrier? (idk maybe also make a drivetrain one)
 // - identity: elevating
