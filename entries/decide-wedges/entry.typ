@@ -21,6 +21,36 @@ We rated the choices by the following criteria:
 #nb_admonition(type: "decision")[
     The final decision is to use the wedges. Ultimately, they were the easiest and most efficient to use. The wedges are also passive, which means they don't require motors or pistons to be put into use. 
 ]
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 20pt,
+  figure(
+    image("./iso.png"),
+    caption: "Isometric view"
+  ),
+  figure(
+    image("./top.png", height: 25%),
+    caption: "Top view"
+  ),
+
+  figure(
+    image("./front.png", height: 25%),
+    caption: "Front view"
+  ),
+  figure(
+    image("./side.png"),
+    caption: "Side view"
+  ),
+)
+
+\
+
+#nb_heading([Final Design], level: 1)
+
+#image("./1.png")
+#image("./2.png")
+
 ]
 
 
