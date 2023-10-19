@@ -1,5 +1,4 @@
 #import "template/template.typ": *
-
 #include "/entries/entries.typ" 
 #include "/glossary.typ"
 
