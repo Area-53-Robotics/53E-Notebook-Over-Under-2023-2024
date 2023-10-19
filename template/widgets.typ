@@ -1,3 +1,5 @@
+// I should have named  this file components.typ, can't change it now.
+
 #import "./globals.typ": appendix_page_counter
 #import "./colors.typ": *
 #let nb_frontmatter_footer() = {
@@ -160,7 +162,7 @@
   } else if type == "equation" { // TODO: make equation its own function, choose a color other than yellow :v(
     title = "Equation"
     icon = "./icons/function.svg"
-    color = amber
+    color = deep_orange
   } else if type == "decision" {
     title = "Final Decision"
     icon = "./icons/target.svg"

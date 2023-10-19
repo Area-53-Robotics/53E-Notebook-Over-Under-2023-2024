@@ -27,8 +27,10 @@
   ]
 
   show link: it => [
-  #text(fill: blue, [ _ #it _ ])
+    #text(fill: blue, [ _ #it _ ])
   ]
+
+  show figure.caption: it => it.body
 
   show figure: it => align(
     center,
