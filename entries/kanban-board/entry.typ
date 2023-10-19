@@ -12,7 +12,7 @@ Today we had a workshop presentation from one of the parents in our organization
 We broke up our tasks into one meeting increments and posted them as sticky notes on a whiteboard.
 
 #figure(
-  caption: "The finished board.",
+  caption: "The finished kanban board",
   image("./kanban-board.jpg", height: 50%)
 )
 
