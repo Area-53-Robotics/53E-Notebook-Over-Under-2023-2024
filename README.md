@@ -84,6 +84,7 @@ If pronouns are needed, use the gender neutral "they/them". For example:
 
 - The Typst developers
 - The awesome people in the [Typst discord](https://discord.gg/2uDybryKPe)
+- [Tablex](https://github.com/PgBiel/typst-tablex/)
 
 ## License
 
