@@ -60,10 +60,11 @@
 
 #include "./identify-wedges/entry.typ"
 #include "./brainstorm-wedges/entry.typ"
-#include "./decide-wedges/entry.typ"
-#include "./brainstorm-wedges/entry.typ" //TODO: redraw images
+#include "./decide-wedges/entry.typ"  // TODO: part diagram
+// TODO: build wedges
 
 #include "./kanban-board/entry.typ"
+
 
 //#include "./identify-scoring.typ"
 
@@ -73,8 +74,6 @@
 
 // TODO:
 // entry backlog:
-// - autonomous movement
-// - wedges
 // - visualizing information (live graphing)
 // - kanban board
 // - identify: traversing the barrier? (idk maybe also make a drivetrain one)
