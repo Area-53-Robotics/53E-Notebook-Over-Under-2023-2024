@@ -133,11 +133,11 @@ image("./complete-arm.jpg"),
 
 #nb_heading([General Testing], level: 2)
 
-#image("./general-testing-cycle.svg")
+#image("./general-testing-cycle.svg", width: 60%)
 
 #nb_heading([Trajectory Testing], level: 2)
 
-#image("./trajectory-testing.svg")
+#image("./trajectory-testing.svg", width: 55%)
 
 #nb_heading([Results], level: 1)
 
@@ -145,23 +145,55 @@ image("./complete-arm.jpg"),
 columns: (1fr, 1fr),
 gutter: 20pt,
 [
-It was found upon initial testing that the driven axle bended when the catapult was pulled back. To remedy this, zip ties were used to brace the axle. It was decided that the driven axle would be replaced to increase strength. Different stops were tested, and an optimum trajectory was achieved. The slip gears were modified to reflect these changes.
+
+It was found upon initial testing that the driven axle bent when the catapult was pulled back. This meant that the bottom 12 tooth gears would disengage and begin to slip.
+
+To remedy this, zip ties were used to brace the axle. This almost worked, but it put too much stress on the bottom axle, heavily increasing friction and it still didn't prevent all of the skipping. We decided to switch to a high strength axle instead.
+
+Different stops were tested, and an optimum trajectory was achieved. The slip gears were modified to reflect these changes.
+
+#nb_admonition(type: "note")[
+  For testing purposes we used 3D printed 12 tooth gears. This allowed us to make slip gears relatively risk free.
+]
+
+Our final slip gear had 5 teeth.
+
 ],
-image("./stop-and-bands-down.jpg")
+
+figure(
+  image("./stop-and-bands-down.jpg"),
+  caption: "Rubber bands and stops"
+  )
 )
 
-
+// TODO: image of 3D printed gears.
 
 ]
 
 #create_entry(
-  title: "Test: Moving Triballs",
-  type: "test",
+  title: "Build: Moving Triballs",
+  type: "build",
   start_date: datetime(year: 2023, month: 9, day: 16),
 )[
+#grid(
+columns: (1fr, 2fr),
+gutter: 20pt,
+[
+Due to our findings from last meeting we replaced the bottom axle on the catapult (the one with the 12 tooth gears on it) with a high strength axle. This required us to drill out the holes in our supporting towers so that a high strength axle could fit. We also needed to change the type of spacers we were using to high strength ones.
 
-The catapult’s low strength axle was replaced with a high strength axle. The 3d printed slip-gear was replicated using a high strength 12 tooth gear.
-#image("./new-axle.jpg")
+
+  //The 3d printed slip-gear was replicated using a high strength 12 tooth gear.
+
+After the testing from last week we knew the final number of teeth required for the slip gear. We cut down steel 12 tooth gears so that they had 5 teeth instead and replaced the 3D printed ones.
+
+
+],
+figure(
+  image("./new-axle.jpg"),
+  caption: "The new axle and gear"
+)
+)
+
 ]
 
 #create_entry(
@@ -169,8 +201,26 @@ The catapult’s low strength axle was replaced with a high strength axle. The 3
   type: "build",
   start_date: datetime(year: 2023, month: 9, day: 22),
 )[
- A  ratchet was added to the catapult using plexiglass and a 24 tooth gear. The lexan was anchored to the side of the catapult with a flap protruding outwards. This flap meshed with the teeth of the 24 tooth gear in such a way that the gear could only move in one direction.
- The ratchet was iterated to use a larger gear (36 tooth) and a longer piece of lexan. The larger gear was designed to increase how precise the ratchet was to allow the catapult to be loaded at a lower angle. The longer lexan was designed to reduce the chance of the ratchet being over compressed and rotated to a point where it did not hold the catapult in place.
+
+#grid(
+  columns: (1fr, 2fr),
+  gutter: 20pt,
+[
+During testing we noticed that the motor on the catapult was not strong enough to hold the catapult arm in the down position. In order to fix this we decided to add a ratchet which will stop the catapult from being able to spin backwards.
+
+ A ratchet was added to the catapult using plexiglass and a 24 tooth gear. The lexan was anchored to the side of the catapult with a flap protruding outwards. This flap meshed with the teeth of the 24 tooth gear in such a way that the gear could only move in one direction.
+
+ The ratchet was then upgraded to use a larger gear (36 tooth) and a longer piece of lexan. The larger gear was designed to increase how precise the ratchet was to allow the catapult to be loaded at a lower angle. The longer lexan was designed to reduce the chance of the ratchet being over compressed and rotated to a point where it did not hold the catapult in place.
+
+ ],
+
+ image("./lexan-ratchet.svg", height: 75%)
+
+ )
+ #nb_admonition(type: "warning")[
+   This solution ended up not working due to the ratchet consistently failing. The force of the rubber bands pulling on the catapult arm would pull bend the ratchet backward, disengaging it and rendering it useless.
+ ]
+
 
 // TODO: take picture of old ratchet (or add drawing)
 ]
@@ -185,8 +235,23 @@ The catapult’s low strength axle was replaced with a high strength axle. The 3
 columns: (1fr, 1fr),
 gutter: 20pt,
 [
-The ratchet was iterated to use steel l-channel anchored with rotational freedom (using a screw joint) to the side of the catapult using another length of l-channel. A bearing was attached to the rotating length of l-channel to decrease the play of the screw joint, though another bearing was not needed on the anchoring piece of l-channel and would interfere with its anchoring screws. This ratchet was designed to be much stronger than the previous lexan designs because of their small amount of durability.
+This meeting we constructed the new ratchet.
+
+1. We cut a 4 hole long piece of steel L-channel
+2. We anchored it to the top of the catapult tower with a screw joint to allow it to rotate freely.
+3. We attached a bearing to the L-channel to decrease the play of the screw joint.
+#nb_admonition(type: "note")[
+Another bearing was not needed on the anchoring piece of L-channel and would interfere with its anchoring screws.
+]
+
+Overall this ratchet is much stronger than our previous design and can hold the the catapult arm in place.
+
 ],
 image("./new-ratchet.jpg")
 )
+
+//#nb_admonition(type: "build")[
+  //The catapult is finally complete! The ratchet and limit switch 
+//]
+
 ]
