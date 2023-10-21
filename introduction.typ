@@ -56,7 +56,7 @@
           - Builder
           - Driver
         ],
-        nb_member(name: "Joy Oladimejij", picture: "./assets/logo.png")[
+        nb_member(name: "Joy Oladimejij", picture: "./assets/mugshots/joy.jpg")[
           - 10th Grade
           - Programmer
           - Builder
@@ -65,7 +65,7 @@
           - 9th Grade
           - Programmer
         ],
-        nb_member(name: "Violet Ridge", picture: "./assets/logo.png")[
+        nb_member(name: "Violet Ridge", picture: "./assets/mugshots/violet.jpg")[
           - 9th Grade
           - Design
           - Builder
