@@ -28,7 +28,7 @@
 
 #include "./identify-program-structure/entry.typ"
 #include "./brainstorm-program-structure/entry.typ"
-#include "./decide-program-structure/entry.typ" 
+#include "./decide-program-structure/entry.typ"
 #include "./program-program-structure/entry.typ"
 
 #include "./build-tracking-wheels/entry.typ"
@@ -52,19 +52,18 @@
 #include "./decide-launcher/entry.typ"
 #include "./build-test-launcher/entry.typ" // TODO: finish build log
 
-#include "./identify-auton-movement/entry.typ" 
+#include "./identify-auton-movement/entry.typ"
 #include "./brainstorm-auton-movement/entry.typ"
 #include "./decide-auton-movement/entry.typ"
-#include "./program-auton-movement/entry.typ" 
+#include "./program-auton-movement/entry.typ"
 #include "./test-auton-movement/entry.typ" // TODO: write this entry
 
 #include "./identify-wedges/entry.typ"
 #include "./brainstorm-wedges/entry.typ"
-#include "./decide-wedges/entry.typ"  // TODO: part diagram
+#include "./decide-wedges/entry.typ" // TODO: part diagram
 // TODO: build wedges
 
 #include "./kanban-board/entry.typ"
-
 
 //#include "./identify-scoring.typ"
 

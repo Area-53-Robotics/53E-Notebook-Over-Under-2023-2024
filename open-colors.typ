@@ -1,6 +1,9 @@
 #let red = rgb("#fa5252")
-#let green = rgb("#51cf66")
+#let green = rgb("#2f9e44")
+//#let green = rgb("#51cf66")
 #let light_green = rgb("#51cf66")
+#let yellow = rgb("#fcc419")
+#let deep_orange = rgb("#d9480f")
 
 #let primary = green
 #let secondary = light_green
@@ -10,4 +13,3 @@
 #let surface_2 = rgb("#dee2e6")
 #let surface_3 = rgb("#ced4da")
 #let surface_4 = rgb("#adb5bd")
-

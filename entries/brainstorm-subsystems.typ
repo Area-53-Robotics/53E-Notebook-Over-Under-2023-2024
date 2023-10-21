@@ -54,5 +54,5 @@
   - puncher
   - flaps
   - 2 bar
-  ]
+]
 

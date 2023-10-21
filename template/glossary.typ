@@ -17,29 +17,29 @@
   })
 }
 
-
 #let nb_print_glossary() = [
-#page(
-  footer: align(
-    right,
-  )[
-    #counter(page).display()
+  #page(
+    footer: align(right)[
+      #counter(page).display()
     ],
-)[
-  #nb_heading([Glossary])<nb_heading_glossary>
-  #columns(
-    2,
   )[
-    #locate(
-      loc => {
-        let sorted_glossary = glossary_entries.final(loc).sorted(key: ((title, _)) => title)
+    #nb_heading([Glossary #h(1fr)])<nb_heading_glossary>
 
-        for entry in sorted_glossary [
-        #nb_heading([#entry.title], level: 2)
-        #entry.definition
-        ]
-      },
-    )
+    #v(20pt)
+
+    #columns(
+      2,
+    )[
+      #locate(
+        loc => {
+          let sorted_glossary = glossary_entries.final(loc).sorted(key: ((title, _)) => title)
+
+          for entry in sorted_glossary [
+            #nb_heading([#entry.title], level: 2)
+            #entry.definition
+          ]
+        },
+      )
     ]
   ]
-] 
+]

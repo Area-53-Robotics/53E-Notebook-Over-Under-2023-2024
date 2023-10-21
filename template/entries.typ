@@ -2,13 +2,7 @@
 #import "./globals.typ": *
 #import "./widgets.typ": *
 
-#let create_entry(
-  title: "",
-  type: "",
-  start_date: none,
-  end_date: none,
-  body,
-) = {
+#let create_entry(title: "", type: "", start_date: none, end_date: none, body) = {
   if start_date == none {
     panic("No valid start date specified")
   }
@@ -28,30 +22,33 @@
 }
 
 #let print_entries() = {
-  locate(
-    loc => {
-      for entry in entries.final(loc) {
-        [
+  locate(loc => {
+    for entry in entries.final(loc) {
+      [
         #set page(
-          footer: [
+        header: [
+          #let info = entry_type_metadata.at(entry.type)
+
+          #nb_heading(color: info.color, level: 0, beggining: [
+            #image.decode(change_icon_color(info.icon, white), height: 1em)
+          ], [
+            #entry.title #h(1fr)
+          ], end: [
+            #entry.start_date.display("[year]/[month]/[day]")
+          ])<nb_heading_entry>
+        ],
+        footer: [
           #line(length: 100%)
-          #align(
-            left,
-            [
+          #align(left, [
             *Designed by:* \
             *Witnessed by:* #h(1fr) #counter(page).display()
-            ],
-          )
-          ],
-        )
-
-        #nb_heading([#nb_label(label: entry.type) #h(5pt) #entry.title #h(1fr) #entry.start_date.display("[year]/[month]/[day]")])<nb_heading_entry>
+          ])
+        ])
         #counter(footnote).update(0)
 
         #entry.body
-        ]
-      }
-    },
-  )
+      ]
+    }
+  })
 }
 

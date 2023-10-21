@@ -1,100 +1,93 @@
 // I should have named  this file components.typ, can't change it now.
+#import "@preview/showybox:2.0.1": showybox
+#import "@preview/tablex:0.0.5": *
 
-#import "./globals.typ": appendix_page_counter
+#import "./globals.typ": appendix_page_counter, entry_type_metadata
 #import "./colors.typ": *
+
+// Returns the raw image data, not image content
+#let change_icon_color(icon, fill) = {
+  let raw_icon = read(icon)
+  raw_icon.replace("<path", "<path style=\"fill: " + fill.to-hex() + "\"")
+}
+
 #let nb_frontmatter_footer() = {
   appendix_page_counter.step()
   align(right, appendix_page_counter.display("i"))
 }
 
 #let nb_highlight(color: red, body) = {
-  box(fill: color, outset: 3pt, radius: 5pt, body)
+  box(fill: color, outset: 3pt, radius: 1.5pt, body)
 }
 
-#let nb_label(label: "", long: false) = {
-  if label == "identify" [
-  #nb_highlight(
-    color: yellow,
-    [ #image("icons/question-mark.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Identify the Problem* ]
-  ] else if label == "brainstorm" [
-  #nb_highlight(
-    color: orange,
-    [ #image("icons/light-bulb.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Brainstorm Possible Solutions* ]
-  ] else if label == "decide" [
-  #nb_highlight(
-    color: blue,
-    [ #image("icons/target.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Select Best Solution* ]
-  ] else if label == "build" [
-  #nb_highlight(
-    color: red,
-    [ #image("icons/hammer.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Build the Solution* ]
-  ] else if label == "program" [
-  #nb_highlight(
-    color: purple,
-    [ #image("icons/terminal.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Program the Solution* ]
-  ] else if label == "test" [
-  #nb_highlight(
-    color: teal,
-    [ #image("icons/flask.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Test the Solution* ]
-  ] else if label == "repeat" [
-  #nb_highlight(
-    color: green,
-    [ #image("icons/refresh.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Repeat Design Process* ]
-  ] else if label == "management" [
-  #nb_highlight(
-    color: gray,
-    [ #image("icons/bar-chart.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Project Management* ]
-  ] else if label == "notebook" [
-  #nb_highlight(
-    color: pink,
-    [ #image("icons/page.svg", height: 0.7em) ],
-  ) #if long [ #h(5pt) *Notebook Metadata* ]
-  ] else {
-    panic("invalid option passed to label funtion")
+#let nb_label(label: "") = {
+  let data = entry_type_metadata.at(label)
+
+  let colored_image = change_icon_color(data.icon, white)
+
+  nb_highlight(color: data.color, image.decode(colored_image, height: 0.7em))
+}
+
+#let nb_heading(level: 1, color: gray, beggining: none, end: none, body) = [
+  #let highlight(color: none, body, width: auto) = {
+    box(
+      fill: color,
+      outset: 5pt,
+      radius: 1.5pt,
+      body,
+      height: 1em,
+      width: width,
+    )
   }
-}
+  #if level == 0 [
+      #set text(size: 18pt, weight: "bold")
 
-#let nb_heading(level: 0, body) = [
-#if level == 0 [
-= #text(size: 20pt, [#body])
-#line(
-  length: 100%,
-  stroke: (thickness: 2pt, cap: "round", dash: "solid"),
-)
-] else if level == 1 [
-== #text(size: 18pt, [#body])
-#line()
-] else if level == 2 [
-=== #text(size: 14pt, [#body])
-] else if level == 3 [
-==== #text(size: 12pt, [#body])
-] else {
-  panic("Invalid heading level")
-}
+      #if not beggining == none {
+        highlight(color: color)[
+          #beggining
+        ]
+        h(10pt)
+      }
+      #highlight(color: color.lighten(80%), width: 1fr)[
+        #box(baseline: -30%, body)
+      ]
+      #if not end == none {
+        h(10pt)
+        highlight(color: color.lighten(80%))[
+          #box(baseline: -30%, end)
+        ]
+      }
+  ] else if level == 1 [
+    #heading([
+    #set text(size: 15pt)
+    #highlight(color: surface_3)[
+      #box(baseline: 130%, body)
+    ]
+  ])
+  ] else if level == 2 [
+    #heading([
+    #set text(size: 13pt)
+    #body
+    ])
+  ]
+
 ]
 
 #let nb_pro_con(pros: [], cons: []) = [
-#table(
-  fill: (col, row) => if col == 0 and row == 0 { green } else if col == 1 and row == 0 { red },
-  // This feels scuffed somehow 
-  columns: (1fr, 1fr),
-  [*Pros*],
-  [*Cons*],
-  [
-  #pros
-  ],
-  [
-  #cons
-  ],
-)
+  #let cell = rect.with(width: 100%, inset: 5pt)
+  #grid(
+    columns: (1fr, 1fr),
+    column-gutter: 4pt,
+    cell(fill: green, radius: (top: 1.5pt))[*Pros*],
+    cell(fill: red, radius: (top: 1.5pt))[*Cons*],
+    cell(fill: green.lighten(80%), radius: (bottom: 1.5pt))[
+      #pros
+    ],
+    cell(fill: red.lighten(80%), radius: (bottom: 1.5pt))[
+      #cons
+    ],
+  )
+
 ]
 
 #let nb_decision_matrix(properties: (), choices: ()) = {
@@ -104,13 +97,15 @@
     }
   }
 
-  let totaled_choices = choices.map(choice => {
-    let total = 0
-    for element in choice {
-      if type(element) == "integer" or type(element) == "float" { total += element }
-    }
-    choice + (total,)
-  })
+  let totaled_choices = choices.map(
+    choice => {
+      let total = 0
+      for element in choice {
+        if type(element) == "integer" or type(element) == "float" { total += element }
+      }
+      choice + (total,)
+    },
+  )
 
   let highest = (index: 0, value: 0)
 
@@ -121,26 +116,37 @@
     }
   }
 
-  table(
+  tablex(
+    auto-lines: false,
     columns: properties.len() + 2,
     // 1 column for the names, one for the total
-    fill: (_, row) => if row == highest.index { green },
-    [],
+    fill: (_, row) => {
+      if row == highest.index { green.lighten(50%) }
+      if calc.odd(row) and not row == highest.index { surface_3 }
+      if calc.even(row) and not row == highest.index { surface_1 }
+    },
+    hlinex(stroke: (cap: "round", thickness: 2pt)),
     // Blank column to account for names of choices
+    [],
     ..for property in properties {
-      ([ #property ],)
+      ([ *#property* ],)
     },
-    [Total],
-    ..for element in totaled_choices.flatten() {
-      ([ #element ],)
+    [*Total*],
+    ..for (index, element) in totaled_choices.flatten().enumerate() {
+      if calc.rem(index, properties.len() + 2) == 0 {
+        ([ *#element* ],)
+      } else {
+        ([ #element ],)
+      }
     },
+    hlinex(stroke: (cap: "round", thickness: 2pt)),
   )
 }
 
 #let nb_admonition(type: "", body) = {
-  let title
-  let icon
-  let color
+  let color;
+  let icon;
+  let title;
 
   // I hate everthing about this
   if type == "note" {
@@ -150,7 +156,7 @@
   } else if type == "warning" {
     title = "Warning"
     icon = "./icons/warning.svg"
-    color = pink
+    color = red
   } else if type == "example" {
     title = "Example"
     icon = "./icons/web.svg"
@@ -159,10 +165,10 @@
     title = "Quote"
     icon = "./icons/quotes.svg"
     color = gray
-  } else if type == "equation" { // TODO: make equation its own function, choose a color other than yellow :v(
+  } else if type == "equation" {
     title = "Equation"
     icon = "./icons/function.svg"
-    color = deep_orange
+    color = orange
   } else if type == "decision" {
     title = "Final Decision"
     icon = "./icons/target.svg"
@@ -175,17 +181,18 @@
     panic("invalid admonition type")
   }
 
-  rect(
-    width: 100%,
-    fill: color.lighten(50%),
-    stroke: (left: 4pt + color),
-    [
-    #text(
-      size: 15pt,
-      [#box(baseline: 30%, image(icon, width: 1.5em)) *#title*],
-    )
+  let colored_icon = change_icon_color(icon, color)
+
+  showybox(frame: (
+    border-color: color,
+    body-color: color.lighten(80%),
+    thickness: (left: 4pt),
+    radius: 1.5pt,
+  ), [
+    #text(size: 15pt, fill: color, [
+      #box(baseline: 30%, image.decode(colored_icon, width: 1.5em)) *#title*
+    ])
     \
     #body
-    ],
-  )
+  ])
 }
