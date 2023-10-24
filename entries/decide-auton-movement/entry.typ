@@ -149,7 +149,7 @@
   float linearError = pose.distance(carrot) * cos(angularError); // linear error
   ```
 
-  `angularError`'s calculation is simple enough, but linearError is worth looking
+  `angularError`'s calculation is simple enough, but `linearError` is worth looking
   into. Instead of taking the raw distance, it multiplies by $cos("angularError")$ to
   find the distance that the robot can actually achieve while moving in a straight
   line.
@@ -162,13 +162,20 @@
   LemLib uses a boomerang controller in order to be able to move the robot to a
   specified rotation. It does this by following an intermediary carrot point.
 
+  Assuming the following variables:
+  - $d_"lead"$ is a constant set by us that dictates how far away the carrot point
+  - $x_"current"$ is the x value of the robot's current position.
+  - $y_"current"$ is the y value of the robot's current position.
+  - $x_"carrot"$ is the x value of the carrot point's position.
+  - $y_"carrot"$ is the y value of the carrot point's position.
+  - $x_"target"$ is the x value that the robot is moving to.
+  - $y_"target"$ is the y value that the robot is moving to.
+  - $theta_"target"$ is the rotation that the robot is moving to.
+  - $d_"lead"$ is a constant set by the user that controls how far away the carrot point is from the target point.
+
   #nb_admonition(
     type: "equation",
   )[
-    Assuming the following variables:
-    - $d_"lead"$ is a constant set by us that dictates how far away the carrot point
-      is from the end point.
-
     $ h = sqrt(x_"current" - x_"target" + y_"current" - y_"target") $
     $ x_"carrot" = x_"target" - h sin(theta_"target") * d_"lead" $
     $ y_"carrot" = y_"target" - h cos(theta_"target") * d_"lead" $
