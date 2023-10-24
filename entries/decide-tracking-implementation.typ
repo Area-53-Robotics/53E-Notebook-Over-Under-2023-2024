@@ -80,20 +80,18 @@
 
   If the robot has two perpendicular tracking wheels the rotation can be
   calculated with this equation:
+  Assuming these variables:
+  - $Delta theta$ is the absolute rotation
+  - $Delta L$ is the total distance the left tracking wheel has traveled
+  - $Delta R$ is the total distance the right tracking wheel has traveled
+  - $S_L$ is the distance from the left tracking wheel to the tracking center
+  - $S_R$ is the distance from the right tracking wheel to the tracking center
+
   #nb_admonition(
     type: "equation",
   )[
-    Assuming these variables:
-    - $Delta theta$ is the absolute rotation
-    - $Delta L$ is the total distance the left tracking wheel has traveled
-    - $Delta R$ is the total distance the right tracking wheel has traveled
-    - $S_L$ is the distance from the left tracking wheel to the tracking center
-    - $S_R$ is the distance from the right tracking wheel to the tracking center
-
-    \
     $ Delta theta = (Delta L - Delta R) / (S_L + S_R) $
     \
-
   ]
 
   If an IMU is being used, no equation is required, and its output can be used
@@ -158,25 +156,22 @@
   #image("../assets/odometry/local-coordinates.svg")
 
   The length of this chord can be calculated with the following equation:
+  Assuming these variables:
+  - $Delta theta$ is the change in angle since the last loop
+  - $Delta R$ is the distance the right tracking wheel has traveled since the last loop
+  - $Delta S$ is the distance the center tracking wheel has traveled since the last loop
+  - $S_R$ is the distance from the right tracking wheel to the tracking center
+  - $S_S$ is the distance from the center tracking wheel to the tracking center
 
   #nb_admonition(
     type: "equation",
   )[
-    Assuming these variables:
-    - $Delta theta$ is the change in angle since the last loop
-    - $Delta R$ is the distance the right tracking wheel has traveled since the last
-      loop
-    - $Delta S$ is the distance the center tracking wheel has traveled since the last
-      loop
-    - $S_R$ is the distance from the right tracking wheel to the tracking center
-    - $S_S$ is the distance from the center tracking wheel to the tracking center
-
-      \
-      $ Delta limits("d"_"l")^--> = 2 sin((Delta theta)/2) * mat(
+      $
+      Delta limits("d"_"l")^--> = 2 sin((Delta theta)/2) * mat(
         delim: "[",
         (Delta S)/(Delta theta) + S_S;(Delta R)/(Delta theta) + S_R,
-
-      ) $
+      )
+      $
       \
   ]
 
