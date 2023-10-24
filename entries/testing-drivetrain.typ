@@ -139,7 +139,7 @@
       The video we took of the 1st trial started late, and therefore did not have
       enough info to calculate the correct time.
     ]
-
+    // FIXME: change this table to the new style
     #table(
       columns: 7,
       inset: 10pt,

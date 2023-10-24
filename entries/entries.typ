@@ -65,7 +65,9 @@
 
 #include "./kanban-board/entry.typ"
 
-//#include "./identify-scoring.typ"
+#include "./identify-scoring/entry.typ"
+#include "./brainstorm-scoring/entry.typ"
+#include "./decide-scoring/entry.typ"
 
 // TODO: put captions on part diagrams
 

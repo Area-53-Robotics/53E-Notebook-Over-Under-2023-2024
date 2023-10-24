@@ -100,13 +100,20 @@
 
     Here are the existing types:
 
-    - #nb_label(label: "identify")
-    - #nb_label(label: "brainstorm")
-    - #nb_label(label: "decide")
-    - #nb_label(label: "build")
-    - #nb_label(label: "program")
-    - #nb_label(label: "test")
-    - #nb_label(label: "management")
-    - #nb_label(label: "notebook")
+    - #nb_label(label: "identify") #h(5pt)  Identify the problem
+
+    - #nb_label(label: "brainstorm") #h(5pt) Brainstorm possible solutions
+
+    - #nb_label(label: "decide") #h(5pt) Decide on the optimal solution
+
+    - #nb_label(label: "build") #h(5pt) Build the solution
+
+    - #nb_label(label: "program") #h(5pt) Program the solution
+
+    - #nb_label(label: "test") #h(5pt) Test the Solution
+
+    - #nb_label(label: "management") #h(5pt) Team Management
+
+    - #nb_label(label: "notebook") #h(5pt) Notebook Metadata
   ],
 )
