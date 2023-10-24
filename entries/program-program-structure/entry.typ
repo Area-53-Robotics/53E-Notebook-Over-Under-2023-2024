@@ -34,8 +34,6 @@
 
   namespace lib {
 
-  // TODO: split this into a body file
-
   template <typename State, State init_state = State::Idle>
   class StateMachine {
    private:
