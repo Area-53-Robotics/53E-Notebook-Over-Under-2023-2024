@@ -10,14 +10,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install cargo-sort from git
+        uses: baptiste0928/cargo-install@v2
+        with:
+          crate: typst 
+          git: https://github.com/typst/typst
+          branch: main
       - name: Compile Notebook
         run: |
+          wget 
           typst compile main.typ --font-path ./assets/fonts/
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
           name: notebook
           path: main.pdf
-runs:
-  using: docker
-  image: Dockerfile
