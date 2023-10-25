@@ -10,16 +10,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Fonts
-        run: |
-          mkdir -p $HOME/.local/share/fonts
-          cp ./assets/fonts/* $HOME/.local/share/fonts/ 
-          fc-cache -f -v
       - name: Typst
         uses: lvignoli/typst-action@v0
         with:
           source_file: |
             main.typ
+          options: |
+              --font-path
+              assets/fonts/
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
