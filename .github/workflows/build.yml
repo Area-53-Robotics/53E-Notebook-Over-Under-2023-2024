@@ -11,13 +11,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Typst
-        uses: lvignoli/typst-action@v0
+        uses: battlech1cken/typst-action
         with:
           source_file: |
             main.typ
           options: |
-              --font-path
-              assets/fonts/
+              --font-path ./assets/fonts/
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
