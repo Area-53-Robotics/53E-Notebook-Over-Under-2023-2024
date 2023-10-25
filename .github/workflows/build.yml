@@ -18,7 +18,6 @@ jobs:
           branch: main
       - name: Compile Notebook
         run: |
-          wget 
           typst compile main.typ --font-path ./assets/fonts/
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
