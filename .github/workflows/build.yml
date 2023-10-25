@@ -10,13 +10,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Typst
-        uses: battlech1cken/typst-action@v0
-        with:
-          source_file: |
-            main.typ
-          options: |
-              --font-path ./assets/fonts/
+      - name: Compile Notebook
+        run: |
+          typst compile main.typ --font-path ./assets/fonts/
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
