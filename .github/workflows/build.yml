@@ -11,7 +11,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Typst
-        uses: battlech1cken/typst-action
+        uses: battlech1cken/typst-action@v0
         with:
           source_file: |
             main.typ
