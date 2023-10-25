@@ -10,15 +10,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Typst
-        uses: baptiste0928/cargo-install@v2
+      - name: Typst
+        uses: lvignoli/typst-action@v0
         with:
-          crate: typst-cli
-          git: https://github.com/typst/typst
-          branch: main
-      - name: Compile Notebook
-        run: |
-          typst compile main.typ --font-path ./assets/fonts/
+          source_file: |
+            main.typ
+          compile_options: |
+              --font-path fonts
       - name: Upload PDF file
         uses: actions/upload-artifact@v3
         with:
