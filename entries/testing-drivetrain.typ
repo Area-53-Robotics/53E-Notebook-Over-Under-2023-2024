@@ -2,7 +2,7 @@
 #import "/template/widgets.typ": *
 
 #create_entry(
-  title: "Testing: Drivetrain",
+  title: "Test: Drivetrain",
   type: "test",
   start_date: datetime(year: 2023, month: 8, day: 4),
   [
@@ -139,10 +139,8 @@
       The video we took of the 1st trial started late, and therefore did not have
       enough info to calculate the correct time.
     ]
-    // FIXME: change this table to the new style
-    #table(
+    #nb_table(
       columns: 7,
-      inset: 10pt,
       [],
       [Trial 1],
       [Trial 2],
@@ -169,7 +167,7 @@
     We also recorded the velocity of the left and right side of the drivetrain
     during each test.
 
-    #let graph_width = 75%
+    #let graph_width = 75% 
 
     #figure(
       caption: [ Trial 1 ],

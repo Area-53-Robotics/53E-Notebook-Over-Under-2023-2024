@@ -2,9 +2,11 @@
 #import "template/widgets.typ": *
 
 #page(
+  header: [
+    #nb_heading([About This Notebook], level: 0)
+  ],
   footer: [#nb_frontmatter_footer()],
   [
-    #nb_heading([About This Notebook], level: 0)
 
     This notebook was written with a programming language called Typst. We write
     instructions about formatting in Typst, and they they are rendered into a pdf.
@@ -60,7 +62,7 @@
       gutter: 20pt,
       [
         The source code can be found here: #link("https://github.com/Area-53-Robotics/53E-Notebook").
-        Alternatively, you can use the qr code to the left.
+        Alternatively, you can use the QR code to the left.
       ],
       image("./assets/notebook-qr-code.png", width: 50%),
     )

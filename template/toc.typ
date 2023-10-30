@@ -3,14 +3,15 @@
 
 #let nb_toc() = {
   page(
-    footer: [#nb_frontmatter_footer()],
+    header: nb_heading([Table of Contents], level: 0),
+    footer: nb_frontmatter_footer(),
     [
-      #nb_heading([Table of Contents], level: 0)
 
       #nb_heading([Entries], level: 1)
 
       #locate(
         loc => {
+          // FIXME: its not displaying the page number correctly
           let headings = query(selector(<nb_heading_entry>), loc)
 
           for (index, entry) in entries.final(loc).enumerate() {
@@ -25,28 +26,6 @@
               #box(width: 1fr, line(length: 100%, stroke: (dash: "dotted")))
               #page_number \
             ]
-            /*
-                    if not entry.end_date == entry.start_date {
-                      align(
-                        right,
-                        [
-                        #box(
-                          outset: 0pt,
-                          [
-                          #line(
-                            length: 15pt,
-                            start: (-30pt, -8pt),
-                            angle: 90deg,
-                            stroke: (thickness: 1pt),
-                          )
-                          ],
-                        )
-                        \
-                        #entry.end_date.display("[year]/[month]/[day]") #h(1.7em)
-                        ],
-                      )
-                    }
-                    */
           }
           [
 

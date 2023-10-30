@@ -6,6 +6,7 @@
 #import "./colors.typ": *
 
 // Returns the raw image data, not image content
+// You'll still need to run image.decode on the result
 #let change_icon_color(icon, fill) = {
   let raw_icon = read(icon)
   raw_icon.replace("<path", "<path style=\"fill: " + fill.to-hex() + "\"")
@@ -73,6 +74,38 @@
 
 ]
 
+#let nb_table(columns: (1fr, 1fr), ..elements) = {
+    let length = if type(columns) == int {
+      columns
+    } else {
+      columns.len()
+    }
+
+    tablex(
+      columns: columns,
+      auto-lines: false,
+      inset: 10pt,
+      fill: (_, row) => {
+        if calc.odd(row)  { surface_3 }
+        if calc.even(row) { surface_1 }
+      },
+
+      hlinex(stroke: (cap: "round", thickness: 2pt)),
+      ..for (index, element) in elements.pos().enumerate() {
+
+        // Make the element bold if its in the top row or on the first column
+        if index < length or calc.rem(index, length) == 0 {
+            ([ *#element* ],)
+        } else {
+          ([ #element ],)
+        }
+
+      },
+
+      hlinex(stroke: (cap: "round", thickness: 2pt)),
+    )
+}
+
 #let nb_pro_con(pros: [], cons: []) = [
   #let cell = rect.with(width: 100%, inset: 5pt)
   #grid(
@@ -87,7 +120,6 @@
       #cons
     ],
   )
-
 ]
 
 #let nb_decision_matrix(properties: (), choices: ()) = {
@@ -149,6 +181,7 @@
   let title;
 
   // I hate everthing about this
+  // TODO: swap this out for a hashmap
   if type == "note" {
     title = "Note"
     icon = "./icons/pencil.svg"
@@ -156,7 +189,7 @@
   } else if type == "warning" {
     title = "Warning"
     icon = "./icons/warning.svg"
-    color = red
+    color = yellow
   } else if type == "example" {
     title = "Example"
     icon = "./icons/web.svg"
