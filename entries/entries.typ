@@ -61,6 +61,7 @@
 #include "./identify-wedges/entry.typ"
 #include "./brainstorm-wedges/entry.typ"
 #include "./decide-wedges/entry.typ" // TODO: part diagram
+#include "./build-wedges/entry.typ"
 // TODO: build wedges
 
 #include "./kanban-board/entry.typ"

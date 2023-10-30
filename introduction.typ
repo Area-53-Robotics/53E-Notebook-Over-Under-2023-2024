@@ -3,11 +3,11 @@
 #import "/template/widgets.typ" : *
 
 #page(
+  header: nb_heading([Our Team], level: 0),
   footer: [
     #nb_frontmatter_footer()
   ],
   [
-    #nb_heading([Our Team], level: 0)
 
     // TODO: move to template
     #let nb_member(name: "", picture: "", body) = [
