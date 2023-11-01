@@ -9,10 +9,12 @@
 
       #nb_heading([Entries], level: 1)
 
+      
+
       #locate(
         loc => {
           // FIXME: its not displaying the page number correctly
-          let headings = query(selector(<nb_heading_entry>), loc)
+          let headings = query(selector(<nb_entry>), loc)
 
           for (index, entry) in entries.final(loc).enumerate() {
             let page_number = counter(page).at(headings.at(index).location()).at(0)

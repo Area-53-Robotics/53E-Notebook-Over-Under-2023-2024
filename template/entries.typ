@@ -28,15 +28,15 @@
         #set page(
         header: [
           #let info = entry_type_metadata.at(entry.type)
-
           #nb_heading(color: info.color, level: 0, beggining: [
             #image.decode(change_icon_color(info.icon, white), height: 1em)
           ], [
             #entry.title #h(1fr)
           ], end: [
             #entry.start_date.display("[year]/[month]/[day]")
-          ])<nb_heading_entry>
+          ])
         ],
+
         footer: [
           #line(length: 100%)
           #align(left, [
@@ -44,11 +44,12 @@
             *Witnessed by:* #h(1fr) #counter(page).display()
           ])
         ])
-        #counter(footnote).update(0)
 
-        #entry.body
+        #counter(footnote).update(0)
+        #entry.body <nb_entry>
+
       ]
-    }
+      }
   })
 }
 
