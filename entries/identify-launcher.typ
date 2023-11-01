@@ -4,7 +4,7 @@
 #create_entry(
   title: "Identify: Moving Triballs",
   type: "identify",
-  start_date: datetime(year: 2023, month: 8, day: 5),
+  start_date: datetime(year: 2023, month: 9, day: 5),
 )[
   Moving the triballs is vital to our ability to score points. The faster we move
   triballs to the opposite side of the field the more points we get. Not only do

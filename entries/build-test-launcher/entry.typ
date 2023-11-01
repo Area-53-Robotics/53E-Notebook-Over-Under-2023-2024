@@ -117,17 +117,17 @@
     [
       //The throwing arm was completed, and the driven gear’s spacing was completed.
 
-      The meeting we completed the arm of the catapult.
+      This meeting we completed the arm of the catapult.
 
       1. We cut a piece of half cut down to 13 holes.
       2. We screwed the piece of half cut to the end of the catapult arm.
-      3. We attached 90 #sym.degree gussets to the end of the catapult to provide more
+      3. We attached 90#sym.degree gussets to the end of the catapult to provide more
         bracing
       #nb_admonition(
         type: "note",
       )[
         This is a deviation from the CAD, we originally used two pieces of strip here.
-        The 90 #sym.degree gussets provide much more rigidity and are a much better
+        The 90#sym.degree gussets provide much more rigidity and are a much better
         choice here.
       ]
       4. We screwed standoffs to the end of the catapult.

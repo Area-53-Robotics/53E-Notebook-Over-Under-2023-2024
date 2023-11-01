@@ -4,7 +4,7 @@
 #create_entry(
   title: "Brainstorm: Autonomous Movement",
   type: "brainstorm",
-  start_date: datetime(year: 2023, month: 8, day: 29),
+  start_date: datetime(year: 2023, month: 9, day: 11),
 )[
 
   In order to move the robot we need some kind of control loop. This is a process
@@ -22,8 +22,8 @@
   calculates the required movement before starting, and then simply follows those
   instructions. This means that it cannot correct for outside interference.
 
-  We stated in our goals that we wanted the robot to be able to correct for past
-  movements, so open loop controllers are not an option.
+  We stated in our goals that we wanted the robot to be able to correct for errors
+  in past movements, so open loop controllers are not an option.
 
   There are a variety of closed loop controllers that are commonly used:
 

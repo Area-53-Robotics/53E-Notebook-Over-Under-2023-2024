@@ -4,7 +4,7 @@
 #create_entry(
   title: "Decide: Autonomous Movement",
   type: "decide",
-  start_date: datetime(year: 2023, month: 8, day: 29),
+  start_date: datetime(year: 2023, month: 9, day: 11),
 )[
 
   We rated all of our choices by the following criteria:
@@ -67,19 +67,19 @@
   LemLib calculates PID output with the following code:
 
   ```cpp
-  float lemlib::FAPID::update(float target, float position, bool log) {
-      // calculate output
-      float error = target - position; // Calculate P term
-      float deltaError = error - prevError; // Calculate D term
-      float output = kF * target + kP * error + kI * totalError + kD * deltaError;
-      if (kA != 0) output = lemlib::slew(output, prevOutput, kA); // Limit rate of change, if applicable
-      prevOutput = output;
-      prevError = error;
-      totalError += error; // Calculate I term
+      float lemlib::FAPID::update(float target, float position, bool log) {
+          // calculate output
+          float error = target - position; // Calculate P term
+          float deltaError = error - prevError; // Calculate D term
+          float output = kF * target + kP * error + kI * totalError + kD * deltaError;
+          if (kA != 0) output = lemlib::slew(output, prevOutput, kA); // Limit rate of change, if applicable
+          prevOutput = output;
+          prevError = error;
+          totalError += error; // Calculate I term
 
-      return output;
-  }
-  ```
+          return output;
+      }
+      ```
 
   The PID loop cannot run forever and needs an exit condition. We could naively
   assume that if error (distance from the target) is zero, then we exit, but this
@@ -94,63 +94,63 @@
   spend settling. The code for this is found below:
 
   ```cpp
-  bool lemlib::FAPID::settled() {
-      if (startTime == 0) { // if maxTime has not been set
-          startTime = pros::c::millis();
-          return false;
-      } else { // check if the FAPID has settled
-          if (pros::c::millis() - startTime > maxTime) return true; // maxTime has been exceeded
-          if (std::fabs(prevError) < largeError) { // largeError within range
-              if (!largeTimeCounter) largeTimeCounter = pros::c::millis(); // largeTimeCounter has not been set
-              else if (pros::c::millis() - largeTimeCounter > largeTime) return true; // largeTime has been exceeded
+      bool lemlib::FAPID::settled() {
+          if (startTime == 0) { // if maxTime has not been set
+              startTime = pros::c::millis();
+              return false;
+          } else { // check if the FAPID has settled
+              if (pros::c::millis() - startTime > maxTime) return true; // maxTime has been exceeded
+              if (std::fabs(prevError) < largeError) { // largeError within range
+                  if (!largeTimeCounter) largeTimeCounter = pros::c::millis(); // largeTimeCounter has not been set
+                  else if (pros::c::millis() - largeTimeCounter > largeTime) return true; // largeTime has been exceeded
+              }
+              if (std::fabs(prevError) < smallError) { // smallError within range
+                  if (!smallTimeCounter) smallTimeCounter = pros::c::millis(); // smallTimeCounter has not been set
+                  else if (pros::c::millis() - smallTimeCounter > smallTime) return true; // smallTime has been exceeded
+              }
+              // if none of the exit conditions have been met
+              return false;
           }
-          if (std::fabs(prevError) < smallError) { // smallError within range
-              if (!smallTimeCounter) smallTimeCounter = pros::c::millis(); // smallTimeCounter has not been set
-              else if (pros::c::millis() - smallTimeCounter > smallTime) return true; // smallTime has been exceeded
-          }
-          // if none of the exit conditions have been met
-          return false;
       }
-  }
-  ```
+      ```
 
   LemLib uses two PID controllers to move the robot, one for linear movement, and
   one for angular movement. The output of the two is added together and then
   passed into the motor's `move()` method.
 
   ```cpp
-  float angularPower = -angularPID.update(radToDeg(angularError), 0, log);
-  float linearPower = linearPID.update(linearError, 0, log);
+      float angularPower = -angularPID.update(radToDeg(angularError), 0, log);
+      float linearPower = linearPID.update(linearError, 0, log);
 
-  float leftPower = linearPower + angularPower;
-  float rightPower = linearPower - angularPower;
+      float leftPower = linearPower + angularPower;
+      float rightPower = linearPower - angularPower;
 
-  // move the motors
-  drivetrain.leftMotors->move(leftPower);
-  drivetrain.rightMotors->move(rightPower);
-  ```
+      // move the motors
+      drivetrain.leftMotors->move(leftPower);
+      drivetrain.rightMotors->move(rightPower);
+      ```
 
   `AngularPower` and `LinearPower` are simply the output of the two PID loops.
   LemLib calculates the error with some simple trigonometry.
 
   ```cpp
-  float lemlib::angleError(float angle1, float angle2, bool radians) {
-      float max = radians ? 2 * M_PI : 360;
-      float half = radians ? M_PI : 180;
-      angle1 = fmod(angle1, max);
-      angle2 = fmod(angle2, max);
-      float error = angle1 - angle2;
-      if (error > half) error -= max;
-      else if (error < -half) error += max;
-      return error;
-  }
+      float lemlib::angleError(float angle1, float angle2, bool radians) {
+          float max = radians ? 2 * M_PI : 360;
+          float half = radians ? M_PI : 180;
+          angle1 = fmod(angle1, max);
+          angle2 = fmod(angle2, max);
+          float error = angle1 - angle2;
+          if (error > half) error -= max;
+          else if (error < -half) error += max;
+          return error;
+      }
 
-  float angularError = angleError(pose.angle(carrot), pose.theta, true); // angular error
-  float linearError = pose.distance(carrot) * cos(angularError); // linear error
-  ```
+      float angularError = angleError(pose.angle(carrot), pose.theta, true); // angular error
+      float linearError = pose.distance(carrot) * cos(angularError); // linear error
+      ```
 
-  `angularError`'s calculation is simple enough, but `linearError` is worth looking
-  into. Instead of taking the raw distance, it multiplies by $cos("angularError")$ to
+  `angularError`'s calculation is simple enough, but `linearError` is worth
+  looking into. Instead of taking the raw distance, it multiplies by $cos("angularError")$ to
   find the distance that the robot can actually achieve while moving in a straight
   line.
 
@@ -171,11 +171,10 @@
   - $x_"target"$ is the x value that the robot is moving to.
   - $y_"target"$ is the y value that the robot is moving to.
   - $theta_"target"$ is the rotation that the robot is moving to.
-  - $d_"lead"$ is a constant set by the user that controls how far away the carrot point is from the target point.
+  - $d_"lead"$ is a constant set by the user that controls how far away the carrot
+    point is from the target point.
 
-  #nb_admonition(
-    type: "equation",
-  )[
+  #nb_admonition(type: "equation")[
     $ h = sqrt(x_"current" - x_"target" + y_"current" - y_"target") $
     $ x_"carrot" = x_"target" - h sin(theta_"target") * d_"lead" $
     $ y_"carrot" = y_"target" - h cos(theta_"target") * d_"lead" $

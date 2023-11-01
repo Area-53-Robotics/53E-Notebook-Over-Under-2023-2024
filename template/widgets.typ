@@ -12,6 +12,7 @@
   raw_icon.replace("<path", "<path style=\"fill: " + fill.to-hex() + "\"")
 }
 
+// FIXME: frontmatter is using the appendix counter
 #let nb_frontmatter_footer() = {
   appendix_page_counter.step()
   align(right, appendix_page_counter.display("i"))
@@ -41,69 +42,66 @@
     )
   }
   #if level == 0 [
-      #set text(size: 18pt, weight: "bold")
+    #set text(size: 18pt, weight: "bold")
 
-      #if not beggining == none {
-        highlight(color: color)[
-          #beggining
-        ]
-        h(10pt)
-      }
-      #highlight(color: color.lighten(80%), width: 1fr)[
-        #box(baseline: -30%, body)
+    #if not beggining == none {
+      highlight(color: color)[
+        #beggining
       ]
-      #if not end == none {
-        h(10pt)
-        highlight(color: color.lighten(80%))[
-          #box(baseline: -30%, end)
-        ]
-      }
-  ] else if level == 1 [
-    #heading([
-    #set text(size: 15pt)
-    #highlight(color: surface_3)[
-      #box(baseline: 130%, body)
+      h(10pt)
+    }
+     #highlight(color: color.lighten(80%), width: 1fr)[
+      #box(baseline: -30%, body)
     ]
-  ])
+    #if not end == none {
+      h(10pt)
+      highlight(color: color.lighten(80%))[
+        #box(baseline: -30%, end)
+      ]
+    }
+  ]  else if level == 1 [
+    #heading([
+      #set text(size: 15pt)
+      #highlight(color: surface_3)[
+        #box(baseline: 130%, body)
+      ]
+      #v(6pt)
+    ])
   ] else if level == 2 [
     #heading([
-    #set text(size: 13pt)
-    #body
+      #set text(size: 13pt)
+      #body
     ])
   ]
 
 ]
 
 #let nb_table(columns: (1fr, 1fr), ..elements) = {
-    let length = if type(columns) == int {
-      columns
-    } else {
-      columns.len()
-    }
+  let length = if type(columns) == int {
+    columns
+  } else {
+    columns.len()
+  }
 
-    tablex(
-      columns: columns,
-      auto-lines: false,
-      inset: 10pt,
-      fill: (_, row) => {
-        if calc.odd(row)  { surface_3 }
-        if calc.even(row) { surface_1 }
-      },
-
-      hlinex(stroke: (cap: "round", thickness: 2pt)),
-      ..for (index, element) in elements.pos().enumerate() {
-
-        // Make the element bold if its in the top row or on the first column
-        if index < length or calc.rem(index, length) == 0 {
-            ([ *#element* ],)
-        } else {
-          ([ #element ],)
-        }
-
-      },
-
-      hlinex(stroke: (cap: "round", thickness: 2pt)),
-    )
+  tablex(
+    columns: columns,
+    auto-lines: false,
+    inset: 10pt,
+    fill: (_, row) => {
+      if calc.odd(row) { surface_3 }
+      if calc.even(row) { surface_1 }
+    },
+    hlinex(stroke: (cap: "round", thickness: 2pt)),
+    ..for (index, element) in elements.pos().enumerate() {
+      // Make the element bold if its in the top row or on the first column
+      if index < length or calc.rem(index, length) == 0 {
+        ([ *#element* ],)
+      } else {
+        ([ #element ],)
+      }
+    },
+    hlinex(stroke: (cap: "round", thickness: 2pt)),
+  )
 }
 
 #let nb_pro_con(pros: [], cons: []) = [

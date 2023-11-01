@@ -13,25 +13,25 @@
     Here are some examples of what that looks like:
 
     ```typ
-      Just some ordinary text // Turns into text
+              Just some ordinary text // Turns into text
 
-      #grid( // Creates a grid layout
-        columns: (1fr,1fr),
-        gutter: 20pt,
-        nb_pro_con(pros: [ // Turns into a table of pros and cons (appears on the right side)
-           - good
-           - better
-        ], cons: [
-          - bad
-          - worse
-        ]),
-        [
-          Some content on the left side
+              #grid( // Creates a grid layout
+                columns: (1fr,1fr),
+                gutter: 20pt,
+                nb_pro_con(pros: [ // Turns into a table of pros and cons (appears on the right side)
+                   - good
+                   - better
+                ], cons: [
+                  - bad
+                  - worse
+                ]),
+                [
+                  Some content on the left side
 
-          *Bold content on the left side*
-        ]
-      )
-      ```
+                  *Bold content on the left side*
+                ]
+              )
+              ```
     This would would render into:
 
     Just some ordinary text // Turns into text
@@ -102,7 +102,7 @@
 
     Here are the existing types:
 
-    - #nb_label(label: "identify") #h(5pt)  Identify the problem
+    - #nb_label(label: "identify") #h(5pt) Identify the problem
 
     - #nb_label(label: "brainstorm") #h(5pt) Brainstorm possible solutions
 

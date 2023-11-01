@@ -4,13 +4,15 @@
 #create_entry(
   title: "Identify: Pushing Robots",
   type: "identify",
-  start_date: datetime(year: 2023, month: 8, day: 26),
-  end_date: datetime(year: 2023, month: 9, day: 3),
+  start_date: datetime(year: 2023, month: 9, day: 3),
 )[
-  VRC is a very contact heavy robotics competition. We will often be trying to push other robots. During the Spin Up season, even with our 6 motor drivetrain, we still struggled to push other robots. 
+  VRC is a very contact heavy robotics competition. We will often be trying to
+  push other robots. During the Spin Up season, even with our 6 motor drivetrain,
+  we still struggled to push other robots.
 
-  We need to something that will give us an advantage while pushing robots without adding more motors to our drivetrain.
-  
+  We need to something that will give us an advantage while pushing robots without
+  adding more motors to our drivetrain.
+
   #figure(image("modelone.png", width: 80%))
 
   #nb_heading([Design Constraints])

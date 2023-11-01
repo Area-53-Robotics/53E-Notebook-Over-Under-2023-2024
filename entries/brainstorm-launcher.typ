@@ -4,7 +4,7 @@
 #create_entry(
   title: "Brainstorm: Moving Triballs",
   type: "brainstorm",
-  start_date: datetime(year: 2023, month: 8, day: 5),
+  start_date: datetime(year: 2023, month: 9, day: 5),
 )[
   After discussing for a bit we realized that the only mechanism that would be
   able to meet our goal of being able to get the triballs across the field in

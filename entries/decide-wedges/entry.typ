@@ -2,7 +2,7 @@
 #import "/template/widgets.typ": *
 
 #create_entry(
-  title: "Decide: Wedges",
+  title: "Decide: Pushing Robots",
   type: "decide",
   start_date: datetime(year: 2023, month: 9, day: 8),
 )[

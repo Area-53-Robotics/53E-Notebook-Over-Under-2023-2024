@@ -72,14 +72,14 @@
   In code it looks like this:
 
   ```cpp
-  double calcDriveCurve(double input, double scale) {
-      if (scale != 0) {
-          return (powf(2.718, -(scale / 10)) + powf(2.718, (fabs(input) - 127) / 10) * (1 - powf(2.718, -(scale / 10)))) *
-                 input;
+      double calcDriveCurve(double input, double scale) {
+          if (scale != 0) {
+              return (powf(2.718, -(scale / 10)) + powf(2.718, (fabs(input) - 127) / 10) * (1 - powf(2.718, -(scale / 10)))) *
+                     input;
+          }
+          return input;
       }
-      return input;
-  }
-  ```
+      ```
 
   #nb_heading([Tank Drive], level: 2)
 
@@ -88,11 +88,11 @@
   motor groups.
 
   ```cpp
-  void tank(int left, int right, float curveGain) {
-      leftMotors.move(calcDriveCurve(left, curveGain));
-      rightMotors.move(calcDriveCurve(right, curveGain));
-  };
-  ```
+      void tank(int left, int right, float curveGain) {
+          leftMotors.move(calcDriveCurve(left, curveGain));
+          rightMotors.move(calcDriveCurve(right, curveGain));
+      };
+      ```
 
   #nb_heading([Arcade Drive], level: 2)
 
@@ -101,13 +101,13 @@
   from the value of the throttle value.
 
   ```cpp
-  void arcade(int throttle, int turn, float curveGain) {
-      int leftPower = calcDriveCurve(throttle + turn, curveGain);
-      int rightPower = calcDriveCurve(throttle - turn, curveGain);
-      leftMotors.move(leftPower);
-      rightMotors.move(rightPower);
-  };
-  ```
+      void arcade(int throttle, int turn, float curveGain) {
+          int leftPower = calcDriveCurve(throttle + turn, curveGain);
+          int rightPower = calcDriveCurve(throttle - turn, curveGain);
+          leftMotors.move(leftPower);
+          rightMotors.move(rightPower);
+      };
+      ```
 
   #nb_heading([Curvature Drive], level: 2)
 
@@ -119,23 +119,23 @@
   or subtracted from it, rather than turn by itself.
 
   ```cpp
-  void curvature(int throttle, int turn, float curveGain) {
-      // If we're not moving forwards change to arcade drive
-      if (throttle == 0) {
-          arcade(throttle, turn, curveGain);
-          return;
-      }
+      void curvature(int throttle, int turn, float curveGain) {
+          // If we're not moving forwards change to arcade drive
+          if (throttle == 0) {
+              arcade(throttle, turn, curveGain);
+              return;
+          }
 
-      double leftPower = throttle + (std::abs(throttle) * turn) / 127.0;
-      double rightPower = throttle - (std::abs(throttle) * turn) / 127.0;
+          double leftPower = throttle + (std::abs(throttle) * turn) / 127.0;
+          double rightPower = throttle - (std::abs(throttle) * turn) / 127.0;
 
-      leftPower = calcDriveCurve(leftPower, curveGain);
-      rightPower = calcDriveCurve(rightPower, curveGain);
+          leftPower = calcDriveCurve(leftPower, curveGain);
+          rightPower = calcDriveCurve(rightPower, curveGain);
 
-      leftMotors.move(leftPower);
-      rightMotors.move(rightPower);
-  };
-  ```
+          leftMotors.move(leftPower);
+          rightMotors.move(rightPower);
+      };
+      ```
   #nb_heading([Results], level: 1)
 
   After running our test our driver decided on

@@ -27,39 +27,39 @@
   same variable.
 
   ```cpp
-  // state_machine.hpp
-  #pragma once
-  #include "pros/rtos.hpp"
-  #include "pros/screen.hpp"
+      // state_machine.hpp
+      #pragma once
+      #include "pros/rtos.hpp"
+      #include "pros/screen.hpp"
 
-  namespace lib {
+      namespace lib {
 
-  template <typename State, State init_state = State::Idle>
-  class StateMachine {
-   private:
-    State state = init_state;
-    pros::Mutex state_lock; // Define the mutex
+      template <typename State, State init_state = State::Idle>
+      class StateMachine {
+       private:
+        State state = init_state;
+        pros::Mutex state_lock; // Define the mutex
 
-   public:
-    StateMachine() {}
+       public:
+        StateMachine() {}
 
 
-    State get_state() {
-      state_lock.take(); // Only one task can take a mutex at a time
-      State current_state = state;
-      state_lock.give(); // Once its given back another task can take it
-      return current_state;
-    }
+        State get_state() {
+          state_lock.take(); // Only one task can take a mutex at a time
+          State current_state = state;
+          state_lock.give(); // Once its given back another task can take it
+          return current_state;
+        }
 
-    void set_state(State new_state) {
-      state_lock.take();
-      state = new_state;
-      state_lock.give();
-    }
-  };
+        void set_state(State new_state) {
+          state_lock.take();
+          state = new_state;
+          state_lock.give();
+        }
+      };
 
-  }
-  ```
+      }
+      ```
 
   We took the same approach for the task wrapper and made it it's own class. This
   is also inspired by Theo. #footnote(link(
@@ -67,100 +67,100 @@
   ))
 
   ```cpp
-  // task_wrapper.hpp
-  #pragma once
-  #include <cstdio>
-  #include <memory>
+      // task_wrapper.hpp
+      #pragma once
+      #include <cstdio>
+      #include <memory>
 
-  #include "pros/rtos.hpp"
+      #include "pros/rtos.hpp"
 
-  namespace lib {
+      namespace lib {
 
-  class TaskWrapper {
-   protected:
-    virtual void loop() = 0; // Will be overridden later
+      class TaskWrapper {
+       protected:
+        virtual void loop() = 0; // Will be overridden later
 
-   public:
-    void start_task();
+       public:
+        void start_task();
 
-   private:
-    pros::Task *task{nullptr}; // We don't want the task to start right away
-  };
+       private:
+        pros::Task *task{nullptr}; // We don't want the task to start right away
+      };
 
-  }  // namespace lib
-  ```
+      }  // namespace lib
+      ```
 
   ```cpp
-  // task_wrapper.cpp
-  #include "lib/utils/task-wrapper.hpp"
+      // task_wrapper.cpp
+      #include "lib/utils/task-wrapper.hpp"
 
-  namespace lib {
+      namespace lib {
 
-  void TaskWrapper::start_task() {
-    if (task == nullptr) {
-      task = new pros::Task([this] {
-        while (true) {
-          this->loop();
+      void TaskWrapper::start_task() {
+        if (task == nullptr) {
+          task = new pros::Task([this] {
+            while (true) {
+              this->loop();
+            }
+          });
         }
-      });
-    }
-  }
+      }
 
-  };  // namespace lib
-  ```
+      };  // namespace lib
+      ```
 
   With these two defined we can now define a subsystem. We made a mock catapult to
   showcase our new capabilities.
 
   ```cpp
-  // catapult.hpp
-  #pragma once
-  #include <memory>
+      // catapult.hpp
+      #pragma once
+      #include <memory>
 
-  #include "lib/utils/state_machine.hpp"
-  #include "lib/utils/task-wrapper.hpp"
-  #include "pros/motors.hpp"
+      #include "lib/utils/state_machine.hpp"
+      #include "lib/utils/task-wrapper.hpp"
+      #include "pros/motors.hpp"
 
-  namespace lib {
+      namespace lib {
 
-  enum class CatapultState { Idle, Loading, Ready, Firing };
+      enum class CatapultState { Idle, Loading, Ready, Firing };
 
-  class Catapult : public lib::StateMachine<CatapultState>, public TaskWrapper { // Inherit both classes here
-   public:
-    Catapult(std::shared_ptr<pros::Motor> i_motor); // We take a pointer to the motor instead of a port to avoid having to configure it
-    ~Catapult();
+      class Catapult : public lib::StateMachine<CatapultState>, public TaskWrapper { // Inherit both classes here
+       public:
+        Catapult(std::shared_ptr<pros::Motor> i_motor); // We take a pointer to the motor instead of a port to avoid having to configure it
+        ~Catapult();
 
-   private:
-    std::shared_ptr<pros::Motor> motor;
+       private:
+        std::shared_ptr<pros::Motor> motor;
 
-   protected:
-    void loop() override;
-  };
+       protected:
+        void loop() override;
+      };
 
-  }  // namespace lib
-  ```
+      }  // namespace lib
+      ```
 
   ```cpp
-  // catapult.cpp
-  #include "lib/subsystems/catapult.hpp"
+      // catapult.cpp
+      #include "lib/subsystems/catapult.hpp"
 
-  #include <cstdio>
+      #include <cstdio>
 
-  #include "pros/rtos.hpp"
+      #include "pros/rtos.hpp"
 
-  namespace lib {
+      namespace lib {
 
-  Catapult::Catapult(std::shared_ptr<pros::Motor> i_motor) : motor(i_motor){};
-  Catapult::~Catapult(){};
-  void Catapult::loop() {
-    while (true) {
-      if (get_state() == CatapultState::Idle) {  // State machine
-        printf("just chillin\n");
+      Catapult::Catapult(std::shared_ptr<pros::Motor> i_motor) : motor(i_motor){};
+      Catapult::~Catapult(){};
+      void Catapult::loop() {
+        while (true) {
+          if (get_state() == CatapultState::Idle) {  // State machine
+            printf("just chillin\n");
+          }
+          pros::delay(20);
+        }
+      };
       }
-      pros::delay(20);
-    }
-  };
-  }
-  ```
+      ```
 
 ]

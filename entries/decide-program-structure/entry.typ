@@ -50,36 +50,36 @@
   combination of the 3. These states are perfectly modeled as an enumeration.
 
   ```cpp
-  enum class CatapultState {
-    Loading,
-    Ready,
-    Firing,
-  }
-  ```
+      enum class CatapultState {
+        Loading,
+        Ready,
+        Firing,
+      }
+      ```
 
   We can then make a variable that tracks the current state and then have the
   system change based on the current state.
 
   ```cpp
-  CatapultState current_state = CatapultState::Loading;
-  while(true) {
-    switch (current_state) {
-    case CatapultState::Loading: {
-      // Load the catapult
-      break;
-    }
-    case CatapultState::Ready: {
-      // Ready the catapult
-      break;
-    }
+      CatapultState current_state = CatapultState::Loading;
+      while(true) {
+        switch (current_state) {
+        case CatapultState::Loading: {
+          // Load the catapult
+          break;
+        }
+        case CatapultState::Ready: {
+          // Ready the catapult
+          break;
+        }
 
-    case CatapultState::Firing: {
-      // Fire the catapult
-      break;
-    }
-    }
-  }
-  ```
+        case CatapultState::Firing: {
+          // Fire the catapult
+          break;
+        }
+        }
+      }
+      ```
 
   #nb_heading([Tasks], level: 2)
 
@@ -99,14 +99,14 @@
   initialize it later with a lambda function, which looks like this:
 
   ```cpp
-  if (task == nullptr) {
-    task = new pros::Task([=] {
-      while (true) {
-        loop();
+      if (task == nullptr) {
+        task = new pros::Task([=] {
+          while (true) {
+            loop();
+          }
+        });
       }
-    });
-  }
-  ```
+      ```
 
   #nb_heading([File Structure], level: 2)
 
