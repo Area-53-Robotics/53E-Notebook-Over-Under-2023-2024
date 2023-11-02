@@ -102,35 +102,35 @@
 
     Here are the existing types:
 
-    #box(baseline: 30%, nb_label(label: "identify", size: 1.7em)) #h(5pt) *Identify the problem*
+    #box(baseline: 30%, nb_label(label: "identify", size: 1.7em)) #h(10pt) *Identify the problem*
 
     #v(5pt)
 
-    #box(baseline: 30%, nb_label(label: "brainstorm", size: 1.7em)) #h(5pt) *Brainstorm possible solutions*
+    #box(baseline: 30%, nb_label(label: "brainstorm", size: 1.7em)) #h(10pt) *Brainstorm possible solutions*
 
     #v(5pt)
 
-    #box(baseline: 30%, nb_label(label: "decide", size: 1.7em)) #h(5pt) *Decide on the optimal solution*
+    #box(baseline: 30%, nb_label(label: "decide", size: 1.7em)) #h(10pt) *Decide on the optimal solution*
 
     #v(5pt)
 
-    #box(baseline: 30%, nb_label(label: "build", size: 1.7em)) #h(5pt) *Build the solution*
+    #box(baseline: 30%, nb_label(label: "build", size: 1.7em)) #h(10pt) *Build the solution*
 
     #v(5pt)
 
-    #box(baseline: 30%, nb_label(label: "program", size: 1.7em)) #h(5pt) *Program the solution*
+    #box(baseline: 30%, nb_label(label: "program", size: 1.7em)) #h(10pt) *Program the solution*
 
     #v(5pt)
 
-    #box(baseline: 30%, nb_label(label: "test", size: 1.7em)) #h(5pt) *Test the solution*
+    #box(baseline: 30%, nb_label(label: "test", size: 1.7em)) #h(10pt) *Test the solution*
 
     #v(5pt)
 
-    #box(baseline: 30%, nb_label(label: "management", size: 1.7em)) #h(5pt) *Team management*
+    #box(baseline: 30%, nb_label(label: "management", size: 1.7em)) #h(10pt) *Team management*
     
     #v(5pt)
 
-    #box(baseline: 30%, nb_label(label: "notebook", size: 1.7em)) #h(5pt) *Notebook Metadata*
+    #box(baseline: 30%, nb_label(label: "notebook", size: 1.7em)) #h(10pt) *Notebook Metadata*
 
   ],
 )

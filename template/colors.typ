@@ -1,5 +1,5 @@
 #let red = rgb("#e03131")
-#let pink = rgb("#c2255c")
+#let pink = rgb("#f06595")
 #let purple = rgb("#9c36b5")
 #let violet = rgb("#6741d9")
 #let indigo = rgb("3b5bdb")
