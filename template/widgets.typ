@@ -19,15 +19,18 @@
 }
 
 #let nb_highlight(color: red, body) = {
-  box(fill: color, outset: 3pt, radius: 1.5pt, body)
+  box(fill: color, outset: 3pt, radius: 1.5pt)[
+    #set align(center + horizon)
+    #body
+  ]
 }
 
-#let nb_label(label: "") = {
+#let nb_label(label: "", size: 0.7em) = {
   let data = entry_type_metadata.at(label)
 
   let colored_image = change_icon_color(data.icon, white)
 
-  nb_highlight(color: data.color, image.decode(colored_image, height: 0.7em))
+  nb_highlight(color: data.color, image.decode(colored_image, height: size))
 }
 
 #let nb_heading(level: 1, color: gray, beggining: none, end: none, body) = [
