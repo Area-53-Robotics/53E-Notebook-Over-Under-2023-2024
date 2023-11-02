@@ -10,7 +10,7 @@
 #let green = rgb("#2f9e44")
 #let light_green = rgb("#8ce99a")
 #let lime = rgb("#66a80f")
-#let yellow = rgb("#f08c00")
+#let yellow =rgb("#fcc419")
 #let orange = rgb("#e8590c")
 #let gray = rgb("#343a40")
 #let white = rgb("#ffffff")
