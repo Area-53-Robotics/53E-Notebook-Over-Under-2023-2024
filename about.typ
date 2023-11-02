@@ -102,20 +102,35 @@
 
     Here are the existing types:
 
-    - #nb_label(label: "identify") #h(5pt) Identify the problem
+    #box(baseline: 30%, nb_label(label: "identify", size: 1.7em)) #h(5pt) *Identify the problem*
 
-    - #nb_label(label: "brainstorm") #h(5pt) Brainstorm possible solutions
+    #v(5pt)
 
-    - #nb_label(label: "decide") #h(5pt) Decide on the optimal solution
+    #box(baseline: 30%, nb_label(label: "brainstorm", size: 1.7em)) #h(5pt) *Brainstorm possible solutions*
 
-    - #nb_label(label: "build") #h(5pt) Build the solution
+    #v(5pt)
 
-    - #nb_label(label: "program") #h(5pt) Program the solution
+    #box(baseline: 30%, nb_label(label: "decide", size: 1.7em)) #h(5pt) *Decide on the optimal solution*
 
-    - #nb_label(label: "test") #h(5pt) Test the Solution
+    #v(5pt)
 
-    - #nb_label(label: "management") #h(5pt) Team Management
+    #box(baseline: 30%, nb_label(label: "build", size: 1.7em)) #h(5pt) *Build the solution*
 
-    - #nb_label(label: "notebook") #h(5pt) Notebook Metadata
+    #v(5pt)
+
+    #box(baseline: 30%, nb_label(label: "program", size: 1.7em)) #h(5pt) *Program the solution*
+
+    #v(5pt)
+
+    #box(baseline: 30%, nb_label(label: "test", size: 1.7em)) #h(5pt) *Test the solution*
+
+    #v(5pt)
+
+    #box(baseline: 30%, nb_label(label: "management", size: 1.7em)) #h(5pt) *Team management*
+    
+    #v(5pt)
+
+    #box(baseline: 30%, nb_label(label: "notebook", size: 1.7em)) #h(5pt) *Notebook Metadata*
+
   ],
 )
