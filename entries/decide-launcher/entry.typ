@@ -33,10 +33,10 @@
   #grid(
     columns: (1fr, 1fr),
     gutter: 20pt,
-    figure(caption: "Front View", image("./front.png")),
-    figure(caption: "Top View", image("./top.png")),
-    figure(caption: "Side View", image("./side.png")),
-    figure(caption: "Isometric View", image("./iso.png")),
+    figure(caption: "Front View", image("./front.png",width: 90%)),
+    figure(caption: "Top View", image("./top.png", width: 90%)),
+    figure(caption: "Side View", image("./side.png", width: 90%)),
+    figure(caption: "Isometric View", image("./iso.png", width: 90%)),
   )
 
   #image("./1.png")

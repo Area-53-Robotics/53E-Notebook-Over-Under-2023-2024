@@ -190,7 +190,7 @@
   } else if type == "warning" {
     title = "Warning"
     icon = "./icons/warning.svg"
-    color = yellow
+    color = red
   } else if type == "example" {
     title = "Example"
     icon = "./icons/web.svg"

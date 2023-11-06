@@ -149,11 +149,11 @@
 
   #nb_heading([General Testing], level: 2)
 
-  #image("./general-testing-cycle.svg", width: 60%)
+  #image("./general-testing-cycle.svg", width: 55%)
 
   #nb_heading([Trajectory Testing], level: 2)
 
-  #image("./trajectory-testing.svg", width: 55%)
+  #image("./trajectory-testing.svg", width: 50%)
 
   #nb_heading([Results], level: 1)
 

@@ -64,6 +64,8 @@
 
   #nb_heading([Final Design])
 
+  Our final design used a top mounted piston and a piece of C-channel as the wing base. This strikes the right balance between structural integrity and lightness, and also doesn't expose the piston to other robots.
+
   #grid(
     columns: (1fr, 1fr),
     gutter: 20pt,

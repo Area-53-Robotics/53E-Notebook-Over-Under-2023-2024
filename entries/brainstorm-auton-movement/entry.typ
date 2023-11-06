@@ -59,6 +59,8 @@
       down as it approaches the target. Its output is calculated by adding together
       it's 3 terms, P, I, and D.
 
+      #v(500pt)
+
       #nb_pro_con(pros: [
         - Smooth, precise movement
       ], cons: [

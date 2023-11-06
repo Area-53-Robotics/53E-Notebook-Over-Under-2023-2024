@@ -15,6 +15,7 @@
 ) = {
   // Styling rules
   set text(font: "Calibri", size: 11pt)
+  set page("us-letter")
 
   set heading()
   set footnote.entry(separator: none)

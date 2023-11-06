@@ -12,7 +12,7 @@
       "https://lemlib.github.io/LemLib/md_docs_tutorials_1_getting_started.html",
     ),
   ) and downloaded the zip file for the 0.4.7 release. Then we ran the following
-  commands to apply the template: ```shell-unix-generic
+  commands to apply the template: ```sh
       pros c fetch LemLib@0.4.7.zip
       pros c apply LemLib@0.4.7
       ```

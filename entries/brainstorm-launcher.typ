@@ -21,7 +21,7 @@
       - Take up a lot of horizontal space
     ])
 
-  ], image("/assets/launchers/puncher.svg"), [
+  ], image("/assets/launchers/puncher.svg", width: 90%), [
     #nb_heading([Catapult], level: 2)
 
     #nb_pro_con(pros: [
@@ -31,7 +31,7 @@
     ], cons: [
       - Takes up a lot of space
     ])
-  ], image("/assets/launchers/catapult.svg"), [
+  ], image("/assets/launchers/catapult.svg", width: 90%), [
     #nb_heading([Flywheel], level: 2)
     #nb_pro_con(pros: [
       - Very accurate speed control
@@ -39,7 +39,7 @@
       - Easily burn out if not given enough power
       - Difficult to correctly tune
     ])
-  ], image("/assets/launchers/flywheel.svg"))
+  ], image("/assets/launchers/flywheel.svg", width: 90%))
 
 ]
 

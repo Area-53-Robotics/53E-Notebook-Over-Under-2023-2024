@@ -49,9 +49,9 @@
 
     ],
     [
-      #figure(image("./iso.jpg"), caption: "Lengthened arm")
-      #figure(image("./sensor.jpg"), caption: "New sensor")
-      #figure(image("./ratchet.jpg"), caption: "Ratchet, with temporary 3D printed gear")
+      #figure(image("./iso.jpg", width: 75%), caption: "Lengthened arm")
+      #figure(image("./sensor.jpg", width: 75%), caption: "New sensor")
+      #figure(image("./ratchet.jpg", width: 75%), caption: "Ratchet, with temporary 3D printed gear")
     ],
   )
 

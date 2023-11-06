@@ -180,10 +180,17 @@
     $ y_"carrot" = y_"target" - h cos(theta_"target") * d_"lead" $
   ]
 
+  #v(100pt)
+
   As the robot gets closer to the carrot point, the carrot point gets closer to
   the target point, moving the robot along the projected path. Eventually the
   points will overlap, and the movement will be complete.
 
-  #image("./boomerang-controller.svg")
+  #figure(
+    image("./boomerang-controller.svg"),
+    caption: "Projected boomerang path"
+  )
+
+  Overall this has a lot of advantages over a simple move to point. It means that the system only has to settle once, and it also means that the system knows what angle it should end at, giving it more certainty at the end of movements.
 
 ]

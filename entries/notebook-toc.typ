@@ -108,7 +108,7 @@
           )
         }
         ```
-
+#v(100pt)
   This means that all the notebooker has to do to add a new entry is this: ```typ
             #nb_create_entry(
               title: "Interesting Title",
