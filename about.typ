@@ -1,5 +1,6 @@
 #import "template/entries.typ": *
 #import "template/widgets.typ": *
+#import "@preview/codetastic:0.2.2": qrcode
 
 #page(
   header: [
@@ -64,13 +65,8 @@
         The source code can be found here: #link("https://github.com/Area-53-Robotics/53E-Notebook").
         Alternatively, you can use the QR code to the left.
       ],
-      image("./assets/notebook-qr-code.png", width: 50%),
+      qrcode("https://github.com/Area-53-Robotics/53E-Notebook", size: 5pt),
     )
-
-    \
-    \
-    \
-    \
 
     #nb_heading([Why Digital?], level: 1)
 
