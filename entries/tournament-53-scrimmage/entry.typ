@@ -3,64 +3,7 @@
 
 // TODO: move to widgets
 
-#let nb_tournament(matches: ((
-  match: "",
-  red_alliance: (teams: ("", ""), score: 0),
-  blue_alliance: (teams: ("", ""), score: 0),
-  won: false,
-  auton: false,
-  awp: false,
-  notes: [],
-),)) = {
-  gridx(
-    auto-lines: false,
-    columns: (1fr, 1fr, 1fr, 1fr, 1fr, 1fr),
-    [*Match*],
-    [*Red Alliance*],
-    [*Blue Alliance*],
-    [*Auton Bonus*],
-    [*AWP*],
-    [*Notes*],
-    //hlinex(stroke: (cap: "round", thickness: 2pt)),
-    ..for match in matches {
-      let color = if match.won { green.lighten(80%) } else { red.lighten(80%) }
-      let cell = cellx.with(fill: color)
 
-      let alliance_info(alliance: none) = {
-        cell[
-          #grid(
-            columns: (1fr, 1fr),
-            [
-              #alliance.teams.at(0) \
-              #alliance.teams.at(1) \
-            ],
-            [
-              #set text(size: 15pt)
-              #set align(horizon + center)
-              #alliance.score
-            ]
-          )
-        ]
-      }
-
-      let bool_icon(input) = {
-        cell[
-          #set align(horizon + center)
-          #if input {image("/template/icons/check.svg", width: 1.5em)} else {image("/template/icons/x.svg", width: 1.5em)}
-        ]
-      }
-
-      (
-        cell[#match.match],
-        alliance_info(alliance: match.red_alliance), 
-        alliance_info(alliance: match.blue_alliance), 
-        bool_icon(match.auton),
-        bool_icon(match.awp),
-        cell[#match.notes ],
-      )
-    },
-  )
-}
 
 #create_entry(
   title: "Tournament: Area 53 Scrimmage",

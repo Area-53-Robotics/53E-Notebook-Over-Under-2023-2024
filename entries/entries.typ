@@ -79,8 +79,15 @@
 
 #include "./build-catapult-upgrade/entry.typ"
 
+#include "./identify-elevation/entry.typ"
+#include "./decide-elevation/entry.typ"
+#include "./build-elevation/entry.typ"
+
+#include "./tournament-dulaney-royal-rumble/entry.typ"
+
 // TODO: make the entries automatically sorted by date
 
 // TODO:
 // entry backlog:
 // - visualizing information (live graphing)
+// - hang mech
