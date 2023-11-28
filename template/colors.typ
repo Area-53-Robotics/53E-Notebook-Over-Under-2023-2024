@@ -8,7 +8,7 @@
 #let teal = rgb("#099268")
 #let green = rgb("#51cf66")
 #let lime = rgb("#66a80f")
-#let yellow =rgb("#ffd43b")
+#let yellow = rgb("#ffd43b")
 #let orange = rgb("#ff922b")
 #let gray = rgb("#343a40")
 #let white = rgb("#ffffff")

@@ -11,6 +11,6 @@
     #include "about.typ"
   ],
   intro: [
-    #include "introduction.typ"
+    //#include "introduction.typ"
   ],
 )

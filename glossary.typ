@@ -140,10 +140,13 @@
   An API developed by students at Purdue, used to control vex robots.
 ])
 
-#nb_create_glossary_entry(title: "Odometry", definition: [
-  A method of tracking the position of the robot in cartesian coordinates
-  developed by team 5225, the Pilons.
-])
+#nb_create_glossary_entry(
+  title: "Odometry",
+  definition: [
+    A method of tracking the position of the robot in cartesian coordinates
+    developed by team 5225, the Pilons.
+  ],
+)
 
 #nb_create_glossary_entry(
   title: "Absolute Movement",

@@ -1,5 +1,5 @@
 #import "./colors.typ": *
-#import "./widgets.typ": *
+#import "./components/components.typ": *
 #import "./globals.typ": *
 
 #let nb_create_glossary_entry(title: none, definition: none) = {
@@ -19,27 +19,25 @@
 
 #let nb_print_glossary() = [
   #page(
+    columns: 2,
+    header: [
+      #nb_title[Glossary] <nb_glossary>
+    ],
     footer: align(right)[
       #counter(page).display()
     ],
   )[
-    #nb_heading([Glossary #h(1fr)])<nb_heading_glossary>
+    #locate(
+      loc => {
+        let sorted_glossary = glossary_entries.final(loc).sorted(key: ((title, _)) => title)
 
-    #v(20pt)
+        for entry in sorted_glossary [
+          == #entry.title
+          #entry.definition
 
-    #columns(
-      2,
-    )[
-      #locate(
-        loc => {
-          let sorted_glossary = glossary_entries.final(loc).sorted(key: ((title, _)) => title)
+        ]
+      },
+    )
 
-          for entry in sorted_glossary [
-            #nb_heading([#entry.title], level: 2)
-            #entry.definition
-          ]
-        },
-      )
-    ]
   ]
 ]
