@@ -96,6 +96,7 @@
     }
   }
 
+  set align(center)
   tablex(
     auto-lines: false,
     columns: properties.len() + 2,
