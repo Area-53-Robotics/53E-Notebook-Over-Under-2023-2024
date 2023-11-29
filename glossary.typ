@@ -1,8 +1,8 @@
 #import "/template/glossary.typ": *
 
-// TODO: singleton
-// TODO: mutual exclusion
-// TODO: skid steer
+// TODO: Python
+// TODO: CSV
+// CLI
 
 #nb_create_glossary_entry(title: "Singleton Pattern", definition: [
   A software design pattern where a class is only instantiated once.
