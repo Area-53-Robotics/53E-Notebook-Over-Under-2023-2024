@@ -4,7 +4,7 @@
 #show:  create_entry.with(
   title: "Identify: Autonomous Strategy",
   type: "identify",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start_date: datetime(year: 2023, month: 12, day: 1),
 )
 
 The autonomous period is a essential part of the game. It can give you a head start on the match itself, and the autonomous bonus can even decide close games. 

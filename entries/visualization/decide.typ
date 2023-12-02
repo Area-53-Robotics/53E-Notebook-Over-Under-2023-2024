@@ -5,7 +5,7 @@
 #show:  create_entry.with(
   title: "Decide: Data Visualization",
   type: "decide",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start_date: datetime(year: 2023, month: 11, day: 18),
 )
 
 In order to make our decision we rated each option for the following properties:

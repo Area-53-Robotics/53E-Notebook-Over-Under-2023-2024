@@ -51,7 +51,7 @@
     // Title Page
     #text(size: 24pt, font: "Tele-Marines")[
       #text(size: 28pt)[
-        Engineering Notebook
+        Second Notebook
       ]
 
       #image(cover, height: 70%)

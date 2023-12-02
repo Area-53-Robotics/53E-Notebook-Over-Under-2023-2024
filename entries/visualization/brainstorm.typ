@@ -4,7 +4,7 @@
 #show:  create_entry.with(
   title: "Brainstorm: Data Visualization",
   type: "brainstorm",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start_date: datetime(year: 2023, month: 11, day: 11),
 )
 There are a multitude of different options that we could choose from. These options fall into two categories:
 

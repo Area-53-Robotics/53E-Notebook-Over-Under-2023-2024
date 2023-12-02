@@ -25,5 +25,24 @@ We rated each choice by the following properties:
 
 = CAD Design
 
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 20pt,
+  [
+    We opted to use a 4" flex wheel as the wheel for our flywheel.  We would have liked to use a 3" one, but we did not have any available to us.
+
+    This meant that the speed of our flywheel was slightly higher than we would have liked it to be, and reduced the torque.
+    
+    Triballs are dropped onto the spinning wheel directly by the match loaders. The intake does not work at all with this design.
+  ],
+  image("./flywheel-wheel.svg", width: 70%),
+  image("./flywheel-gear-ratio.png"),
+  [
+    We ended up with a 30:6 ratio, using sprockets and chain instead of gears. We would have liked to use gears, but they didn't clear the larger flex wheel we were using. This leaves us with a final RPM of 3000.
+
+  ],
 
 
+)
+
+#image("./technical-drawing-1.png")

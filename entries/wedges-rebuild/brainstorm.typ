@@ -2,7 +2,7 @@
 #show:  create_entry.with(
   title: "Brainstorm: Wedges Rebuild",
   type: "brainstorm",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start_date: datetime(year: 2023, month: 11, day: 29),
 )
 
 After brainstorming we came up with several designs for full length wedges. All three options involve some sort of plastic cover. Plastic is super easy to manipulate into the right shape we want, making it the ideal surface for wedges.
@@ -13,7 +13,7 @@ After brainstorming we came up with several designs for full length wedges. All 
   columns: (2fr, 3fr),
   gutter: 20pt,
   [
-    == Rebuild Wedge to use Lexan
+    == Rebuild Wedge to use Plastic
 
    The wedge could be completely rebuilt to use plastic over supports.
 
@@ -31,9 +31,9 @@ After brainstorming we came up with several designs for full length wedges. All 
   image("./complete-lexan.svg"),
 
   [
-    == Add Lexan to Existing Wedges
+    == Add Plastic to Existing Wedges
 
-    Lexan could be added between existing wedges to create a pushing surface.
+    Plastic could be added between existing wedges to create a pushing surface.
 
     #nb_pro_con(
       pros: [
@@ -49,8 +49,8 @@ After brainstorming we came up with several designs for full length wedges. All 
   image("./lexan-over-old.svg"),
 
   [
-    == Create Lexan Flap to Aid Existing Wedges
-    A lexan flap could be used to aid the wedges without having to lift the bot.
+    == Create Plastic Flap to Aid Existing Wedges
+    A plastic flap could be used to aid the wedges without having to lift the bot.
     #nb_pro_con(
 
       pros: [

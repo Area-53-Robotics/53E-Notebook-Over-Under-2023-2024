@@ -6,7 +6,7 @@
 #show:  create_entry.with(
   title: "Program: Data Visualization",
   type: "program",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start_date: datetime(year: 2023, month: 11, day: 18),
 )
 
 Now what we had a rough idea of what we were doing we could implement them. If you want to see our final implementation you can look at it on our GitHub. #footnote(

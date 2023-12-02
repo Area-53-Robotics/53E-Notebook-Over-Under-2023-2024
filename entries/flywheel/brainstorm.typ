@@ -29,8 +29,7 @@ There are several different options we could choose from when it comes to shooti
       ],
       )
   ],
-
-  [],
+  image("./catapult.svg"),
 
   [
     == Flywheel
@@ -52,8 +51,7 @@ There are several different options we could choose from when it comes to shooti
       )
   ],
 
-  [],
-
+  image("./flywheel.svg", width: 70%),
   [
     == Puncher
 
@@ -71,5 +69,6 @@ There are several different options we could choose from when it comes to shooti
         - It woud take a long time to build and we do not have a lot of time
       ],
       )
-  ]
+  ],
+  image("./puncher.svg"),
 )

@@ -2,7 +2,7 @@
 #show:  create_entry.with(
   title: "Identify: Wedges Rebuild",
   type: "identify",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start_date: datetime(year: 2023, month: 11, day: 29),
 )
 
 At our last tournament we discovered a few issues with our wedges. While they were amazing for pushing other robots, they were not so good for pushing triballs. The wedges also do not cover the full length of the robot, and therefore do not protect the tracking wheels whatsoever.
