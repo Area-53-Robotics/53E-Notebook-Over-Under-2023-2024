@@ -46,7 +46,7 @@
     )
 
     if not match.at("notes", default: none) == none [
-      == Notes
+      === Notes
 
       #match.notes
     ] else [

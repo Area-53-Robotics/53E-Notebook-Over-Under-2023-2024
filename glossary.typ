@@ -1,8 +1,18 @@
 #import "/template/glossary.typ": *
 
-// TODO: Python
-// TODO: CSV
-// CLI
+
+#nb_create_glossary_entry(title: "Python", definition: [
+  A high level programming language implemented in C. It's very useful for data science and data visualization.
+])
+
+
+#nb_create_glossary_entry(title: "CSV", definition: [
+  A minimal, text based file format for spreadsheets. This allows a lot of data to be stored in a relatively simple, organized manner.
+])
+
+#nb_create_glossary_entry(title: "CLI", definition: [
+  Short for command line interface. This is a style of software interface where everything is controlled from the command line, by typing in commands, rather than clicking with buttons.
+])
 
 #nb_create_glossary_entry(title: "Singleton Pattern", definition: [
   A software design pattern where a class is only instantiated once.

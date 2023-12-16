@@ -102,9 +102,6 @@ The above flow chart represents our decision making plan. In the end, 1893C part
       won: true,
       auton: false,
       awp: false,
-      notes: [
-        This match ended up being the highest score at the entire tournament.
-      ]
 ),
 
 (
@@ -139,5 +136,28 @@ The above flow chart represents our decision making plan. In the end, 1893C part
 
 = Reflection
 
+#grid(
+  columns: (1fr, 1fr),
+nb_pie_chart(
+  (8, green, "wins"),
+  (2, red, "losses"),
+),
+[
+  Overall we're extremely happy with the performance of our robot. We won nearly all of our qualification matches, and got all the way to finals.
+]
+)
 
+Our overall robot performance was as follows:
 
+#nb_pro_con(
+  pros: [
+    - Flywheel was able to quickly and consistently fire the triballs across the field
+    - Intake was able to quickly and consistently grab the triballs
+  ],
+  cons: [
+    - Our robot could not elevate at all.
+    - We cannot consistently get AWP.
+  ]
+)
+
+Overall our focus in the coming meetings should be to improve our climbing mechanism, and getting our auton as consistent as possible. The other parts of our robot work extremely well and don't need to be changed.

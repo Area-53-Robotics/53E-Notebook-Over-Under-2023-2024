@@ -8,7 +8,6 @@
 #include "./flywheel/brainstorm.typ"
 #include "./flywheel/decide.typ"
 #include "./flywheel/build.typ"
-#include "./flywheel/program.typ"
 #include "./flywheel/test.typ"
 
 #include "./wedges-rebuild/identify.typ"
@@ -20,6 +19,6 @@
 #include "./auton-routes/identify.typ"
 #include "./auton-routes/decide.typ"
 #include "./tournament-hereford/entry.typ"
-
 #include "./auton-routes/program.typ"
 
+#include "./flywheel/program.typ"
