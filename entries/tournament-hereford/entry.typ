@@ -1,0 +1,143 @@
+#import "@preview/diagraph:0.1.0": *
+#import "/template/template.typ": *
+#show:  create_entry.with(
+  title: "Tournament: Hereford Stampede",
+  type: "test",
+  start_date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+)
+
+= Qualification Matches
+
+#nb_tournament(
+  matches: (
+    (
+      match: "Q5",
+      red_alliance: (teams: ("7135E", "53E"), score: 57),
+      blue_alliance: (teams: ("53C", "960W"), score: 49),
+      won: true,
+      auton: false,
+      awp: false,
+    ),
+  (
+      match: "Q13",
+      red_alliance: (teams: ("5588H", "9290A"), score: 22),
+      blue_alliance: (teams: ("53E", "5588B"), score: 70),
+      won: true,
+      auton: false,
+      awp: false,
+    ),
+(
+      match: "Q28",
+      red_alliance: (teams: ("53E", "960Z"), score: 59),
+      blue_alliance: (teams: ("53D", "9080C"), score: 122),
+      won: false,
+      auton: false,
+      awp: false,
+    ),
+
+(
+      match: "Q33",
+      red_alliance: (teams: ("1893P", "929S"), score: 93),
+      blue_alliance: (teams: ("53E", "82856A"), score: 139),
+      won: true,
+      auton: false,
+      awp: false,
+),
+
+(
+      match: "Q44",
+      red_alliance: (teams: ("53E", "5599T"), score: 106),
+      blue_alliance: (teams: ("7135B", "9080S"), score: 86),
+      won: true,
+      auton: false,
+      awp: false,
+),
+
+(
+      match: "Q60",
+      red_alliance: (teams: ("1893C", "53E"), score: 170),
+      blue_alliance: (teams: ("934Z", "929X"), score: 58),
+      won: true,
+      auton: false,
+      awp: false,
+),
+
+)
+)
+
+= Alliance Selection
+
+We were 10th place in eliminations, so we didn't have very many options. We hoped that we could get a team above us to pick us. We talked to 1893C, 929N, 82856A. We thought that it was highly unlikely that 1893C would pick us, so we hoped 929N or 82856A would.
+
+If one of these teams doesn't pick us, we'll need to pick a team. We thought that 1727R's bot would complement ours very well, so we reached out to them. We also talked to 53C and 1727A.
+
+#raw-render[```dot
+  digraph {
+    rankdir=LR;
+    start->"929N picks us"
+    "929N picks us"->"82856A picks us" [label = "no"]
+    "929N picks us"->"end" [label = "yes"]
+    "82856A picks us"->"We pick 1727R" [label = "no"]
+    "82856A picks us"->"end" [label = "yes"]
+    "We pick 1727R"->"We pick 53C" [label = "no"]
+    "We pick 53C"-> end [label = "yes"]
+    "We pick 53C"->"We pick 1727A" [label = "no"]
+    "We pick 1727A"->end
+
+    start[shape=Mdiamond]
+    end[shape=Msquare]
+  }
+```]
+
+The above flow chart represents our decision making plan. In the end, 1893C partnered with 929N, and 82856A ended up picking us.
+
+= Elimination Matches 
+
+#nb_tournament(
+  matches: (
+(
+      match: "R16 #8-1",
+      red_alliance: (teams: ("82856A", "53E"), score: 196),
+      blue_alliance: (teams: ("9290C", "929R"), score: 72),
+      won: true,
+      auton: false,
+      awp: false,
+      notes: [
+        This match ended up being the highest score at the entire tournament.
+      ]
+),
+
+(
+      match: "QF #4-1",
+      red_alliance: (teams: ("5588E", "53A"), score: 89),
+      blue_alliance: (teams: ("82856A", "53E"), score: 115),
+      won: true,
+      auton: false,
+      awp: false,
+),
+
+(
+      match: "SF #2-1",
+      red_alliance: (teams: ("1893C", "929N"), score: 71),
+      blue_alliance: (teams: ("82856A", "53E"), score: 103),
+      won: true,
+      auton: false,
+      awp: false,
+),
+
+(
+      match: "Final #1-1",
+      red_alliance: (teams: ("1727B", "1727K"), score: 140),
+      blue_alliance: (teams: ("1893C", "929N"), score: 120),
+      won: false,
+      auton: false,
+      awp: false,
+),
+
+)
+)
+
+= Reflection
+
+
+

@@ -44,10 +44,13 @@
       bool_icon(match.auton),
       bool_icon(match.awp),
     )
-    [
-      #nb_heading(level: 2)[Notes]
+
+    if not match.at("notes", default: none) == none [
+      == Notes
 
       #match.notes
+    ] else [
+
     ]
   }
 }

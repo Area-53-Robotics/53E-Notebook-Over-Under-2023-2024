@@ -18,6 +18,8 @@
 #include "./wedges-rebuild/test.typ"
 
 #include "./auton-routes/identify.typ"
-#include "./auton-routes/brainstorm.typ"
 #include "./auton-routes/decide.typ"
+#include "./tournament-hereford/entry.typ"
+
 #include "./auton-routes/program.typ"
+
