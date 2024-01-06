@@ -22,3 +22,4 @@
 #include "./auton-routes/program.typ"
 
 #include "./flywheel/program.typ"
+#include "./tournament-roosevelt/entry.typ"
