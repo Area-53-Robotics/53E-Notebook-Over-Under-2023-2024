@@ -1,7 +1,9 @@
-#import "/template/template.typ": *
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
+
 #import "@preview/codetastic:0.2.2": qrcode
 
-#show:  create_entry.with(
+#show:  create_body_entry.with(
   title: "Brainstorm: Data Visualization",
   type: "brainstorm",
   start_date: datetime(year: 2023, month: 11, day: 11),
@@ -27,7 +29,7 @@ The only downside is that the Bluetooth capabilities of the brain are largely un
 
 This option would involve writing a native desktop application for data visualization. This options would allow users to simply download the app, click connect, and then view data. We're unsure what tools we would use for this currently but it seems like the easiest option for the user.
 
-#nb_pro_con(
+#pro_con(
   pros: [
     - Very easy to use
     - Requires little setup from the user
@@ -42,7 +44,7 @@ This option would involve writing a native desktop application for data visualiz
 == Grafana Integration
 
 This option involves an integration with the Grafana data visualization tool. Grafana is a powerful tool designed exactly for our use case. Using it would mean that we already have a whole host of functionality essentially for free, without having to implement it ourselves. We would have to write some kind of integration that can send information to one of the data sources that Grafana can read from in addition to setting up Bluetooth, but that's about it.
-#nb_pro_con(
+#pro_con(
   pros: [
     - Industry grade software
     - Easier to develop
@@ -58,7 +60,7 @@ Overall this option seems like the easiest option for us to write, but could cau
 
 This solution eliminates the need for a external connection the brain entirely, and graphs the data directly on the brain's LCD screen. PROS #footnote("See glossary.") already packages a library called LVGL (Light and Versatile Graphics Library), which already supports things like graphs.
 
-#nb_pro_con(
+#pro_con(
   pros: [
     - No bandwidth problems
     - No setup required by the user

@@ -1,5 +1,7 @@
-#import "/template/template.typ": *
-#show:  create_entry.with(
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
+
+#show:  create_body_entry.with(
   title: "Identify: Wedges Rebuild",
   type: "identify",
   start_date: datetime(year: 2023, month: 11, day: 29),

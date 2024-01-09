@@ -1,6 +1,9 @@
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
+
 #import "@preview/codetastic:0.2.2": qrcode
-#import "/template/template.typ": *
-#show:  create_entry.with(
+
+#show:  create_body_entry.with(
   title: "Decide: Autonomous Routes",
   type: "decide",
   start_date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
@@ -23,14 +26,12 @@ After identifying that AWP #footnote[See Glossary] is the most important thing w
   [
   == Defensive
   The defensive side auton is slightly more complicated. It performs two of the AWP tasks, and scores an alliance triball in the opposing goal. 
-  #nb_admonition(type: "note")[
+  #admonition(type: "note")[
     Even though we are scoring a triball in this auton, this does not count as a solo AWP, because the rules stipulate that the goal must be our alliance goal.
 
   ]
   ],
 )
-
-#pagebreak()
 
 = Skills Auton
 

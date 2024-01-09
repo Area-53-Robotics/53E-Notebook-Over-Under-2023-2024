@@ -1,6 +1,7 @@
-#import "/template/template.typ": *
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
 
-#show:  create_entry.with(
+#show:  create_body_entry.with(
   title: "Build: Launcher Rebuild",
   type: "build",
   start_date: datetime(year: 2023, month: 11, day: 29),
@@ -10,7 +11,7 @@
   columns: (1fr, 1fr),
   gutter: 20pt,
   [
-    #nb_admonition(type: "warning")[
+    #admonition(type: "warning")[
       We made several changes to the design that differ from the original CAD.
       - We changed the sprockets from 30 tooth to 24 tooth
       - We doubled up the sprockets for redundancy

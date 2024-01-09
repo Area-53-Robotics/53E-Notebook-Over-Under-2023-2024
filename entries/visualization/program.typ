@@ -1,9 +1,11 @@
-#import "/template/template.typ": *
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
+
 #import "@preview/diagraph:0.2.0": *
 
 #import "@preview/codetastic:0.2.2": qrcode
 
-#show:  create_entry.with(
+#show:  create_body_entry.with(
   title: "Program: Data Visualization",
   type: "program",
   start_date: datetime(year: 2023, month: 11, day: 18),

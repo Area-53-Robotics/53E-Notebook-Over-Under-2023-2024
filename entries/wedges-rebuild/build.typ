@@ -1,5 +1,7 @@
-#import "/template/template.typ": *
-#show:  create_entry.with(
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
+
+#show:  create_body_entry.with(
   title: "Build: Wedges Rebuild",
   type: "build",
   start_date: datetime(year: 2023, month: 12, day: 1),
@@ -19,14 +21,14 @@
     + We screwed the polycarbonate to the bottom assembly
     + Wedges
 
-    #nb_admonition(type: "note")[
+    #admonition(type: "note")[
       Our design currently lacks the bottom standoff. We plan to add it in, but we ran out of time at our last meeting.
     ]
   ],
   image("./build-1.jpg")
 )
 
-#nb_admonition(type: "build")[
+#admonition(type: "build")[
   The wedges are complete. In the future we'll want to swap out the polycarbonate for a piece of acetal.
 ]
 

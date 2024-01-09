@@ -1,5 +1,6 @@
-#import "/template/template.typ": *
-#show:  create_entry.with(
+#import "@local/notebookinator:0.1.0": *
+
+#show:  create_body_entry.with(
   title: "Identify: Data Visualization",
   type: "identify",
   start_date: datetime(year: 2023, month: 11, day: 11),

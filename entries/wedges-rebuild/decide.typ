@@ -1,6 +1,7 @@
-#import "/template/template.typ": *
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
 
-#show:  create_entry.with(
+#show:  create_body_entry.with(
   title: "Decide: Launcher Rebuild",
   type: "decide",
   start_date: datetime(year: 2023, month: 11, day: 29),
@@ -11,20 +12,18 @@ We rated each option in the following categories:
 - Ease of fabrication from 0 to 5
 - Ease of tuning from 0 to 5
 
-#nb_decision_matrix(
+#decision_matrix(
   properties: (
     "Reliability",
     "Ease of fabrication",
     "Ease of tuning",
     ),
-  choices: (
-    ("Rebuild Wedge to use plastic", 1, 3, 2),
-    ("Add plastic to Existing Wedges",3,1,3),
-    ("Create plastic Flap to Aid Existing Wedges",2,2,1),
-    ),
+  ("Rebuild Wedge to use plastic", 1, 3, 2),
+  ("Add plastic to Existing Wedges",3,1,3),
+  ("Create plastic Flap to Aid Existing Wedges",2,2,1),
 )
 
-#nb_admonition(type: "decision")[
+#admonition(type: "decision")[
   We ending up choosing to add plastic over our existing wedges. This will provide them with the rigidity they need to not break, while still covering the whole front length of the bot.
 ]
 
@@ -38,12 +37,5 @@ Our new wedge design is pretty simple. It involves a simple hinged piece that go
 )
 
 We plan to laser cut the plastic cover out of acetal, but we will not get access to a laser cutter in time to get it cut. For now we'll cut polycarbonate out by hand and use that.
-
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 20pt,
-  [],
-
-)
 
 #image("./technical-drawing-1.png")

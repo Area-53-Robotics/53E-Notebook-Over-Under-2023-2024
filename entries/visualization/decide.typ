@@ -1,8 +1,8 @@
-#import "/template/template.typ": *
-
+#import "@local/notebookinator:0.1.0": *
+#import themes.radial.components: *
 #import "@preview/codetastic:0.2.2": qrcode
 
-#show:  create_entry.with(
+#show:  create_body_entry.with(
   title: "Decide: Data Visualization",
   type: "decide",
   start_date: datetime(year: 2023, month: 11, day: 18),
@@ -12,19 +12,17 @@ In order to make our decision we rated each option for the following properties:
 - Ease of use on a scale of 0 to 10. This is how easy the software for the user
 - Ease of development on a scale of 0 to 6. This is how easy it is for us to actually write the software.
 
-#nb_decision_matrix(
+#decision_matrix(
   properties: (
     "Ease of use",
     "Ease of development",
     ),
-    choices: (
-      ("Native App", 8, 3),
-      ("Grafana", 5, 5),
-      ("LCD Screen", 5, 4),
-    )
+    ("Native App", 8, 3),
+    ("Grafana", 5, 5),
+    ("LCD Screen", 5, 4),
 )
 
-#nb_admonition(type: "decision")[
+#admonition(type: "decision")[
   In the end we went with a native application. We are prioritising user friendliness over development time, and so this is the best option.
 ]
 
@@ -62,19 +60,17 @@ We rated each option by:
 
 Ideally we could get a working solution quickly, and then use Cooper's solution once it became more polished.
 
-#nb_decision_matrix(
+#decision_matrix(
   properties: (
     "Ease of use",
     "Ease of development",
     ),
-    choices: (
-      ("Native App", 4, 3),
-      ("Grafana", 4, 4),
-      ("LCD Screen", 3, 4),
-    )
+    ("Native App", 4, 3),
+    ("Grafana", 4, 4),
+    ("LCD Screen", 3, 4),
 )
 
-#nb_admonition(type: "decision")[
+#admonition(type: "decision")[
   We ended up going with the Grafana integration. This will only require a bit of glue code to get running, and requires no front-end development, overall making the whole process much easier.
 ]
 
