@@ -14,31 +14,15 @@ Alternatively you can download the latest version, which gets built automaticall
 
 ## How to Compile
 
-1. Install the required fonts
-    - Calibri
-    - Tele-Marines
-2. Install Typst
-
-Download a [release](https://github.com/typst/typst/releases/), and add it to your system's PATH. 
-
-You can also use a package manager:
-
-```
-# MacOS
-brew install typst
-
-# Arch Linux
-sudo pacman -S typst
-
-# Nix
-nix run nixpkgs#typst
-```
-3. Clone the repository
+1. Install the required fonts, located in the `assets/fonts` folder.
+2. Install [Typst](https://github.com/typst/typst#installation)
+3. Install the [Notebookinator](https://github.com/BattleCh1cken/notebookinator)
+4. Clone the repository
 ```sh
 git clone https://github.com/Area-53-Robotics/53E-Notebook.git
 cd 53E-Notebook
 ```
-4. Compile the project
+5. Compile the project
 ```sh
 typst compile main.typ
 ```
@@ -92,8 +76,6 @@ If pronouns are needed, use the gender neutral "they/them". For example:
 ## License
 
 The content of this notebook is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
-
-The template that this notebook uses is licensed under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 [![CC BY-SA 4.0][cc-by-sa-image]][cc-by-sa]
 
