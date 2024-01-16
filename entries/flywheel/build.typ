@@ -29,7 +29,7 @@
     + Attached two 24 tooth sprockets to the bottom axle.
     + Bound the sprockets together with chain.
 
-    We're pleasantly suprised by how easy this design was to put together compared to the catapult.
+    We're pleasantly surprised by how easy this design was to put together compared to the catapult.
   ],
   [
     #image("./build-1.jpg")

@@ -30,6 +30,7 @@
           typstfmt.packages.${system}.default
           #pkgs.nodePackages_latest.mermaid-cli
           pkgs.act
+          pkgs.typos
         ];
       };
 

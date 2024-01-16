@@ -72,9 +72,9 @@ brain
   .unwrap();
 
  // If the code was correct the Brain will echo it back to us from the same characteristic
- let respose = brain.read(&characteristic).await.unwrap();
+ let response = brain.read(&characteristic).await.unwrap();
 
- if respose != code {
+ if response != code {
   return Err(BrainControllerError::IncorrectCode);
  }
 ```
@@ -145,7 +145,7 @@ loginator list-brains
 loginator display-code
 # User must now put the code into the config file
 loginator connect
-# The the Loginator should now be connecte, and ready to send information
+# The the Loginator should now be connected, and ready to send information
 ```
 Once the Loginator is configured, all the user needs to do is run the last command, and the Loginator will work right away.
 
@@ -159,7 +159,7 @@ The data must be numerical, separated by numbers. Data in any other format will 
 
 #figure(
   image("./loginator_pid.png", width: 60%),
-  caption: "Grafana, recieving data PID from the loginator"
+  caption: "Grafana, receiving data PID from the loginator"
 )
 
 Overall we're very happy with how this turned out, and will continue to use it in the future. We hope that other teams will use it and benefit from it as well.

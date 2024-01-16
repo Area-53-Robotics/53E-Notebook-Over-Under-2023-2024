@@ -76,7 +76,7 @@ shooting mechanisms.
         - Our team does not have experience building punchers
         - The nature of punchers is such that it would be hard on the materials it is
           build with, causing damage
-        - It woud take a long time to build and we do not have a lot of time
+        - It would take a long time to build and we do not have a lot of time
       ],
     )
   ],
