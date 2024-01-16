@@ -1,7 +1,6 @@
-#import "@local/notebookinator:0.1.0": *
+#import "/packages.typ": notebookinator
+#import notebookinator: *
 #import themes.radial.components: *
-
-#import "@preview/cetz:0.1.2"
 
 #show: create-body-entry.with(
   title: "Identify: Autonomous Strategy",
@@ -43,8 +42,8 @@ matches.
   gutter: 20pt,
   pie-chart(
     (value: 1, color: yellow, name: "Tie"),
-    (value: 2, color:  green, name: "Win"),
-    (value: 1, color: blue, name: "AWP")
+    (value: 2, color: green, name: "Win"),
+    (value: 1, color: blue, name: "AWP"),
   ),
   [
     The maximum possible amount of win points we can score during a match is 3, but

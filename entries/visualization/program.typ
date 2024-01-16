@@ -1,9 +1,9 @@
-#import "@local/notebookinator:0.1.0": *
+#import "/packages.typ": notebookinator, diagraph, codetastic
+#import notebookinator: *
 #import themes.radial.components: *
 
-#import "@preview/diagraph:0.2.0": *
-
-#import "@preview/codetastic:0.2.2": qrcode
+#import diagraph: *
+#import codetastic: qrcode
 
 #show:  create-body-entry.with(
   title: "Program: Data Visualization",

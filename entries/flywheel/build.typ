@@ -1,4 +1,5 @@
-#import "@local/notebookinator:0.1.0": *
+#import "/packages.typ": notebookinator
+#import notebookinator: *
 #import themes.radial.components: *
 
 #show:  create-body-entry.with(
@@ -35,5 +36,4 @@
     #image("./build-1.jpg")
     #image("./build-2.jpg")
   ],
-
 )

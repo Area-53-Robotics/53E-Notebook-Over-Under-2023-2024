@@ -1,7 +1,9 @@
-#import "@local/notebookinator:0.1.0": *
+#import "/packages.typ": notebookinator, diagraph
+#import notebookinator: *
 #import themes.radial.components: *
 
-#import "@preview/diagraph:0.1.0": *
+#import diagraph: *
+
 #show: create-body-entry.with(
   title: "Tournament: Hereford Stampede",
   type: "test",

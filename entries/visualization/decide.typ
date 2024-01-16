@@ -1,6 +1,8 @@
-#import "@local/notebookinator:0.1.0": *
+#import "/packages.typ": notebookinator, codetastic
+#import notebookinator: *
 #import themes.radial.components: *
-#import "@preview/codetastic:0.2.2": qrcode
+
+#import codetastic: qrcode
 
 #show:  create-body-entry.with(
   title: "Decide: Data Visualization",

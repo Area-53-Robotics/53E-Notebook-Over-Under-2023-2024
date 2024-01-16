@@ -1,4 +1,6 @@
-#import "@local/notebookinator:0.1.0": *
+#import "/packages.typ": notebookinator
+#import notebookinator: *
+#import themes.radial.components: *
 
 #show:  create-body-entry.with(
   title: "Identify: Data Visualization",
