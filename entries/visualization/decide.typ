@@ -2,17 +2,17 @@
 #import themes.radial.components: *
 #import "@preview/codetastic:0.2.2": qrcode
 
-#show:  create_body_entry.with(
+#show:  create-body-entry.with(
   title: "Decide: Data Visualization",
   type: "decide",
-  start_date: datetime(year: 2023, month: 11, day: 18),
+  start-date: datetime(year: 2023, month: 11, day: 18),
 )
 
 In order to make our decision we rated each option for the following properties:
 - Ease of use on a scale of 0 to 10. This is how easy the software for the user
 - Ease of development on a scale of 0 to 6. This is how easy it is for us to actually write the software.
 
-#decision_matrix(
+#decision-matrix(
   properties: (
     "Ease of use",
     "Ease of development",
@@ -47,7 +47,7 @@ In addition, we still didn't have a good format for sending information off of t
 This final nail in the coffin was when Cooper from team 614A started writing a competing app. #footnote(
   [
     Cooper's visualization app:
-    #align(bottom, qrcode("https://github.com/Cooper7196/vex_dashboard", size: 2pt))
+    #align(bottom, qrcode("https://github.com/Cooper7196/vex-dashboard", size: 2pt))
   ]
 )
 It already supported the features we wanted to add, and was looking overall more polished. It was by no means complete, but it showed promise.
@@ -60,7 +60,7 @@ We rated each option by:
 
 Ideally we could get a working solution quickly, and then use Cooper's solution once it became more polished.
 
-#decision_matrix(
+#decision-matrix(
   properties: (
     "Ease of use",
     "Ease of development",

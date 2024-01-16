@@ -1,10 +1,10 @@
 #import "@local/notebookinator:0.1.0": *
 #import themes.radial.components: *
 
-#show:  create_body_entry.with(
+#show:  create-body-entry.with(
   title: "Build: Launcher Rebuild",
   type: "build",
-  start_date: datetime(year: 2023, month: 11, day: 29),
+  start-date: datetime(year: 2023, month: 11, day: 29),
 )
 
 #grid(

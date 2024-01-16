@@ -1,10 +1,10 @@
 #import "@local/notebookinator:0.1.0": *
 #import themes.radial.components: *
 
-#show:  create_body_entry.with(
+#show:  create-body-entry.with(
   title: "Decide: Launcher Rebuild",
   type: "decide",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start-date: datetime(year: 2023, month: 11, day: 28),
 )
 
 We rated each choice by the following properties:
@@ -12,7 +12,7 @@ We rated each choice by the following properties:
 - Distance launched on a scale of 0 to 5.
 - Consistency/Accuracy on a scale of 0 to 5.
 
-#decision_matrix(
+#decision-matrix(
   properties: ("Ease of building", "Distance Launched", "Consistency/Accuracy"),
   ("Catapult", 8, 3, 3),
   ("Flywheel", 9, 5, 2),

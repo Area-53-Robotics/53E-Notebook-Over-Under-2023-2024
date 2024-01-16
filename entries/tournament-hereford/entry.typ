@@ -2,53 +2,53 @@
 #import themes.radial.components: *
 
 #import "@preview/diagraph:0.1.0": *
-#show: create_body_entry.with(
+#show: create-body-entry.with(
   title: "Tournament: Hereford Stampede",
   type: "test",
-  start_date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  start-date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
 )
 
 = Qualification Matches
 
 #tournament((
   match: "Q5",
-  red_alliance: (teams: ("7135E", "53E"), score: 57),
-  blue_alliance: (teams: ("53C", "960W"), score: 49),
+  red-alliance: (teams: ("7135E", "53E"), score: 57),
+  blue-alliance: (teams: ("53C", "960W"), score: 49),
   won: true,
   auton: false,
   awp: false,
 ), (
   match: "Q13",
-  red_alliance: (teams: ("5588H", "9290A"), score: 22),
-  blue_alliance: (teams: ("53E", "5588B"), score: 70),
+  red-alliance: (teams: ("5588H", "9290A"), score: 22),
+  blue-alliance: (teams: ("53E", "5588B"), score: 70),
   won: true,
   auton: false,
   awp: false,
 ), (
   match: "Q28",
-  red_alliance: (teams: ("53E", "960Z"), score: 59),
-  blue_alliance: (teams: ("53D", "9080C"), score: 122),
+  red-alliance: (teams: ("53E", "960Z"), score: 59),
+  blue-alliance: (teams: ("53D", "9080C"), score: 122),
   won: false,
   auton: false,
   awp: false,
 ), (
   match: "Q33",
-  red_alliance: (teams: ("1893P", "929S"), score: 93),
-  blue_alliance: (teams: ("53E", "82856A"), score: 139),
+  red-alliance: (teams: ("1893P", "929S"), score: 93),
+  blue-alliance: (teams: ("53E", "82856A"), score: 139),
   won: true,
   auton: false,
   awp: false,
 ), (
   match: "Q44",
-  red_alliance: (teams: ("53E", "5599T"), score: 106),
-  blue_alliance: (teams: ("7135B", "9080S"), score: 86),
+  red-alliance: (teams: ("53E", "5599T"), score: 106),
+  blue-alliance: (teams: ("7135B", "9080S"), score: 86),
   won: true,
   auton: false,
   awp: false,
 ), (
   match: "Q60",
-  red_alliance: (teams: ("1893C", "53E"), score: 170),
-  blue_alliance: (teams: ("934Z", "929X"), score: 58),
+  red-alliance: (teams: ("1893C", "53E"), score: 170),
+  blue-alliance: (teams: ("934Z", "929X"), score: 58),
   won: true,
   auton: false,
   awp: false,
@@ -90,29 +90,29 @@ partnered with 929N, and 82856A ended up picking us.
 
 #tournament((
   match: "R16 #8-1",
-  red_alliance: (teams: ("82856A", "53E"), score: 196),
-  blue_alliance: (teams: ("9290C", "929R"), score: 72),
+  red-alliance: (teams: ("82856A", "53E"), score: 196),
+  blue-alliance: (teams: ("9290C", "929R"), score: 72),
   won: true,
   auton: false,
   awp: false,
 ), (
   match: "QF #4-1",
-  red_alliance: (teams: ("5588E", "53A"), score: 89),
-  blue_alliance: (teams: ("82856A", "53E"), score: 115),
+  red-alliance: (teams: ("5588E", "53A"), score: 89),
+  blue-alliance: (teams: ("82856A", "53E"), score: 115),
   won: true,
   auton: false,
   awp: false,
 ), (
   match: "SF #2-1",
-  red_alliance: (teams: ("1893C", "929N"), score: 71),
-  blue_alliance: (teams: ("82856A", "53E"), score: 103),
+  red-alliance: (teams: ("1893C", "929N"), score: 71),
+  blue-alliance: (teams: ("82856A", "53E"), score: 103),
   won: true,
   auton: false,
   awp: false,
 ), (
   match: "Final #1-1",
-  red_alliance: (teams: ("1727B", "1727K"), score: 140),
-  blue_alliance: (teams: ("1893C", "929N"), score: 120),
+  red-alliance: (teams: ("1727B", "1727K"), score: 140),
+  blue-alliance: (teams: ("1893C", "929N"), score: 120),
   won: false,
   auton: false,
   awp: false,
@@ -124,7 +124,7 @@ partnered with 929N, and 82856A ended up picking us.
   columns: (1fr, 1fr),
   // FIXME: port pie chart
   /*
-nb_pie_chart(
+nb-pie-chart(
   (8, green, "wins"),
   (2, red, "losses"),
 ),
@@ -138,7 +138,7 @@ nb_pie_chart(
 
 Our overall robot performance was as follows:
 
-#pro_con(
+#pro-con(
   pros: [
     - Flywheel was able to quickly and consistently fire the triballs across the field
     - Intake was able to quickly and consistently grab the triballs

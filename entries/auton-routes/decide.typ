@@ -3,10 +3,10 @@
 
 #import "@preview/codetastic:0.2.2": qrcode
 
-#show:  create_body_entry.with(
+#show:  create-body-entry.with(
   title: "Decide: Autonomous Routes",
   type: "decide",
-  start_date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  start-date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
 )
 
 = Match Autons

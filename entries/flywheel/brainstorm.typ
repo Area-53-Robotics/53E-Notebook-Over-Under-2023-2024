@@ -2,10 +2,10 @@
 #import themes.radial.components: *
 
 #import "@preview/codetastic:0.2.2": qrcode
-#show: create_body_entry.with(
+#show: create-body-entry.with(
   title: "Brainstorm: Launcher Rebuild",
   type: "brainstorm",
-  start_date: datetime(year: 2023, month: 11, day: 28),
+  start-date: datetime(year: 2023, month: 11, day: 28),
 )
 
 There are several different options we could choose from when it comes to
@@ -21,7 +21,7 @@ shooting mechanisms.
     using a catapult, but it is not shooting far enough or consistently enough to be
     reliable, so we would have to make many design changes.
 
-    #pro_con(
+    #pro-con(
       pros: [
         - We already have a catapult in place
         - Would be familiar
@@ -46,7 +46,7 @@ shooting mechanisms.
     team 5203G's bot at the Haunted signature event #footnote[
       #qrcode("https://www.youtube.com/watch?v=FwUk5V6V3U4", size: 2pt)
     ]
-    #pro_con(
+    #pro-con(
       pros: [
         - The team has experience building flywheels from last year
         - The mechanism is simpler than other options
@@ -66,7 +66,7 @@ shooting mechanisms.
 
     A puncher provides linear force to the projectiles using elastic force.
 
-    #pro_con(
+    #pro-con(
       pros: [
         - The design would most likely launch triballs across the field
         - The design is small

@@ -3,53 +3,53 @@
 
 #import "@preview/diagraph:0.1.0": *
 
-#show: create_body_entry.with(
+#show: create-body-entry.with(
   title: "Capital Beltway Challenge",
   type: "test",
-  start_date: datetime(year: 2023, month: 12, day: 16), // TODO: fix date
+  start-date: datetime(year: 2023, month: 12, day: 16), // TODO: fix date
 )
 
 = Qualification Matches
 
 #tournament((
   match: "Q1",
-  red_alliance: (teams: ("676D", "17760X"), score: 38),
-  blue_alliance: (teams: ("53E", "3700A"), score: 38),
+  red-alliance: (teams: ("676D", "17760X"), score: 38),
+  blue-alliance: (teams: ("53E", "3700A"), score: 38),
   won: false,
   auton: false,
   awp: false,
 ), (
   match: "Q13",
-  red_alliance: (teams: ("53B", "9080R"), score: 119),
-  blue_alliance: (teams: ("20096G", "53E"), score: 89),
+  red-alliance: (teams: ("53B", "9080R"), score: 119),
+  blue-alliance: (teams: ("20096G", "53E"), score: 89),
   won: false,
   auton: true,
   awp: false,
 ), (
   match: "Q19",
-  red_alliance: (teams: ("53E, 7135D"), score: 121),
-  blue_alliance: (teams: ("9080S, 53C"), score: 50),
+  red-alliance: (teams: ("53E, 7135D"), score: 121),
+  blue-alliance: (teams: ("9080S, 53C"), score: 50),
   won: true,
   auton: true,
   awp: false,
 ), (
   match: "Q27",
-  red_alliance: (teams: ("53E, 5588R"), score: 4),
-  blue_alliance: (teams: ("9080C, 53A"), score: 154),
+  red-alliance: (teams: ("53E, 5588R"), score: 4),
+  blue-alliance: (teams: ("9080C, 53A"), score: 154),
   won: false,
   auton: true,
   awp: false,
 ), (
   match: "Q37",
-  red_alliance: (teams: ("5588E, 53D"), score: 101),
-  blue_alliance: (teams: ("23098A, 53E"), score: 64),
+  red-alliance: (teams: ("5588E, 53D"), score: 101),
+  blue-alliance: (teams: ("23098A, 53E"), score: 64),
   won: false,
   auton: false,
   awp: false,
 ), (
   match: "Q43",
-  red_alliance: (teams: ("53E, 9080H"), score: 138),
-  blue_alliance: (teams: ("5588H, 17760Y"), score: 21),
+  red-alliance: (teams: ("53E, 9080H"), score: 138),
+  blue-alliance: (teams: ("5588H, 17760Y"), score: 21),
   won: true,
   auton: false,
   awp: false,
@@ -89,29 +89,29 @@ picked 53A and 9080H ended up picking us.
 
 #tournament((
   match: "R16 #8-1",
-  red_alliance: (teams: ("9080H", "53E"), score: 154),
-  blue_alliance: (teams: ("5588H", "5525A"), score: 62),
+  red-alliance: (teams: ("9080H", "53E"), score: 154),
+  blue-alliance: (teams: ("5588H", "5525A"), score: 62),
   won: true,
   auton: true,
   awp: false,
 ), (
   match: "QF #4-1",
-  red_alliance: (teams: ("7135D", "9080S"), score: 66),
-  blue_alliance: (teams: ("9080H", "53E"), score: 99),
+  red-alliance: (teams: ("7135D", "9080S"), score: 66),
+  blue-alliance: (teams: ("9080H", "53E"), score: 99),
   won: true,
   auton: true,
   awp: false,
 ), (
   match: "SF #2-1",
-  red_alliance: (teams: ("7135S", "9080R"), score: 75),
-  blue_alliance: (teams: ("9080H", "53E"), score: 142),
+  red-alliance: (teams: ("7135S", "9080R"), score: 75),
+  blue-alliance: (teams: ("9080H", "53E"), score: 142),
   won: true,
   auton: true,
   awp: false,
 ), (
   match: "F #1-1",
-  red_alliance: (teams: ("9080C", "53A"), score: 147),
-  blue_alliance: (teams: ("9080H", "53E"), score: 93),
+  red-alliance: (teams: ("9080C", "53A"), score: 147),
+  blue-alliance: (teams: ("9080H", "53E"), score: 93),
   won: false,
   auton: false,
   awp: false,
@@ -120,7 +120,11 @@ picked 53A and 9080H ended up picking us.
 = Reflection
 #grid(
   columns: (1fr, 1fr),
-  pie_chart((5, green, "wins"), (1, orange, "ties"), (4, red, "losses")),
+  pie-chart(
+    (value: 5, color: green, name: "wins"),
+    (value: 1, color: orange, name: "ties"),
+    (value: 4, color: red, name: "losses")
+  ),
   [
     Ultimately, the qualification matches were a bit of a struggle for our bot this
     competition but we were able to make a comeback during the elimination rounds,
@@ -130,7 +134,7 @@ picked 53A and 9080H ended up picking us.
 
 Our overall robot performance was as follows:
 
-#pro_con(
+#pro-con(
   pros: [
     - Flywheel was able to accurately and consistently fire triballs across the field.
     - Intake and wedges were both used efficiently and stayed strong.

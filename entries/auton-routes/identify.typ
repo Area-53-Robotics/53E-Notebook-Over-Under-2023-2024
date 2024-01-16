@@ -3,10 +3,10 @@
 
 #import "@preview/cetz:0.1.2"
 
-#show: create_body_entry.with(
+#show: create-body-entry.with(
   title: "Identify: Autonomous Strategy",
   type: "identify",
-  start_date: datetime(year: 2023, month: 12, day: 1),
+  start-date: datetime(year: 2023, month: 12, day: 1),
 )
 
 The autonomous period is a essential part of the game. It can give you a head
@@ -20,10 +20,10 @@ assume 6 triballs is the amount for each triball related goal.
 #grid(
   columns: (2fr, 1fr),
   gutter: 20pt,
-  pie_chart(
-    (10, blue, "Auton bonus"),
-    (30, green, "Triballs in goal"),
-    (12, red, "Triballs in offensive zone"),
+  pie-chart(
+    (value: 10, color: blue, name: "Auton bonus"),
+    (value: 30, color: green, name: "Triballs in goal"),
+    (value: 12, color: red, name: "Triballs in offensive zone"),
   ),
   [
     Overall scoring triballs in the goal is the most efficient way to score points
@@ -41,7 +41,11 @@ matches.
 #grid(
   columns: (1fr, 1fr),
   gutter: 20pt,
-  pie_chart((1, yellow, "Tie"), (2, green, "Win"), (1, blue, "AWP")),
+  pie-chart(
+    (value: 1, color: yellow, name: "Tie"),
+    (value: 2, color:  green, name: "Win"),
+    (value: 1, color: blue, name: "AWP")
+  ),
   [
     The maximum possible amount of win points we can score during a match is 3, but
     even if we lose, AWP gives us the same amount of points that we would have

@@ -1,10 +1,10 @@
 #import "@local/notebookinator:0.1.0": *
 #import themes.radial.components: *
 
-#show:  create_body_entry.with(
+#show:  create-body-entry.with(
   title: "Brainstorm: Wedges Rebuild",
   type: "brainstorm",
-  start_date: datetime(year: 2023, month: 11, day: 29),
+  start-date: datetime(year: 2023, month: 11, day: 29),
 )
 
 After brainstorming we came up with several designs for full length wedges. All three options involve some sort of plastic cover. Plastic is super easy to manipulate into the right shape we want, making it the ideal surface for wedges.
@@ -19,7 +19,7 @@ After brainstorming we came up with several designs for full length wedges. All 
 
    The wedge could be completely rebuilt to use plastic over supports.
 
-    #pro_con(
+    #pro-con(
       pros: [
         - Low complexity
         - Easy to tune
@@ -37,7 +37,7 @@ After brainstorming we came up with several designs for full length wedges. All 
 
     Plastic could be added between existing wedges to create a pushing surface.
 
-    #pro_con(
+    #pro-con(
       pros: [
         - Low complexity
         - Easy to fabricate
@@ -53,7 +53,7 @@ After brainstorming we came up with several designs for full length wedges. All 
   [
     == Create Plastic Flap to Aid Existing Wedges
     A plastic flap could be used to aid the wedges without having to lift the bot.
-    #pro_con(
+    #pro-con(
 
       pros: [
         - Easy to fabricate
