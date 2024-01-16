@@ -27,6 +27,8 @@ cd 53E-Notebook
 typst compile main.typ
 ```
 
+## Creating New Entries
+
 ## Style Guide
 
 These following rules should be followed when writing entries:
