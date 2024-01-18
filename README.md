@@ -39,7 +39,7 @@ typst compile main.typ
 
 To create a new entry you first need to create a new `.typ` file in the `entries/` folder. There are two different ways this project organizes entries. Either they are organized by project section (for example flywheel, or intake), or they are single entries.
 
-> Words or phrases like this: <word here> should be substituted with a different word or phrase.
+> Words or phrases like this: \<word here\> should be substituted with a different word or phrase.
 
 To create a single entry, create a file with this path: `entries/<entry-name>/entry.typ`.
 To create an entry in a group, create a file with the following path: `entries/<group-name>/<entry_name>.typ`
