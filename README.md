@@ -47,7 +47,8 @@ To create an entry in a group, create a file with the following path: `entries/<
 Once you've done this, you need to create an entry in the file.
 
 ```typ
-#import "@local/notebookinator:0.1.0": * // Make sure to update the version when new notebookinator versions come out
+#import "/packages.typ": notebookinator
+#import notebookinator: *
 #import themes.radial.components: *
 
 #show:  create_body_entry.with(
