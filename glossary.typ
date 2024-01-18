@@ -14,15 +14,15 @@
 #glossary.add-term(
   "CSV",
 )[
-  A minimal)text based file format for spreadsheets. This allows a lot of data to
-  be stored in a relatively simple)organized manner.
+  A minimal text based file format for spreadsheets. This allows a lot of data to
+  be stored in a relatively simple, organized manner.
 ]
 
 #glossary.add-term(
   "CLI",
 )[
   Short for command line interface. This is a style of software interface where
-  everything is controlled from the command line)by typing in commands, rather
+  everything is controlled from the command line by typing in commands, rather
   than clicking with buttons.
 ]
 
