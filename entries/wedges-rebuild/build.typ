@@ -2,7 +2,7 @@
 #import notebookinator: *
 #import themes.radial.components: *
 
-#show:  create-body-entry.with(
+#show: create-body-entry.with(
   title: "Build: Wedges Rebuild",
   type: "build",
   start-date: datetime(year: 2023, month: 12, day: 1),
@@ -22,14 +22,20 @@
     + We screwed the polycarbonate to the bottom assembly
     + Wedges
 
-    #admonition(type: "note")[
-      Our design currently lacks the bottom standoff. We plan to add it in, but we ran out of time at our last meeting.
+    #admonition(
+      type: "note",
+    )[
+      Our design currently lacks the bottom standoff. We plan to add it in, but we ran
+      out of time at our last meeting.
     ]
   ],
-  image("./build-1.jpg")
+  image("./build-1.jpg"),
 )
 
-#admonition(type: "build")[
-  The wedges are complete. In the future we'll want to swap out the polycarbonate for a piece of acetal.
+#admonition(
+  type: "build",
+)[
+  The wedges are complete. In the future we'll want to swap out the polycarbonate
+  for a piece of acetal.
 ]
 

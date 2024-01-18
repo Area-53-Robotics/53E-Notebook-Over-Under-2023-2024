@@ -124,7 +124,7 @@ picked 53A and 9080H ended up picking us.
   pie-chart(
     (value: 5, color: green, name: "wins"),
     (value: 1, color: orange, name: "ties"),
-    (value: 4, color: red, name: "losses")
+    (value: 4, color: red, name: "losses"),
   ),
   [
     Ultimately, the qualification matches were a bit of a struggle for our bot this

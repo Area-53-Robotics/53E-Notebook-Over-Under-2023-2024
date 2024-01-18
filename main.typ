@@ -5,10 +5,7 @@
 //#include "/entries/entries.typ"
 //#include "/glossary.typ"
 
-#show: notebook.with(
-  theme: radial-theme,
-  cover: [Cover :3],
-)
+#show: notebook.with(theme: radial-theme, cover: [Cover :3])
 
 #create-frontmatter-entry(title: "Table of Contents")[
   #components.toc()

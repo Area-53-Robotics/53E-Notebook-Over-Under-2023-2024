@@ -2,15 +2,20 @@
 #import notebookinator: *
 #import themes.radial.components: *
 
-#show:  create-body-entry.with(
+#show: create-body-entry.with(
   title: "Identify: Wedges Rebuild",
   type: "identify",
   start-date: datetime(year: 2023, month: 11, day: 29),
 )
 
-At our last tournament we discovered a few issues with our wedges. While they were amazing for pushing other robots, they were not so good for pushing triballs. The wedges also do not cover the full length of the robot, and therefore do not protect the tracking wheels whatsoever.
+At our last tournament we discovered a few issues with our wedges. While they
+were amazing for pushing other robots, they were not so good for pushing
+triballs. The wedges also do not cover the full length of the robot, and
+therefore do not protect the tracking wheels whatsoever.
 
-Having the wedges be able to do this would greatly simplify scoring, and would allow us to still score triballs that we don't successfully get across the barrier.
+Having the wedges be able to do this would greatly simplify scoring, and would
+allow us to still score triballs that we don't successfully get across the
+barrier.
 
 #image("./identify.svg")
 

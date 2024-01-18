@@ -3,7 +3,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     utils.url = "github:numtide/flake-utils";
     typst.url = "github:typst/typst/main";
-    typstfmt.url = "github:astrale-sharp/typstfmt";
+    typstfmt.url = "github:astrale-sharp/typstfmt/0.2.7";
 
     typst.inputs.nixpkgs.follows = "nixpkgs";
     typstfmt.inputs.nixpkgs.follows = "nixpkgs";
