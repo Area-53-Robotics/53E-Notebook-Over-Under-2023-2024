@@ -23,3 +23,24 @@
 
 #include "./flywheel/program.typ"
 #include "./tournament-roosevelt/entry.typ"
+
+#include "./lift/identify.typ"
+#include "./lift/brainstorm.typ"
+#include "./lift/decide.typ"
+#include "./lift/build-test.typ"
+#include "./lift/program.typ"
+
+#include "./notebook-graphs.typ"
+#include "./auton-routes/program.typ"
+
+// TODO:
+// - lift
+//   - identify
+//   - brainstorm
+//   - decide
+//   - build
+//   - test
+// - autonomous implementation
+// - wedge rebuild
+// - coding the lift?
+// - graphing showcase
