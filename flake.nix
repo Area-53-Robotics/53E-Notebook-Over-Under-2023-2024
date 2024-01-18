@@ -24,15 +24,15 @@
     {
       devShell = pkgs.mkShell {
         packages = [
-          #pkgs.typst
-          typst.packages.${system}.default
+          pkgs.typst
+          #typst.packages.${system}.default
           pkgs.typst-lsp
           typstfmt.packages.${system}.default
           #pkgs.nodePackages_latest.mermaid-cli
           pkgs.act
           pkgs.typos
           pkgs.just
-          pkgs.prettier
+          pkgs.nodePackages_latest.prettier
         ];
       };
 
