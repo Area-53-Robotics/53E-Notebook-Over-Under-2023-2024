@@ -32,10 +32,12 @@
 #include "./lift/build-test.typ"
 #include "./lift/program.typ"
 
-#include "./notebook-graphs.typ"
+#include "./notebook-notebookinator/entry.typ"
+#include "./notebook-graphs/entry.typ"
 #include "./auton-routes/program.typ"
 
 // TODO:
+// - do I wanna have some kind of entry where we decide to not rebuild?
 // - lift
 //   - identify
 //   - brainstorm
