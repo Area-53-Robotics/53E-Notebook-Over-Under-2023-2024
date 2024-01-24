@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Identify: Launcher Rebuild",
   type: "identify",
-  start-date: datetime(year: 2023, month: 11, day: 28),
+  date: datetime(year: 2023, month: 11, day: 28),
 )
 
 At our last tournament we were very unhappy with the performance of our

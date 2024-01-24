@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Program: Lift",
   type: "program",
-  start-date: datetime(year: 2023, month: 12, day: 1),
+  date: datetime(year: 2023, month: 12, day: 1),
 )
 
 ```cpp

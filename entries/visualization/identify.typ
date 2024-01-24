@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Identify: Data Visualization",
   type: "identify",
-  start-date: datetime(year: 2023, month: 11, day: 11),
+  date: datetime(year: 2023, month: 11, day: 11),
 )
 
 Live data visualization is an incredibly powerful tool that could completely

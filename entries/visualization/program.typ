@@ -8,7 +8,7 @@
 #show: create-body-entry.with(
   title: "Program: Data Visualization",
   type: "program",
-  start-date: datetime(year: 2023, month: 11, day: 18),
+  date: datetime(year: 2023, month: 11, day: 18),
 )
 
 Now what we had a rough idea of what we were doing we could implement them. If

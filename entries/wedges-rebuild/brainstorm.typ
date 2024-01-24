@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Brainstorm: Wedges Rebuild",
   type: "brainstorm",
-  start-date: datetime(year: 2023, month: 11, day: 29),
+  date: datetime(year: 2023, month: 11, day: 29),
 )
 
 After brainstorming we came up with several designs for full length wedges. All

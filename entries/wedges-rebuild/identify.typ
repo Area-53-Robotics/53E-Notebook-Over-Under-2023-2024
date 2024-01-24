@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Identify: Wedges Rebuild",
   type: "identify",
-  start-date: datetime(year: 2023, month: 11, day: 29),
+  date: datetime(year: 2023, month: 11, day: 29),
 )
 
 At our last tournament we discovered a few issues with our wedges. While they

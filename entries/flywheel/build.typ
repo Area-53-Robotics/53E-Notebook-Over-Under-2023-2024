@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Build: Launcher Rebuild",
   type: "build",
-  start-date: datetime(year: 2023, month: 11, day: 29),
+  date: datetime(year: 2023, month: 11, day: 29),
 )
 
 #grid(

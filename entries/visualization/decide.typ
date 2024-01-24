@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Decide: Data Visualization",
   type: "decide",
-  start-date: datetime(year: 2023, month: 11, day: 18),
+  date: datetime(year: 2023, month: 11, day: 18),
 )
 
 In order to make our decision we rated each option for the following properties:

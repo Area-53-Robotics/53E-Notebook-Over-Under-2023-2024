@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Decide: Launcher Rebuild",
   type: "decide",
-  start-date: datetime(year: 2023, month: 11, day: 29),
+  date: datetime(year: 2023, month: 11, day: 29),
 )
 
 We rated each option in the following categories:

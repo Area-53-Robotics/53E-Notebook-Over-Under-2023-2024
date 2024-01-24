@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
   title: "Identify: Autonomous Strategy",
   type: "identify",
-  start-date: datetime(year: 2023, month: 12, day: 1),
+  date: datetime(year: 2023, month: 12, day: 1),
 )
 
 The autonomous period is a essential part of the game. It can give you a head

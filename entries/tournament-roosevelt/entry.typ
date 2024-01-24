@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Capital Beltway Challenge",
   type: "test",
-  start-date: datetime(year: 2023, month: 12, day: 16), // TODO: fix date
+  date: datetime(year: 2023, month: 12, day: 16), // TODO: fix date
 )
 
 = Qualification Matches

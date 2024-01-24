@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Brainstorm: Data Visualization",
   type: "brainstorm",
-  start-date: datetime(year: 2023, month: 11, day: 11),
+  date: datetime(year: 2023, month: 11, day: 11),
 )
 There are a multitude of different options that we could choose from. These
 options fall into two categories:

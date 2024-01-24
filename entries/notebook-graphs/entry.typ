@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Notebook: Graphing",
   type: "notebook",
-  start-date: datetime(year: 1982, month: 1, day: 1),
+  date: datetime(year: 1982, month: 1, day: 1),
 )
 
 While making graphs for this notebook we noticed that our workflow was very long

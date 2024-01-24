@@ -57,7 +57,7 @@ Once you've done this, you need to create an entry in the file.
 #show: create-body-entry.with(
   title: "<EDP Stage>: <your title here>",
   type: "<EDP Stage>",
-  start-date: datetime(year: 1982, month: 1, day: 1),
+  date: datetime(year: 1982, month: 1, day: 1),
 )
 
 Write your content here.

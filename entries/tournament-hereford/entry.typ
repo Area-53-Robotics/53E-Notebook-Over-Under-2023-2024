@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Tournament: Hereford Stampede",
   type: "test",
-  start-date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
 )
 
 = Qualification Matches

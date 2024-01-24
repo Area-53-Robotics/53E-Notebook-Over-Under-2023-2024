@@ -5,7 +5,7 @@
 #show: create-body-entry.with(
    title: "Brainstorm: Elevator",
   type: "brainstorm",
-  start-date: datetime(year: 2024, month: 1, day: 03),
+  date: datetime(year: 2024, month: 1, day: 03),
 )
 
 There were several different options regarding the hang and 
