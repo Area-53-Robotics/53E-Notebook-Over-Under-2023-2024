@@ -1,28 +1,28 @@
-#import "/template/entries.typ": create_entry
-#import "/template/widgets.typ": *
+#import "/packages.typ": notebookinator
+#import notebookinator: *
+#import themes.radial.components: *
 
-#create_entry(
+#create-body-entry(
   title: "Decide: Scoring Triballs",
   type: "decide",
-  start_date: datetime(year: 2023, month: 9, day: 2),
-  end_date: datetime(year: 2023, month: 9, day: 4),
+  date: datetime(year: 2023, month: 9, day: 2),
+  author: "Alan Morales",
+  witness: "Violet Ridge",
 )[
-
-  // TODO: add scaling and property list
-
   We rated each option on:
 
   - Efficiency on a scale of 1 to 10
   - Stability on a scale of 1 to 10
   - Feasibility on a scale of 1 to 10.
 
-  #nb_decision_matrix(properties: ("Efficiency", "Stability", "Feasibility"), choices: (
+  #decision-matrix(
+    properties: ("Efficiency", "Stability", "Feasibility"),
     ("Extentable Hook", 7, 4, 9),
     ("Fold Out Flaps", 10, 9, 10),
     ("Shot Out Net", 5, 3, 4),
-  ))
+  )
 
-  #nb_admonition(
+  #admonition(
     type: "decision",
   )[
     We chose the fold out flaps. This option is both the most effective in cost of
@@ -30,7 +30,7 @@
     choice.
   ]
 
-  #nb_heading[First Prototype]
+  #heading[First Prototype]
 
   #grid(
     columns: (1fr, 1fr),
@@ -39,7 +39,7 @@
       Our first prototype was mainly comprised of L-channel. It featured a piston to
       push the L-channel forwards, mounted on the bottom of the drivetrain.
 
-      #nb_admonition(
+      #admonition(
         type: "warning",
       )[
         While this design was stable and powerful, it exposed the fitting of the piston
@@ -55,16 +55,18 @@
 
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Decide: Scoring Triballs",
   type: "decide",
-  start_date: datetime(year: 2023, month: 9, day: 2), // TODO: correct to date of final cad creation
-  end_date: datetime(year: 2023, month: 9, day: 4),
+  date: datetime(year: 2023, month: 9, day: 2), // TODO: correct to date of final cad creation
+  author: "Alan Morales",
+  witness: "Violet Ridge",
 )[
+  #heading([Final Design])
 
-  #nb_heading([Final Design])
-
-  Our final design used a top mounted piston and a piece of C-channel as the wing base. This strikes the right balance between structural integrity and lightness, and also doesn't expose the piston to other robots.
+  Our final design used a top mounted piston and a piece of C-channel as the wing
+  base. This strikes the right balance between structural integrity and lightness,
+  and also doesn't expose the piston to other robots.
 
   #grid(
     columns: (1fr, 1fr),

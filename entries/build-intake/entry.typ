@@ -1,12 +1,14 @@
-#import "/template/entries.typ": create_entry
-#import "/template/widgets.typ": *
+#import "/packages.typ": notebookinator
+#import notebookinator: *
+#import themes.radial.components: *
 
-#create_entry(
+#create-body-entry(
   title: "Build: Intake",
   type: "build",
-  start_date: datetime(year: 2023, month: 8, day: 18),
+  date: datetime(year: 2023, month: 8, day: 18),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
-
   #grid(
     columns: (1fr, 1fr),
     gutter: 10pt,
@@ -28,7 +30,7 @@
       11. We then added collars to the end of the standoffs, and then mounted one collar
         to one of the 15 long angles, and the other collar to the other one.
 
-      #nb_admonition(type: "note")[
+      #admonition(type: "note")[
         We still need to finish the following things:
         - Mount the motor
         - Add the rubber bands
@@ -45,10 +47,12 @@
 
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Build: Intake",
   type: "build",
-  start_date: datetime(year: 2023, month: 8, day: 19),
+  date: datetime(year: 2023, month: 8, day: 19),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
   #grid(
     columns: (1fr, 1fr),
@@ -56,7 +60,7 @@
     [
       The build today was relatively simple. We completed the following steps:
       1. Assembled the other half of cross bracing.
-      #nb_admonition(
+      #admonition(
         type: "note",
       )[
         We originally planned to have a flexible standoff used in order to not have to
@@ -69,7 +73,7 @@
       4. We added the rubber bands to the outer sprockets, completing the intake rollers.
       5. We ziptied mesh to the bottom of the intake to act as an intake surface.
 
-      #nb_admonition(
+      #admonition(
         type: "note",
       )[
         We decided to hold off on full scale testing of the intake subsystem until our

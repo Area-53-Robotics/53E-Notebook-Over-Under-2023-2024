@@ -1,5 +1,6 @@
 #include "./pre-reveal.typ"
 #include "./post-reveal.typ"
+
 #include "./game-rules.typ"
 #include "./team-organization.typ"
 
@@ -17,7 +18,6 @@
 #include "./decide-drivetrain-sensors.typ"
 #include "./brainstorm-tracking-implementation.typ"
 #include "./decide-tracking-implementation.typ"
-
 #include "./notebook-toc.typ"
 
 #include "./testing-drivetrain.typ"
@@ -70,6 +70,7 @@
 #include "./brainstorm-scoring/entry.typ"
 #include "./decide-scoring/entry.typ"
 #include "./build-scoring/entry.typ"
+
 
 #include "./build-wedges/entry.typ"
 

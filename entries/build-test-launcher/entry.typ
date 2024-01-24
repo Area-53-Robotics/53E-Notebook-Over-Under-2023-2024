@@ -1,10 +1,13 @@
-#import "/template/entries.typ": create_entry
-#import "/template/widgets.typ": *
+#import "/packages.typ": notebookinator
+#import notebookinator: *
+#import themes.radial.components: *
 
-#create_entry(
+#create-body-entry(
   title: "Build: Moving Triballs",
   type: "build",
-  start_date: datetime(year: 2023, month: 9, day: 6),
+  date: datetime(year: 2023, month: 9, day: 6),
+  author: "John Kelley",
+  witness: "Alan Morales",
 )[
   // Original text from John:
   //The c-channel for the towers was cut, and most of the boxing was added. The mount points made of U-Channel were cut and assembled. The boxing in the drive train’s support towers was added.
@@ -32,10 +35,12 @@
 
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Build: Moving Triballs",
   type: "build",
-  start_date: datetime(year: 2023, month: 9, day: 7),
+  date: datetime(year: 2023, month: 9, day: 7),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
 
   // Original John text:
@@ -51,7 +56,7 @@
         standoff, a 1.5" standoff, and a 1/2" spacer.
       2. We attached shaft collars to the end of the standoffs.
       3. We screwed pillow bearings to the drivetrain and the top of the towers.
-      #nb_admonition(
+      #admonition(
         type: "warning",
       )[
         We discovered that one of the standoffs on each side interfered with the gears
@@ -66,11 +71,14 @@
 
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Build: Moving Triballs",
   type: "build",
-  start_date: datetime(year: 2023, month: 9, day: 8),
+  date: datetime(year: 2023, month: 9, day: 8),
+  author: "John Kelley",
+  witness: "Alan Morales",
 )[
+
   // Original text from John:
   // The throwing arm was completed with the exception of the side bracing. The spacing for the throwing arm’s axle was also completed.
 
@@ -95,7 +103,9 @@
       8. We cut a piece of C-channel down to 13 holes.
       9. We screwed the C-channel into the half cut, securing them together.
 
-      #nb_admonition(type: "warning")[
+      #admonition(
+        type: "warning",
+      )[
         While figuring out the spacing for the axle we realized that the CAD was
         incorrect. We ended up having to figure out the spacing by hand.
       ]
@@ -105,10 +115,12 @@
   )
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Build: Moving Triballs",
   type: "build",
-  start_date: datetime(year: 2023, month: 9, day: 9),
+  date: datetime(year: 2023, month: 9, day: 9),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
 
   #grid(
@@ -123,7 +135,7 @@
       2. We screwed the piece of half cut to the end of the catapult arm.
       3. We attached 90#sym.degree gussets to the end of the catapult to provide more
         bracing
-      #nb_admonition(
+      #admonition(
         type: "note",
       )[
         This is a deviation from the CAD, we originally used two pieces of strip here.
@@ -139,23 +151,25 @@
   )
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Test: Moving Triballs",
   type: "test",
-  start_date: datetime(year: 2023, month: 9, day: 15),
+  date: datetime(year: 2023, month: 9, day: 15),
+  author: "John Kelley",
+  witness: "Alan Morales",
 )[
 
-  #nb_heading([Testing Procedure], level: 1)
+  = Testing Procedure
 
-  #nb_heading([General Testing], level: 2)
+  == General Testing
 
   #image("./general-testing-cycle.svg", width: 55%)
 
-  #nb_heading([Trajectory Testing], level: 2)
+  == Trajectory Testing
 
   #image("./trajectory-testing.svg", width: 50%)
 
-  #nb_heading([Results], level: 1)
+  = Results
 
   #grid(
     columns: (1fr, 1fr),
@@ -174,7 +188,7 @@
       Different stops were tested, and an optimum trajectory was achieved. The slip
       gears were modified to reflect these changes.
 
-      #nb_admonition(
+      #admonition(
         type: "note",
       )[
         For testing purposes we used 3D printed 12 tooth gears. This allowed us to make
@@ -191,10 +205,12 @@
 
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Build: Moving Triballs",
   type: "build",
-  start_date: datetime(year: 2023, month: 9, day: 16),
+  date: datetime(year: 2023, month: 9, day: 16),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
   #grid(
     columns: (1fr, 2fr),
@@ -218,12 +234,13 @@
 
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Build: Moving Triballs",
   type: "build",
-  start_date: datetime(year: 2023, month: 9, day: 22),
+  date: datetime(year: 2023, month: 9, day: 22),
+  author: "John Kelley",
+  witness: "Alan Morales",
 )[
-
   #grid(
     columns: (1fr, 2fr),
     gutter: 20pt,
@@ -246,7 +263,7 @@
     ],
     image("./lexan-ratchet.svg", height: 75%),
   )
-  #nb_admonition(
+  #admonition(
     type: "warning",
   )[
     This solution ended up not working due to the ratchet consistently failing. The
@@ -257,10 +274,12 @@
   // TODO: take picture of old ratchet (or add drawing)
 ]
 
-#create_entry(
+#create-body-entry(
   title: "Build: Moving Triballs",
   type: "build",
-  start_date: datetime(year: 2023, month: 9, day: 29),
+  date: datetime(year: 2023, month: 9, day: 29),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
 
   #grid(
@@ -273,7 +292,7 @@
       2. We anchored it to the top of the catapult tower with a screw joint to allow it
         to rotate freely.
       3. We attached a bearing to the L-channel to decrease the play of the screw joint.
-      #nb_admonition(
+      #admonition(
         type: "note",
       )[
         Another bearing was not needed on the anchoring piece of L-channel and would
@@ -287,7 +306,7 @@
     image("./new-ratchet.jpg"),
   )
 
-  //#nb_admonition(type: "build")[
+  //#admonition(type: "build")[
   //The catapult is finally complete! The ratchet and limit switch
   //]
 
