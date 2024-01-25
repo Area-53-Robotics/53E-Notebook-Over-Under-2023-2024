@@ -201,3 +201,4 @@ better way to do it.
 Overall we're very happy with how this turned out, and will continue to use it
 in the future. We hope that other teams will use it and benefit from it as well.
 
+#metadata(none) <loginator-program>

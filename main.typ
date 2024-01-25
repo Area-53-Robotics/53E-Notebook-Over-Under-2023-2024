@@ -1,10 +1,6 @@
 #import "@local/notebookinator:0.1.0": *
 #import themes.radial: radial-theme, components
 
-//#import "template/template.typ": *
-//#include "/entries/entries.typ"
-//#include "/glossary.typ"
-
 #show: notebook.with(theme: radial-theme, cover: align(center)[
   #text(size: 24pt, font: "Tele-Marines")[
     #text(size: 28pt)[
@@ -26,8 +22,4 @@
 
 #include "entries/entries.typ"
 
-#include "glossary.typ"
-
-#create-appendix-entry(title: "Glossary")[
-  #components.glossary()
-]
+#include "./appendix.typ"

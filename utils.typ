@@ -18,9 +18,7 @@
   return data
 }
 
-// TODO: add parse datetime function here
-
-#let parse_timestamp(timestamp) = {
+#let parse-timestamp(timestamp) = {
   let data = timestamp.matches(regex("(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2}).(\d{3})"))
   let captures = data.at(0).captures
 
@@ -35,3 +33,8 @@
 }
 
 #let grid = grid.with(columns: (1fr, 1fr), gutter: 20pt)
+
+#let get-page-number(label) = locate(loc => {
+  let elements = query(label, loc)
+  [ #counter(page).at(elements.first().location()).first() ]
+})

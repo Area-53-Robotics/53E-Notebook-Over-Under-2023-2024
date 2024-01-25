@@ -8,10 +8,12 @@
   date: datetime(year: 2023, month: 11, day: 11),
 )
 
+#metadata(none) <loginator-identify>
+
 Live data visualization is an incredibly powerful tool that could completely
 revolutionize how we approach tuning, debugging and testing. In the past we've
-used Matplotlib, a popular Python#footnote("See glossary") <nb_gl> library, to
-graph data from a .csv file #footnote(<nb_gl>). This approach is extremely slow
+used Matplotlib, a popular Python#footnote("See glossary") <nb-gl> library, to
+graph data from a .csv file #footnote(<nb-gl>). This approach is extremely slow
 and cumbersome. It requires many different steps to get the information off the
 brain and into a format that Matplotlib can read. This usually adds around a
 minute of work each time we want to visualize data.

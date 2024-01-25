@@ -7,8 +7,10 @@
 #show: create-body-entry.with(
   title: "Notebook: Graphing",
   type: "notebook",
-  date: datetime(year: 2024, month: 1, day: 16),
+  date: datetime(year: 2024, month: 1, day: 20),
 )
+
+#metadata(none) <notebook-graphs>
 
 While making graphs for this notebook we noticed that our workflow was very long
 and convoluted. In order to get a graph into the notebook we had to:
