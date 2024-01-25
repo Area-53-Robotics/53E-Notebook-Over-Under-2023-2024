@@ -21,7 +21,6 @@
 #include "./auton-routes/identify.typ"
 #include "./auton-routes/decide.typ"
 #include "./tournament-hereford/entry.typ"
-#include "./auton-routes/program.typ"
 
 #include "./flywheel/program.typ"
 #include "./tournament-roosevelt/entry.typ"
@@ -34,16 +33,11 @@
 
 #include "./notebook-notebookinator/entry.typ"
 #include "./notebook-graphs/entry.typ"
+
 #include "./auton-routes/program.typ"
+#include "./test-auton-movement/entry.typ"
 
 // TODO:
-// - do I wanna have some kind of entry where we decide to not rebuild?
-// - lift
-//   - identify
-//   - brainstorm
-//   - decide
-//   - build
-//   - test
 // - autonomous implementation
 // - wedge rebuild
 // - coding the lift?

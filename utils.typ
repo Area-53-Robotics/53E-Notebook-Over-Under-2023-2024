@@ -19,4 +19,19 @@
 }
 
 // TODO: add parse datetime function here
+
+#let parse_timestamp(timestamp) = {
+  let data = timestamp.matches(regex("(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2}).(\d{3})"))
+  let captures = data.at(0).captures
+
+  datetime(
+    year: int(captures.at(0)),
+    month: int(captures.at(1)),
+    day: int(captures.at(2)),
+    hour: int(captures.at(3)),
+    minute: int(captures.at(4)),
+    second: int(captures.at(5)),
+  )
+}
+
 #let grid = grid.with(columns: (1fr, 1fr), gutter: 20pt)

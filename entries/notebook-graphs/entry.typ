@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Notebook: Graphing",
   type: "notebook",
-  date: datetime(year: 1982, month: 1, day: 1),
+  date: datetime(year: 2024, month: 1, day: 16),
 )
 
 While making graphs for this notebook we noticed that our workflow was very long
@@ -139,9 +139,8 @@ did some basic styling, and simplified the API greatly.
 ```
 = Examples
 
-#grid(
-  [
-  ```typ
+#grid([
+```typ
   #let data = gen-from-csv(read("./data.csv"))
   #plot(
     title: "Flywheel PID Data",
@@ -150,14 +149,17 @@ did some basic styling, and simplified the API greatly.
     ..data // Flatten the data into individual arguments
   )
   ```
-  ],
-  {
-    let data = gen-from-csv(read("./data.csv"))
-    plot(
-      title: "Flywheel PID Data",
-      x-label: "Time (ms)",
-      y-label: "Voltage (mV)",
-      ..data,
-    )
-  },
-)
+], {
+  let data = gen-from-csv(read("./data.csv"))
+  plot(
+    title: "Flywheel PID Data",
+    x-label: "Time (ms)",
+    y-label: "Voltage (mV)",
+    ..data,
+  )
+})
+
+Overall we're very happy with how this turned out, and are excited to put it to
+use. This has dramatically shortened the workflow needed to put graphs in the
+notebook, and we hope to be able to visually present data in the notebook more
+often.
