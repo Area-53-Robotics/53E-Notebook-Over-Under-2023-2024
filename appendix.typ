@@ -1,7 +1,6 @@
 #import "./packages.typ": notebookinator
 #import notebookinator: *
 #import themes.radial.components
-#import themes.radial.colors: *
 #import "./utils.typ": get-page-number
 
 #include "./glossary.typ"
@@ -58,4 +57,5 @@
   This covers the entire development progress, from planning to implementation.
 
   You can find the documentation for the notebook graphing utilities on page #get-page-number(<notebook-graphs>).
+  You can see both tools working together to put graphs in the notebook on page #get-page-number(<test-auton-movement>).
 ]

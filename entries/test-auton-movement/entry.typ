@@ -10,6 +10,8 @@
   date: datetime(year: 2024, month: 1, day: 24), // TODO: fix date
 )
 
+#metadata(none) <test-auton-movement>
+
 While implementing our autonomous routines, we noticed that our movements were
 extremely imprecise. While our odometry could compensate for this, it was
 leading to our routes being pretty inconsistent. We decided it would be worth it
