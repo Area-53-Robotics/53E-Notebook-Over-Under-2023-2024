@@ -5,7 +5,7 @@
 #create-body-entry(
   title: "Build: Lift",
   type: "build",
-  date: datetime(year: 2024, month: 1, day: 5),
+  date: datetime(year: 2024, month: 1, day: 6),
   author: "John Kelley",
   witness: "Alan Morales",
 )[
@@ -63,7 +63,7 @@
 #create-body-entry(
   title: "Build: Lift",
   type: "build",
-  date: datetime(year: 2024, month: 1, day: 6),
+  date: datetime(year: 2024, month: 1, day: 12),
   author: "John Kelley",
   witness: "Felix Hass",
 )[
@@ -102,7 +102,7 @@
 #create-body-entry(
   title: "Build: Lift",
   type: "build",
-  date: datetime(year: 2024, month: 1, day: 7),
+  date: datetime(year: 2024, month: 1, day: 13),
   author: "John Kelley",
   witness: "Felix Hass",
 )[
