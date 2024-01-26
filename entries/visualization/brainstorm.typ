@@ -8,6 +8,8 @@
   title: "Brainstorm: Data Visualization",
   type: "brainstorm",
   date: datetime(year: 2023, month: 11, day: 11),
+  author: "Felix Hass",
+  witness: "Meghana Noojipady",
 )
 There are a multitude of different options that we could choose from. These
 options fall into two categories:
@@ -103,4 +105,3 @@ already supports things like graphs.
 This solution would be our go to if we didn't have other places that we wanted
 to display the data, like the notebook. Its super easy, but as soon as you need
 the data somewhere else, our workflow is exactly the same as it was before.
-

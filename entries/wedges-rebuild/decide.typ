@@ -6,6 +6,8 @@
   title: "Decide: Launcher Rebuild",
   type: "decide",
   date: datetime(year: 2023, month: 11, day: 29),
+  author: "Violet Ridge",
+  witness: "Meghana Noojipady",
 )
 
 We rated each option in the following categories:

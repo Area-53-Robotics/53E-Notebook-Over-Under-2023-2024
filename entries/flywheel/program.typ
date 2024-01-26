@@ -8,6 +8,8 @@
   title: "Program: Flywheel",
   type: "program",
   date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  author: "Felix Hass",
+  witness: "Meghana Noojipady",
 )
 
 = PID Control

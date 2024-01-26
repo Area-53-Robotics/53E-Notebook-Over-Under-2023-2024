@@ -6,6 +6,8 @@
   title: "Build: Launcher Rebuild",
   type: "build",
   date: datetime(year: 2023, month: 11, day: 29),
+  author: "Violet Ridge",
+  witness: "Meghana Noojipady",
 )
 
 #grid(

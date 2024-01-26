@@ -8,6 +8,8 @@
   title: "Decide: Data Visualization",
   type: "decide",
   date: datetime(year: 2023, month: 11, day: 18),
+  author: "Felix Hass",
+  witness: "Joy Oladimejij",
 )
 
 In order to make our decision we rated each option for the following properties:

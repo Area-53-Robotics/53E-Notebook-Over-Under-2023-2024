@@ -6,6 +6,8 @@
   title: "Identify: Wedges Rebuild",
   type: "identify",
   date: datetime(year: 2023, month: 11, day: 29),
+  author: "Violet Ridge",
+  witness: "Meghana Noojipady",
 )
 
 At our last tournament we discovered a few issues with our wedges. While they

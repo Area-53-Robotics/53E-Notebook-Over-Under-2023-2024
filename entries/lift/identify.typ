@@ -6,10 +6,14 @@
   title: "Identify: Elevation",
   type: "identify",
   date: datetime(year: 2024, month: 1, day: 03),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )
 
 After the Capital Beltway Challenge, we decided that our robot needed some way
-to elevate. We noticed that not many teams were able to elevate at all, even this late into the season, meaning that we can still score near maximum points by elevating.
+to elevate. We noticed that not many teams were able to elevate at all, even
+this late into the season, meaning that we can still score near maximum points
+by elevating.
 
 #image("./identify.svg")
 

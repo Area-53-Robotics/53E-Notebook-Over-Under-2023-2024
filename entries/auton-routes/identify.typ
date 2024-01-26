@@ -6,6 +6,8 @@
   title: "Identify: Autonomous Strategy",
   type: "identify",
   date: datetime(year: 2023, month: 12, day: 1),
+  author: "Meghana Noojipady",
+  witness: "Felix Hass",
 )
 
 The autonomous period is a essential part of the game. It can give you a head

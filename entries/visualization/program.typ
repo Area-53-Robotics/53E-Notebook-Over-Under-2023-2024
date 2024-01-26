@@ -9,6 +9,8 @@
   title: "Program: Data Visualization",
   type: "program",
   date: datetime(year: 2023, month: 11, day: 18),
+  author: "Felix Hass",
+  witness: "Joy Oladimejij",
 )
 
 Now what we had a rough idea of what we were doing we could implement them. If

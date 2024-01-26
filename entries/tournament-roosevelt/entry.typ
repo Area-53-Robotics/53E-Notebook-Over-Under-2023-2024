@@ -8,6 +8,8 @@
   title: "Capital Beltway Challenge",
   type: "test",
   date: datetime(year: 2023, month: 12, day: 16), // TODO: fix date
+  author: "Meghana Noojipady",
+  witness: "Felix Hass",
 )
 
 = Qualification Matches
@@ -131,7 +133,7 @@ picked 53A and 9080H ended up picking us.
     competition but we were able to make a comeback during the elimination rounds,
     taking us to the finals.
   ],
-),
+)
 
 Our overall robot performance was as follows:
 

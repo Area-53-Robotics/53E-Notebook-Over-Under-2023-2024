@@ -6,6 +6,8 @@
   title: "Brainstorm: Elevation",
   type: "brainstorm",
   date: datetime(year: 2024, month: 1, day: 03),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )
 
 = Choices
@@ -64,5 +66,5 @@ robot to B tier.
 
     ])
   ],
-  image("./pto.svg")
+  image("./pto.svg"),
 )

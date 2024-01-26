@@ -6,6 +6,9 @@
   title: "Identify: Launcher Rebuild",
   type: "identify",
   date: datetime(year: 2023, month: 11, day: 28),
+  author: "Violet Ridge",
+  witness: "Joy Oladimejij",
+
 )
 
 At our last tournament we were very unhappy with the performance of our

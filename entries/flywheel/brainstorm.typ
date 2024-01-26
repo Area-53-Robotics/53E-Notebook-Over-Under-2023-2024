@@ -8,6 +8,8 @@
   title: "Brainstorm: Launcher Rebuild",
   type: "brainstorm",
   date: datetime(year: 2023, month: 11, day: 28),
+  author: "Violet Ridge",
+  witness: "Meghana Noojipady",
 )
 
 There are several different options we could choose from when it comes to

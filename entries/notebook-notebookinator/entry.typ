@@ -8,6 +8,8 @@
   title: "Notebook: Notebookinator",
   type: "notebook",
   date: datetime(year: 2024, month: 1, day: 16),
+  author: "Felix Hass",
+  witness: "Meghana Noojipady",
 )
 
 We've put an insurmountable about of work into both the content of this

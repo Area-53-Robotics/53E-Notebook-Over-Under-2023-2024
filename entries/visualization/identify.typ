@@ -6,6 +6,8 @@
   title: "Identify: Data Visualization",
   type: "identify",
   date: datetime(year: 2023, month: 11, day: 11),
+  author: "Felix Hass",
+  witness: "Meghana Noojipady",
 )
 
 #metadata(none) <loginator-identify>

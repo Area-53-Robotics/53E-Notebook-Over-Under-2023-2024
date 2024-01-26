@@ -8,6 +8,8 @@
   title: "Tournament: Hereford Stampede",
   type: "test",
   date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  author: "Meghana Noojipady",
+  witness: "Felix Hass",
 )
 
 = Qualification Matches

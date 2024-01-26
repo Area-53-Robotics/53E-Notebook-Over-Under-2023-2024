@@ -6,6 +6,8 @@
   title: "Brainstorm: Wedges Rebuild",
   type: "brainstorm",
   date: datetime(year: 2023, month: 11, day: 29),
+  author: "Violet Ridge",
+  witness: "Meghana Noojipady",
 )
 
 After brainstorming we came up with several designs for full length wedges. All

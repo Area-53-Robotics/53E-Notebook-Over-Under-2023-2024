@@ -10,8 +10,6 @@
 #include "./flywheel/build.typ"
 #include "./flywheel/test.typ"
 
-#include "./lift/brainstorm.typ"
-
 #include "./wedges-rebuild/identify.typ"
 #include "./wedges-rebuild/brainstorm.typ"
 #include "./wedges-rebuild/decide.typ"

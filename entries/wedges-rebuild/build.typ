@@ -6,6 +6,8 @@
   title: "Build: Wedges Rebuild",
   type: "build",
   date: datetime(year: 2023, month: 12, day: 1),
+  author: "Violet Ridge",
+  witness: "Meghana Noojipady",
 )
 
 #grid(
@@ -38,4 +40,3 @@
   The wedges are complete. In the future we'll want to swap out the polycarbonate
   for a piece of acetal.
 ]
-
