@@ -81,4 +81,4 @@ Renders this table:
  ("Sweet Potato", 1, 2, 5),
  ("Red Potato", 2, 3, 2),
  ("White Potato", 4, 5, 2),
-))
+)
