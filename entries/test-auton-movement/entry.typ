@@ -98,7 +98,7 @@ Here's the output of the above 10" movement with the above constants. As you can
 see, the movement heavily oscillates, over accelerating, and crossing over the
 zero threshold.
 
-#let data = utils.gen-from-csv(read("./linear-before.csv"))
+#let data = utils.plot-from-csv(read("./linear-before.csv"))
 #plot(
   length: 70%,
   title: "Linear Pid Output",
@@ -127,7 +127,7 @@ lemlib::ControllerSettings angularController(
 
 Here's the output of the PID controller over time with the 90#sym.degree movement:
 
-#let data = utils.gen-from-csv(read("./angular-before.csv"))
+#let data = utils.plot-from-csv(read("./angular-before.csv"))
 #plot(
   length: 70%,
   title: "Angular Pid Output",
@@ -164,7 +164,7 @@ Here's the output of the controller after tuning. As you can see the results are
 much better. The output barely crosses the 0 mark, and goes almost directly to
 the target.
 
-#let data = utils.gen-from-csv(read("./linear-after.csv"))
+#let data = utils.plot-from-csv(read("./linear-after.csv"))
 #plot(
   title: "Linear Pid Output",
   x-label: "Time (ms)",
@@ -201,7 +201,7 @@ term was needed.
 Here's the output after tuning. As you can see, the controller goes directly to
 the target, and doesn't oscillate at all.
 
-#let data = utils.gen-from-csv(read("./angular-after.csv"))
+#let data = utils.plot-from-csv(read("./angular-after.csv"))
 #plot(
   title: "Angular Pid Output",
   x-label: "Time (ms)",

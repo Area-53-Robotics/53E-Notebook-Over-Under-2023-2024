@@ -20,9 +20,9 @@ We rated each choice by the following categories:
 
 #decision-matrix(
   properties: (
-    "Ease of Design and Fabrication",
-    "Possible Height",
-    "Reliability and Ease of Use",
+    (name: "Ease of Design and Fabrication"),
+    (name: "Possible Height"),
+    (name: "Reliability and Ease of Use"),
   ),
   ("Pneumatic Lift", 3, 4, 5),
   ("Balance Mechanism", 5, 1, 1),

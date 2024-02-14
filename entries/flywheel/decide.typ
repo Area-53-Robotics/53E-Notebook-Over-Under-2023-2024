@@ -16,12 +16,11 @@ We rated each choice by the following properties:
 - Distance launched on a scale of 0 to 5.
 - Consistency/Accuracy on a scale of 0 to 5.
 
-#decision-matrix(
-  properties: ("Ease of building", "Distance Launched", "Consistency/Accuracy"),
-  ("Catapult", 8, 3, 3),
-  ("Flywheel", 9, 5, 2),
-  ("Puncher", 4, 2, 3),
-)
+#decision-matrix(properties: (
+  (name: "Ease of building"),
+  (name: "Distance Launched"),
+  (name: "Consistency/Accuracy"),
+), ("Catapult", 8, 3, 3), ("Flywheel", 9, 5, 2), ("Puncher", 4, 2, 3))
 
 #admonition(
   type: "decision",

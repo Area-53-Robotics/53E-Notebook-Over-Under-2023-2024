@@ -2,7 +2,7 @@
 #import notebookinator: *
 #import themes.radial.components: *
 
-#import "/utils.typ": grid, gen-from-csv
+#import "/utils.typ": grid, plot-from-csv
 
 #show: create-body-entry.with(
   title: "Notebook: Graphing",
@@ -154,7 +154,7 @@ did some basic styling, and simplified the API greatly.
   )
   ```
 ], {
-  let data = gen-from-csv(read("./data.csv"))
+  let data = plot-from-csv(read("./data.csv"))
   plot(
     title: "Flywheel PID Data",
     x-label: "Time (ms)",

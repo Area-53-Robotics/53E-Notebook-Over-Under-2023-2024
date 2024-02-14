@@ -18,7 +18,7 @@ In order to make our decision we rated each option for the following properties:
   actually write the software.
 
 #decision-matrix(
-  properties: ("Ease of use", "Ease of development",),
+  properties: ((name: "Ease of use"), (name: "Ease of development"),),
   ("Native App", 8, 3),
   ("Grafana", 5, 5),
   ("LCD Screen", 5, 4),
@@ -77,7 +77,7 @@ Ideally we could get a working solution quickly, and then use Cooper's solution
 once it became more polished.
 
 #decision-matrix(
-  properties: ("Ease of use", "Ease of development",),
+  properties: ((name: "Ease of use"), (name: "Ease of development")),
   ("Native App", 4, 3),
   ("Grafana", 4, 4),
   ("LCD Screen", 3, 4),

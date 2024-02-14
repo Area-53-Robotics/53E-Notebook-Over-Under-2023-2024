@@ -35,8 +35,6 @@
 #include "./auton-routes/program.typ"
 #include "./test-auton-movement/entry.typ"
 
-// TODO:
-// - autonomous implementation
-// - wedge rebuild
-// - coding the lift?
-// - graphing showcase
+#include "./tournament-loyola/entry.typ"
+#include "./tournament-gateway/entry.typ"
+#include "./tournament-cardinal/entry.typ"

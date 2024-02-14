@@ -16,7 +16,11 @@ We rated each option in the following categories:
 - Ease of tuning from 0 to 5
 
 #decision-matrix(
-  properties: ("Reliability", "Ease of fabrication", "Ease of tuning",),
+  properties: (
+    (name: "Reliability"),
+    (name: "Ease of fabrication"),
+    (name: "Ease of tuning"),
+  ),
   ("Rebuild Wedge to use plastic", 1, 3, 2),
   ("Add plastic to Existing Wedges", 3, 1, 3),
   ("Create plastic Flap to Aid Existing Wedges", 2, 2, 1),

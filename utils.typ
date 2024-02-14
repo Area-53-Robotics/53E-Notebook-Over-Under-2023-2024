@@ -1,4 +1,51 @@
-#let gen-from-csv(data) = {
+#let tournament-from-csv(section: "", team-name: "", raw-data) = {
+  let parse-match(name) = {
+    let sample-name = "Qualifier #1"
+    let result = name.matches(regex("Qualifier #(\d+)"))
+
+    if result == () {
+      return (false, name)
+    }
+    return (true, [Q#result.at(0).captures.at(0)])
+  }
+
+  let data = csv.decode(raw-data)
+  data = data.slice(1)
+  let result = ()
+
+  for row in data {
+    if row.contains(team-name) {
+      let winning-alliance = row.at(8)
+
+      let match-name = parse-match(row.at(1))
+
+      if section == "qualifications" and not match-name.at(0) { continue }
+      if section == "eliminations" and match-name.at(0) { continue }
+
+      let match = (
+        match: match-name.at(1),
+        red-alliance: (teams: (row.at(2), row.at(3)), score: row.at(6)),
+        blue-alliance: (teams: (row.at(4), row.at(5)), score: row.at(7)),
+        auton: false,
+        awp: false,
+      )
+
+      match.won = if (
+        (
+          match.red-alliance.teams.contains(team-name) and winning-alliance == "Red"
+        ) or (
+          match.blue-alliance.teams.contains(team-name) and winning-alliance == "Blue"
+        )
+      ) { true } else { false }
+
+      result.push(match)
+    }
+  }
+
+  result
+}
+
+#let plot-from-csv(data) = {
   let raw-data = csv.decode(data)
   let labels = raw-data.at(0)
 
