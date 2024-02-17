@@ -20,6 +20,12 @@
   team-name: "53E",
   section: "qualifications",
 )
+qual-data.at(1).auton = true
+qual-data.at(2).auton = true
+qual-data.at(3).auton = true
+qual-data.at(4).auton = true
+qual-data.at(5).auton = true
+
 
 
 #tournament(..qual-data)
