@@ -126,14 +126,12 @@ partnered with 929N, and 82856A ended up picking us.
 
 #grid(
   columns: (1fr, 1fr),
-  // FIXME: port pie chart
-  /*
-nb-pie-chart(
-  (8, green, "wins"),
-  (2, red, "losses"),
+
+  pie-chart(
+ (value: 8, color: green, name: "wins"),
+ (value: 2, color: red, name: "losses")
 ),
-*/
-  [],
+
   [
     Overall we're extremely happy with the performance of our robot. We won nearly
     all of our qualification matches, and got all the way to finals.
