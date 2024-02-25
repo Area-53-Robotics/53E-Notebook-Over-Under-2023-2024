@@ -38,3 +38,11 @@
 #include "./tournament-loyola/entry.typ"
 #include "./tournament-gateway/entry.typ"
 #include "./tournament-cardinal/entry.typ"
+
+#include "./management-road-to-states/entry.typ"
+
+#include "./intake-rebuild/identify.typ"
+#include "./intake-rebuild/brainstorm.typ"
+#include "./intake-rebuild/decide.typ"
+#include "./intake-rebuild/build.typ"
+#include "./intake-rebuild/test.typ"
