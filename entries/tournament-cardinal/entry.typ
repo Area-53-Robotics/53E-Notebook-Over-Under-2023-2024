@@ -8,9 +8,9 @@
 #show: create-body-entry.with(
   title: "Tournament: Cardinal Classic",
   type: "test",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
-  author: "Meghana Noojipady",
-  witness: "Felix Hass",
+  date: datetime(year: 2024, month: 2, day: 10),
+  //author: "Meghana Noojipady",
+  //witness: "Felix Hass",
 )
 
 
