@@ -1,6 +1,7 @@
 #import "/packages.typ": notebookinator, diagraph
 #import notebookinator: *
 #import themes.radial.components: *
+#import themes.radial.colors: *
 #import "/utils.typ": tournament-from-csv
 
 #import diagraph: *
@@ -88,9 +89,16 @@ subsystem's performance to see where we need improvement.
   columns: (1fr, 1fr),
   gutter: 20pt, //
   [
-    #lorem(20)
+    Overall the wings were probably the best performing part of our robot, and work
+    great, even with the changes in strategy we've made. There are a few minor
+    issues, but these are easily fixable.
   ],
-  pro-con(pros: [], cons: []),
+  pro-con(pros: [
+    - Work reliably
+    - Consistently push triballs into the goal
+  ], cons: [
+    - Sometimes don't fully retract if rubber bands break
+  ]),
 )
 
 === Intake
@@ -99,10 +107,21 @@ subsystem's performance to see where we need improvement.
   columns: (1fr, 1fr),
   gutter: 20pt, //
   [
-    #lorem(20)
+    The intake is the biggest problem point on our robot currently. We haven't
+    changed the design in a very long time, and the optimal design has changed a
+    lot. Not only that, but the intake has some severe structural problems that will
+    only get worse if not addressed.
   ],
-  pro-con(pros: [], cons: []),
+  pro-con(pros: [
+    - Consistently grabs the triballs
+  ], cons: [
+    - Rubber bands easily break
+    - C-channel is bending, putting stress on the axle
+    - The axle is low strength, making it very easy to bend
+  ]),
 )
+
+#colbreak()
 
 === Flywheel
 
@@ -110,7 +129,41 @@ subsystem's performance to see where we need improvement.
   columns: (1fr, 1fr),
   gutter: 20pt, //
   [
-    #lorem(20)
+    The flywheel is another problem point on our robot, but we're not sure if we
+    will have enough time to fix it before the state competition. Having a shooting
+    mechanism is becoming less and less important during match play, but its still
+    very useful during skills.
   ],
-  pro-con(pros: [], cons: []),
+  pro-con(pros: [
+    - Can be loaded very quickly
+    - Elevation makes it hard to block
+  ], cons: [
+    - Extremely inconsistent spread
+    - Bad mounting to the lift gives it more friction than it should
+  ]),
 )
+
+=== Lift
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 20pt, //
+  [
+    The lift has a few problems, but its performance is good enough that we probably
+    won't address many issues with it.
+  ],
+  pro-con(pros: [
+    - Is typically able to elevate in under 5 seconds
+  ], cons: [
+    - Only lifts us to A tier
+    - Has trouble lifting without rubber bands
+    - Has trouble actuating multiple times in a match
+  ]),
+)
+
+== Strategy Breakdown
+
+The strategy we used at this this tournament was very different from the
+strategy we used at Gateway. We've become more comfortable with the field
+starvation strategies, and have become better at knowing when to apply them and
+when not to.

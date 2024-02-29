@@ -23,11 +23,28 @@
 
 #tournament(..qual-data)
 
-//= Reflection
+= Reflection
 
-//Despite the fact that we didn't make it to eliminations this tournament was very
-//successful for us.
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 20pt,
+  pie-chart(
+    (value: 3, color: green, name: "wins"),
+    (value: 7, color: red, name: "losses"),
+  ),
+  [
+    Despite the fact that we didn't make it to eliminations this tournament was very
+    successful for us. We got to see first hand how high level strategy works, and
+    were introduced to techniques like field starvation.
 
-//== Strategic Performance
+    We also finally were paired with alliance partners who could score the other
+    half of the AWP, and we were able to gauge its effectiveness.
+  ],
+)
 
-//== Autonomous Performance
+== Strategic Performance
+
+The first thing we noticed was that many teams were running a field starvation
+strategy.
+
+== Autonomous Performance
