@@ -47,6 +47,6 @@
 #include "./intake-rebuild/build.typ"
 #include "./intake-rebuild/test.typ"
 
-//#include "./management-plastic-map/entry.typ" // TODO: write this entry
+#include "./management-plastic-map/entry.typ"
 
 // FIXME: remember to remove the digital signatures before printing
