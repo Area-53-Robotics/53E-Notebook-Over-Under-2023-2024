@@ -9,8 +9,8 @@
   title: "Tournament: Gateway to the West",
   type: "test",
   date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
-  author: "Meghana Noojipady",
-  witness: "Felix Hass",
+  //author: "Meghana Noojipady",
+  //witness: "Felix Hass",
 )
 
 = Qualifications
@@ -23,3 +23,11 @@
 
 #tournament(..qual-data)
 
+//= Reflection
+
+//Despite the fact that we didn't make it to eliminations this tournament was very
+//successful for us.
+
+//== Strategic Performance
+
+//== Autonomous Performance

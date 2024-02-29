@@ -9,8 +9,8 @@
   title: "Tournament: Blakefield Robotics Challenge",
   type: "test",
   date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
-  author: "Meghana Noojipady",
-  witness: "Felix Hass",
+  //author: "Meghana Noojipady",
+  //witness: "Felix Hass",
 )
 
 = Qualifications
@@ -64,6 +64,7 @@ and had us as their number one option too.
 #tournament(..elims-data)
 
 = Reflection
+
 #grid(
   columns: (1fr, 1fr),
   pie-chart(
