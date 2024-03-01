@@ -166,4 +166,35 @@ subsystem's performance to see where we need improvement.
 The strategy we used at this this tournament was very different from the
 strategy we used at Gateway. We've become more comfortable with the field
 starvation strategies, and have become better at knowing when to apply them and
-when not to.
+when not to. Here is the decision making process we used to choose our strategy:
+
+#raw-render[```dot
+  digraph {
+    rankdir=LR;
+    start->"Do our opponents have angled wings?"
+    "Do our opponents have angled wings?" ->"Field Starvation"[label = "yes"]
+    "Do our opponents have angled wings?" ->"Shooting"[label = "no"]
+
+    start[shape=Mdiamond]
+  }
+```]
+
+The main deciding factor is how fast they can return triballs to our side of the
+field, and the fastest way we've seen to do that is angled wings.
+
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 20pt,
+  pie-chart(
+    (value: 5, color: red, name: "Field Starvation"),
+    (value: 2, color: orange, name: "Shooting"),
+  ), //
+  [
+    Overall we ran field starvation strategies more often than we did shooting,
+    mainly because even if we were facing an alliance that couldn't relocate
+    triballs easily, they had some kind of shooting mechanism we could capitalize
+    off of. Overall we found it more effective to score triballs introduced by other
+    teams rather than introduce them ourselves.
+
+  ],
+)
