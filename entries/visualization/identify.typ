@@ -6,18 +6,21 @@
   title: "Identify: Data Visualization",
   type: "identify",
   date: datetime(year: 2023, month: 11, day: 11),
-  author: "Felix Hass",
-  witness: "Meghana Noojipady",
+  //author: "Felix Hass",
+  //witness: "Meghana Noojipady",
 )
 
 #metadata(none) <loginator-identify>
 
 Live data visualization is an incredibly powerful tool that could completely
-revolutionize how we approach tuning, debugging and testing. In the past we've
-used Matplotlib, a popular Python#footnote("See glossary") <nb-gl> library, to
-graph data from a .csv file #footnote(<nb-gl>). This approach is extremely slow
-and cumbersome. It requires many different steps to get the information off the
-brain and into a format that Matplotlib can read. This usually adds around a
+revolutionize how we approach tuning, debugging and testing. It would help us
+get a bigger picture of whats going on while debugging, instead of just a slice
+in time, and would do so in real time, instead of after program runs.
+
+In the past we've used Matplotlib, a popular Python#footnote("See glossary") <nb-gl> library,
+to graph data from a .csv file #footnote(<nb-gl>). This approach is extremely
+slow and cumbersome. It requires many different steps to get the information off
+the brain and into a format that Matplotlib can read. This usually adds around a
 minute of work each time we want to visualize data.
 
 Live graphing would allow us to view data in an understandable way, with zero

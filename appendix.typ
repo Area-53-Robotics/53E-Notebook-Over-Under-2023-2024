@@ -66,5 +66,5 @@
 
   You can find the documentation for the notebook graphing utilities on page #get-page-number(<notebook-graphs>).
   You can see both tools working together to put graphs in the notebook on page #get-page-number(<test-auton-movement>) and
-  on page #get-page-number(<test-intake>)
+  #get-page-number(<test-intake>).
 ]
