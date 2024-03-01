@@ -9,6 +9,8 @@
   date: datetime(year: 2024, month: 2, day: 24),
 )
 
+#metadata(none) <test-intake>
+
 Since the changes to the intake were mostly structural, we decided the most
 important thing to test for would be friction, as this would tell us if our
 design's construction was sound. We do this by collecting the power draw of the

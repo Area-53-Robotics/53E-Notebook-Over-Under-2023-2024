@@ -35,19 +35,27 @@
 
   == 1. Brief Description of the Novel Aspect of the Team's Design being Submitted:
 
-  Throughout our design process our team uses a large amount of data visualization
-  in order to understand relevant information faster, and present it to the reader
-  in a more appealing format.
+  The innovative part of our design process is our approach to data visualization.
+  Early in the season we identified the important of data visualization, and were
+  using it to get a better understanding of the whole picture, rather than just a
+  snapshot in time.
 
-  We've made multiple tools to help us with this. Our first tool was the
-  Loginator, a bridge between the V5 brain and the existing data visualization
-  tool Grafana. Developing this tool required in depth knowledge of how the brain
-  emits and encodes data.
+  We quickly discovered that the existing solutions for VEX were lacking, and that
+  we wanted to create our own. We've created a tool called the Loginator which
+  acts as a bridge between the V5 brain and the existing data visualization
+  frontend Grafana, over Bluetooth. We are one of the first teams in the world to
+  use the brain's Bluetooth capability to do something other than upload programs
+  to the brain.
 
-  The second tool works with .csv files exported by Grafana, and graphs them
-  directly into the notebook. This is only possible due to the flexibility of our
-  notebooking solution, Typst. It has revolutionised how we add graphs to our
-  notebook, making the whole process much easier and more streamlined.
+  Implementing this required in depth knowledge of the Bluetooth protocol, as well
+  as the serial protocol PROS uses to encode information leaving the brain. We've
+  released our implementation to GitHub, so that any team can benefit from our
+  work.
+
+  As we continue to use we've used this tool we've been able to integrate it into
+  other parts of our workflow, like our notebook. Many of the later entries in
+  this notebook use data gathered by the Loginator. Overall this tool has been
+  extremely useful, and we're very happy with it.
 
   #v(2em)
 
@@ -57,5 +65,6 @@
   This covers the entire development progress, from planning to implementation.
 
   You can find the documentation for the notebook graphing utilities on page #get-page-number(<notebook-graphs>).
-  You can see both tools working together to put graphs in the notebook on page #get-page-number(<test-auton-movement>).
+  You can see both tools working together to put graphs in the notebook on page #get-page-number(<test-auton-movement>) and
+  on page #get-page-number(<test-intake>)
 ]
