@@ -8,7 +8,7 @@
 #show: create-body-entry.with(
   title: "Tournament: Blakefield Robotics Challenge",
   type: "test",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2024, month: 1, day: 27), 
   //author: "Meghana Noojipady",
   //witness: "Felix Hass",
 )
@@ -25,8 +25,6 @@
 #(qual-data.at(2).auton = true)
 #(qual-data.at(3).auton = true)
 #(qual-data.at(4).auton = true)
-
-
 
 #tournament(..qual-data)
 

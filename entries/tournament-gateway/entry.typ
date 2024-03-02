@@ -8,7 +8,7 @@
 #show: create-body-entry.with(
   title: "Tournament: Gateway to the West",
   type: "test",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2024, month: 2, day: 3),
   //author: "Meghana Noojipady",
   //witness: "Felix Hass",
 )
