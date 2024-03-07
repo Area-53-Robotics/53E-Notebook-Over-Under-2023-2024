@@ -7,6 +7,8 @@
   title: "Test: Intake Rebuild",
   type: "test",
   date: datetime(year: 2024, month: 2, day: 24),
+  author: "Felix Hass",
+  witness: "Violet Ridge",
 )
 
 #metadata(none) <test-intake>

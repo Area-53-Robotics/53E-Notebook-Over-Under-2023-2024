@@ -6,6 +6,8 @@
   title: "Decide: Intake Rebuild",
   type: "decide",
   date: datetime(year: 2024, month: 2, day: 16), // TODO: fix date
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )
 
 In order to make our final decision as to which option to choose, we rated each

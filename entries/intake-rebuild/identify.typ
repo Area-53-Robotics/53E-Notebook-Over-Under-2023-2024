@@ -6,6 +6,8 @@
   title: "Identify: Intake Rebuild",
   type: "identify",
   date: datetime(year: 2024, month: 2, day: 10), // TODO: fix date
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )
 
 At our past tournaments we began to see some problems with our intake. Poor

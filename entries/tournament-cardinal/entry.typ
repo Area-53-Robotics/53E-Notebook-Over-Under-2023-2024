@@ -10,8 +10,8 @@
   title: "Tournament: Cardinal Classic",
   type: "test",
   date: datetime(year: 2024, month: 2, day: 10),
-  //author: "Meghana Noojipady",
-  //witness: "Felix Hass",
+  author: "Meghana Noojipady",
+  witness: "Felix Hass",
 )
 
 = Qualifications

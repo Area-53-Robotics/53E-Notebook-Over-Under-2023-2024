@@ -6,6 +6,8 @@
   title: "Brainstorm: Intake Rebuild",
   type: "brainstorm",
   date: datetime(year: 2024, month: 2, day: 16),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )
 
 = Choices

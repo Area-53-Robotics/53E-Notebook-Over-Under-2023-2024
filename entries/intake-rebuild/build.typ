@@ -6,6 +6,8 @@
   title: "Build: Intake Rebuild",
   type: "build",
   date: datetime(year: 2024, month: 2, day: 17),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
   #grid(
     columns: (1fr, 1fr),
@@ -47,6 +49,8 @@
   title: "Build: Intake Rebuild",
   type: "build",
   date: datetime(year: 2024, month: 2, day: 23),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
   #grid(
     columns: (2fr, 3fr),
@@ -92,6 +96,8 @@
   title: "Build: Intake Rebuild",
   type: "build",
   date: datetime(year: 2024, month: 2, day: 24),
+  author: "John Kelley",
+  witness: "Violet Ridge",
 )[
 
   #grid(
@@ -125,7 +131,7 @@
     gutter: 20pt, //
     figure(
       caption: [Standoff bracing running through the mount points],
-      image("./mounting.jpg"),
+      image("./mounting.jpg", width: 90%),
     ),
     figure( //
       caption: [Completed intake with triball],

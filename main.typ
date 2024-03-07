@@ -16,10 +16,7 @@
 
   ]
 ])
-
-#create-frontmatter-entry(title: "Table of Contents")[
-  #components.toc()
-]
+#include "/frontmatter.typ"
 
 #include "entries/entries.typ"
 

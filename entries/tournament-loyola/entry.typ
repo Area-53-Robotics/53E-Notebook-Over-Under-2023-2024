@@ -9,8 +9,8 @@
   title: "Tournament: Blakefield Robotics Challenge",
   type: "test",
   date: datetime(year: 2024, month: 1, day: 27), 
-  //author: "Meghana Noojipady",
-  //witness: "Felix Hass",
+  author: "Meghana Noojipady",
+  witness: "Felix Hass",
 )
 
 = Qualifications

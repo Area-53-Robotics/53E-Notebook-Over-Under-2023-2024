@@ -6,6 +6,8 @@
   title: "Management: Road to States",
   type: "management",
   date: datetime(year: 2024, month: 2, day: 11),
+  author: "Felix Hass",
+  witness: "Violet Ridge",
 )
 
 We have a limited amount of time before states, so we need to plan out the
