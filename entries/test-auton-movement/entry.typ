@@ -7,9 +7,9 @@
 #show: create-body-entry.with(
   title: "Test: Autonomous Movement",
   type: "test",
-  date: datetime(year: 2024, month: 1, day: 24), // TODO: fix date
-  //author: "Felix Hass",
-  //witness: "Meghana Noojipady",
+  date: datetime(year: 2024, month: 1, day: 24),
+  author: "Felix Hass",
+  witness: "Meghana Noojipady",
 )
 
 #metadata(none) <test-auton-movement>

@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Capital Beltway Challenge",
   type: "test",
-  date: datetime(year: 2023, month: 12, day: 16), // TODO: fix date
+  date: datetime(year: 2023, month: 12, day: 16),
   author: "Meghana Noojipady",
   witness: "Felix Hass",
 )

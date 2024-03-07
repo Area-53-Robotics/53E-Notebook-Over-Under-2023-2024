@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Program: Flywheel",
   type: "program",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2023, month: 12, day: 11),
   author: "Felix Hass",
   witness: "Meghana Noojipady",
 )

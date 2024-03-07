@@ -7,7 +7,7 @@
 #show: create-body-entry.with(
   title: "Decide: Autonomous Routes",
   type: "decide",
-  date: datetime(year: 2023, month: 11, day: 28), // TODO: fix date
+  date: datetime(year: 2023, month: 12, day: 1),
   author: "Meghana Noojipady",
   witness: "Felix Hass",
 )

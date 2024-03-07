@@ -59,7 +59,7 @@ plot in order to allow the plot to be used without having a .csv file.
 
     for (row-index, row) in raw-data.enumerate() {
       if row-index == 0 { continue }
-      label-data.push((row-index, float(row.at(label-index)))) // TODO: actually parse the datetime (I need millisecond accuracy for this)
+      label-data.push((row-index, float(row.at(label-index))))
     }
     data.push((name: label, data: label-data))
   }

@@ -1,8 +1,12 @@
 #import "@local/notebookinator:0.1.0": *
 
-// TODO:
-// - Holonomic
-// -
+#glossary.add-term(
+  "Holonomic",
+)[
+  A vehicle is described as holonomic when it can move in any X/Y direction at any
+  time, regardless of its rotation. X-drive and Mecanum drivetrains are examples
+  of holonomic vehicles.
+]
 
 #glossary.add-term(
   "Python",
@@ -102,7 +106,7 @@
   "CNC",
   [
     An acronym that stands for Computer numerical control. This is any application
-    where a computer cuts)carves, or forms parts based on instructions that control
+    where a computer cuts, carves, or forms parts based on instructions that control
     the movement.
   ],
 )
@@ -139,20 +143,20 @@
 ]
 
 #glossary.add-term("PROS")[
-  An API developed by students at Purdue)used to control vex robots.
+  An library developed by students at Purdue used to control vex robots.
 ]
 
 #glossary.add-term(
   "Odometry",
 )[
   A method of tracking the position of the robot in cartesian coordinates
-  developed by team 5225)the Pilons.
+  developed by team 5225, the Pilons.
 ]
 
 #glossary.add-term(
   "Absolute Movement",
 )[
-  Movement that is in relation to a fixed point)rather than relative to itself.
+  Movement that is in relation to a fixed point, rather than relative to itself.
 ]
 
 #glossary.add-term(

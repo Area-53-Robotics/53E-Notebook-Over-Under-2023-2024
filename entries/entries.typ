@@ -2,13 +2,11 @@
 #include "./visualization/brainstorm.typ"
 #include "./visualization/decide.typ"
 #include "./visualization/program.typ"
-#include "./visualization/test.typ"
 
 #include "./flywheel/identify.typ"
 #include "./flywheel/brainstorm.typ"
 #include "./flywheel/decide.typ"
 #include "./flywheel/build.typ"
-#include "./flywheel/test.typ"
 
 #include "./wedges-rebuild/identify.typ"
 #include "./wedges-rebuild/brainstorm.typ"
@@ -49,4 +47,18 @@
 
 #include "./management-plastic-map/entry.typ"
 
-// FIXME: remember to remove the digital signatures before printing
+#include "./lift-pneumatics/entry.typ"
+
+/*
+
+#include "./tournament-states/entry.typ"
+#include "./robot-rebuild/identify.typ"
+#include "./robot-rebuild/brainstorm.typ"
+#include "./robot-rebuild/decide.typ"
+
+#include "./management-road-to-worlds/entry.typ"
+
+#include "./drivetrain-rebuild/identify.typ"
+#include "./drivetrain-rebuild/brainstorm.typ"
+#include "./drivetrain-rebuild/decide.typ"
+*/
