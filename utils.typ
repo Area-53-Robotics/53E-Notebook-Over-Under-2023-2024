@@ -83,5 +83,11 @@
 
 #let get-page-number(label) = locate(loc => {
   let elements = query(label, loc)
-  [#counter(page).at(elements.first().location()).first()]
+  if elements.len() == 0 {
+    panic(label)
+  }
+
+  [
+    #counter(page).at(elements.first().location()).first()
+  ]
 })
