@@ -182,12 +182,13 @@ Here are the existing types:
     ),
     (
       name: "Meghana Noojipady",
-      picture: image("./assets/mugshots/meghana2.png", width: 90pt, height: 90pt),
+      picture: image("./assets/mugshots/meghana3.jpg", width: 90pt, height: 90pt),
       about: [
         - 9th Grade
         - Auton Strategist
         - Programmer
         - Pianist
+        - Vocalist 
       ],
     ),
     (
