@@ -58,5 +58,7 @@ We've created a Gantt chart to visualize what we've planned for task assignments
 
 
   ),
-  goals: (("Worlds Tournament", 8),),
+  goals: (
+  ("Completed Build", 5),
+),
 )
