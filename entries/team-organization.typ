@@ -14,12 +14,12 @@
 
 As stated in the pre reveal reflection we identified that our largest problem
 during the last season was our lack of structure and organization. In order to
-adress this issue we decided to have a set of steps for builders to follow while
-creating a system:
+address this issue we decided to have a set of steps for builders to follow
+while creating a system:
 - Brainstorm possible designs
 - Choose best design
 - Create design in CAD
-- Have design reviewed by fellow teamates and/or alumni
+- Have design reviewed by fellow teammates and/or alumni
 - If the design passed review, build it
 - Test the system
 - Iterate again

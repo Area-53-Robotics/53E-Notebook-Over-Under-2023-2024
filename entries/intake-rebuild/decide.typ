@@ -20,7 +20,7 @@ We then plotted these options on a decision matrix:
 
 #decision-matrix( //
   properties: ( //
-    (name: "Structual Integrity", weight: 1),
+    (name: "Structural Integrity", weight: 1),
     (name: "Reliability", weight: 0.8),
     (name: "Ease of Fabrication", weight: 0.5),
   ),

@@ -14,7 +14,7 @@ With the majority of the complex code handled by LemLib, getting set up is
 relatively simple.
 
 ```cpp
-// Ommitted old chassis configuration
+// Omitted old chassis configuration
 // ...
 
 // Define PID constants

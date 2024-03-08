@@ -27,7 +27,7 @@
     awp: false,
     notes: [
       We played on the defensive side of the field, with our alliance partner 929S.
-      They had a good shooting mech so we were able to just score. Our wedges worked
+      They had a good shooting mechanism so we were able to just score. Our wedges worked
       great and we were able to score a lot of triballs.
 
       We went for a hang, but we ran out of time.
@@ -238,7 +238,7 @@ move individual ones without the need for wings.
     - Sleds protect the sprockets for getting rammed into the goal
   ],
   cons: [
-    - Completly unbraced
+    - Completely unbraced
     - Exposes it's motor for other robot to hit
     - Half cut is bending
   ],

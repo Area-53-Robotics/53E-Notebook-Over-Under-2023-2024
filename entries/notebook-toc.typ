@@ -102,7 +102,7 @@ This means that all the notebooker has to do to add a new entry is this:
 #nb_create_entry(
   title: "Interesting Title",
   type: "notebook"
-  start_date: datetime(year: 1970, month: 1, day: 1) // at the beggining of time
+  start_date: datetime(year: 1970, month: 1, day: 1) // at the beginning of time
 )[
   // Content here
 ]

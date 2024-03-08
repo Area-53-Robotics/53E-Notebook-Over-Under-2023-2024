@@ -41,7 +41,7 @@ There are a variety of closed loop controllers that are commonly used:
     - Reversed
     - Off
 
-    If the robot is facing the target, the controller ouputs maximum power. If the
+    If the robot is facing the target, the controller outputs maximum power. If the
     robot is facing away from the target (it overshot), the controller outputs
     maximum reverse power. If the system is within acceptable error, the controller
     outputs off.
