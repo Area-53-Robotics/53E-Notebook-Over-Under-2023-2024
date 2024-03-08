@@ -142,8 +142,9 @@ Here are the existing types:
       about: [
         - 12th Grade
         - Team Leader
-        - Programmer
+        - Tooling Developer
         - Notebooker
+        - Vocalist
       ],
     ),
     (
@@ -151,9 +152,10 @@ Here are the existing types:
       picture: image("./assets/mugshots/alan.jpg", width: 90pt, height: 90pt),
       about: [
         - 11th Grade
-        - Design
+        - Designer
         - Builder
         - Driver
+        - Guitarist
       ],
     ),
     (
@@ -161,8 +163,9 @@ Here are the existing types:
       picture: image("./assets/mugshots/john.png", width: 90pt, height: 90pt),
       about: [
         - 10th Grade
-        - Design
+        - Designer
         - Builder
+        - "Bass Guitarist"
       ],
     ),
     (
@@ -170,8 +173,11 @@ Here are the existing types:
       picture: image("./assets/mugshots/joy.jpg", width: 90pt, height: 90pt),
       about: [
         - 10th Grade
-          - Programmer
-          - Builder
+        - Programmer
+        - Designer
+        - Builder
+        - Guitarist
+        - Vocalist
       ],
     ),
     (
@@ -179,7 +185,9 @@ Here are the existing types:
       picture: image("./assets/mugshots/meghana2.png", width: 90pt, height: 90pt),
       about: [
         - 9th Grade
+        - Auton Strategist
         - Programmer
+        - Pianist
       ],
     ),
     (
@@ -189,6 +197,7 @@ Here are the existing types:
         - 9th Grade
         - Design
         - Builder
+        - Drummer
       ],
     ),
   )
