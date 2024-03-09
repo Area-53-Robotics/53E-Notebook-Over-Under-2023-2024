@@ -42,5 +42,4 @@ characteristics on a scale of 1-10:
   we would be one of the only teams in 53 history to successfully build a PTO.
 ]
 
-// TODO: put a sketch of the robot design here
-
+#image("/entries/robot-rebuild/elevation.svg")
