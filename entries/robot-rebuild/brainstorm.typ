@@ -34,7 +34,9 @@ make:
     ], cons: [
       - Swapping subsystems will take time
     ]) ],
-  [], // TODO: put image here
+  image("/entries/robot-rebuild/modular.svg"),
+ 
+
   [
     == PTO to Elevation
     This design uses the power of the drivetrain in order to pull the robot into the
@@ -45,11 +47,13 @@ make:
       - No need to swap subsystems
       - Complicated to build
     ], cons: [
-      - Shooting mechanism is mounted during match play
+      - Shooting mechanism is mounted during match play 
     ])
 
   ],
-  [], // TODO: put image here
+  image("/entries/robot-rebuild/motor.svg"),
+
+   // TODO: put image here
   [
     == Descore Bot
     This bot is as flat as possible to fit under the goal.
@@ -62,5 +66,5 @@ make:
     ])
 
   ],
-  [], // TODO: put image here
+  image("/entries/robot-rebuild/descore.svg"), 
 )

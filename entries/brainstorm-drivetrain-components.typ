@@ -22,7 +22,7 @@
     mitigate the issues with dragging wheels on the ground while turning this
     drivetrain uses omni wheels, which can be pushed side to side as well as forward
     and backwards.
-    #admonition(
+    #admonition( 
       type: "note",
     )[
       The ability to strafe refers to the drivetrain's ability to actively move side
