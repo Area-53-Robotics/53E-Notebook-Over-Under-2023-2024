@@ -34,7 +34,7 @@ make:
     ], cons: [
       - Swapping subsystems will take time
     ]) ],
-  image("/entries/robot-rebuild/modular.svg"),
+  image("/entries/robot-rebuild/modularthree.svg"),
  
 
   [
@@ -51,7 +51,7 @@ make:
     ])
 
   ],
-  image("/entries/robot-rebuild/motor.svg"),
+  image("/entries/robot-rebuild/motortwo.svg"),
 
    // TODO: put image here
   [
