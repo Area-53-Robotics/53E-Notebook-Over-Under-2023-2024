@@ -88,13 +88,6 @@ the experience for both the writer and the viewer in several ways:
 - Better, more modern tooling
 - Styling is defined in one location
 
-This is our third year using a digital notebook, and we find that it improves
-the experience for both the writer and the viewer in several ways:
-
-- Increased neatness
-- Better, more modern tooling
-- Styling is defined in one location
-
 == Why Typst?
 
 Typst give us a whole host of benefits:

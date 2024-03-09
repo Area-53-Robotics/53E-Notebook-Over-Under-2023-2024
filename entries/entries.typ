@@ -138,11 +138,11 @@
 
 #include "./lift-pneumatics/entry.typ"
 
+#include "./tournament-states/entry.typ"
 
-//#include "./tournament-states/entry.typ"
-//#include "./robot-rebuild/identify.typ"
-//#include "./robot-rebuild/brainstorm.typ"
-//#include "./robot-rebuild/decide.typ"
+#include "./robot-rebuild/identify.typ"
+#include "./robot-rebuild/brainstorm.typ"
+#include "./robot-rebuild/decide.typ"
 
 #include "./management-road-to-worlds/entry.typ"
 
