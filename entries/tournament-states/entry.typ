@@ -8,7 +8,7 @@
 #show: create-body-entry.with(
   title: "Tournament: State Championship",
   type: "test",
-  date: datetime(year: 2024, month: 1, day: 27),
+  date: datetime(year: 2024, month: 3, day: 2),
   author: "Meghana Noojipady",
   witness: "Felix Hass",
 )

@@ -126,7 +126,6 @@
 #include "./tournament-cardinal/entry.typ"
 
 #include "./management-road-to-states/entry.typ"
-#include "./management-road-to-worlds/entry.typ"
 
 #include "./intake-rebuild/identify.typ"
 #include "./intake-rebuild/brainstorm.typ"
