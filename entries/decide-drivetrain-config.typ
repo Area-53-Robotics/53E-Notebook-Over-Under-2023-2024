@@ -32,7 +32,7 @@ on a scale of 0 to 5.
   type: "decision",
   [
     We settled on a drivetrain with a 4:7 gear ratio, 4" wheels, and blue
-    cartridges, leaving us with a final RPM of 360, and a final speed of 6.7
+    cartridges, leaving us with a final RPM of 342, and a final speed of 5.96
     feet/second.
   ],
 )
